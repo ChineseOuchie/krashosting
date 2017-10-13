@@ -1,0 +1,272 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*start css*/
+*{
+    box-sizing: border-box;
+}
+body{
+    height:2000px;
+    background-color: white;
+}
+.container{
+    margin:0 auto;
+}
+.banner{
+    width: 100%;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+ }
+nav a{
+    display: block;
+    flex:1;
+    float: left;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 20px;
+    text-decoration: none;
+    border: 1px solid black;
+}
+
+.columns {
+    float: left;
+    width: 33.3%;
+    padding: 8px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+.columns2 {
+    float: left;
+    width: 25%;
+    padding: 8px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+/* Style the list */
+.price {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+/* Add shadows on hover */
+.price:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+/* Pricing header */
+.price .header {
+    background-color: #111;
+    color: white;
+    font-size: 25px;
+}
+
+/* List items */
+.price li {
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Grey list item */
+.price .grey {
+    background-color: #eee;
+    font-size: 20px;
+}
+
+/* The "Sign Up" button */
+.button {
+    background-color: #ea3a39;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+.info{
+    height:100px;
+    margin-left: 50px;
+    margin-top: 100px;
+    width: 50%;
+}
+
+.info_about{
+    height:100px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 100px;
+}
+#artcl1 {
+    margin: 0 auto;
+}
+#banner {
+    width: 100vw;
+    height: 300px;
+    background-color: coral;
+}
+#bannerimg {
+    width: 100vw;
+}
+.pro{
+    width: 100%;
+    height: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 30px;
+    display: inline-block;
+    text-align: center;
+}
+.nieuws{
+    margin-top: 100px;
+    border: 1px solid black;
+    height: 300px;
+}
+#bannerimg {
+    width: 100vw;
+}
+#myIframe {
+    position: absolute;
+    width: 66.6%;
+    height: 600px;
+    margin-right: 50px;
+    margin-top: 100px;
+}
+.about{
+    width: 66.6%;
+    float: right;
+    margin-right: 10px;
+}
+.about_img {
+    max-width: 100%;
+}
+.about_img_container{
+    float:left;
+    width: 32%;
+    margin-top: 100px;
+}
+.maps{
+    width: 66.6%;
+    float: right;
+    margin-right: 10px;
+    margin-top: -400px;
+}
+.contact{
+    float:left;
+}
+
+#nav{
+    background-color: #ea3a39;
+    text-decoration: none;
+    color: black;
+}
+.link{
+    text-decoration: none;
+    color: white;
+}
+a:visited{
+    color: white;
+}
+.active{
+    background-color: #b93232;
+}
+@media only screen and (max-width: 600px) {
+    .columns {
+        width: 100%;
+    }
+    .columns2 {
+        width: 100%;
+    }
+    .about_img_container{
+        clear: both;
+        width: 400px;
+        margin-top: 20px;
+        margin-left: 100px;
+    }
+    .about_img{
+        width: 50%;
+        float: left;
+    }
+    .about{
+        float: left;
+        width: 100%;
+        padding: 50px;
+
+    }
+    .maps{
+        float: left;
+        margin-top: 0;
+
+    }
+    .info{
+        margin-top: 20px;
+        height:30px;
+        width: 400px;
+    }
+
+    #myIframe {
+        width: 100%;
+        height: 600px;
+        margin-top: 100px;
+        margin-left: 0;
+    }
+    .contact{
+        float: none;
+    }
+    .info_about{
+        height:100px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+}
