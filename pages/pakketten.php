@@ -9,10 +9,10 @@
 <body>
 <div class="container">
     <div class="banner">
-        <img class="banner" src="../../../Desktop/krashosting/img/banner.gif">
+        <img class="banner" src="../img/banner.gif">
     </div>
     <nav id="nav">
-        <a class="link" href="../../../Desktop/krashosting/index.php">Home</a>
+        <a class="link" href="../index.php">Home</a>
         <a class="link active" href="pakketten.php">Pakketten</a>
         <a class="link" href="../pages/contact.php">Contact</a>
         <a class="link" href="about.php">Over Ons</a>

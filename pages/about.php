@@ -11,18 +11,18 @@
 <body>
     <div class="container">
         <div class="banner">
-            <img class="banner" src="../../../Desktop/krashosting/img/banner.gif">
+            <img class="banner" src="../img/banner.gif">
         </div>
         <nav id="nav">
-            <a class="link" href="../../../Desktop/krashosting/index.php">Home</a>
+            <a class="link" href="../index.php">Home</a>
             <a class="link" href="../pages/pakketten.php">Pakketten</a>
             <a class="link" href="../pages/contact.php">Contact</a>
             <a class="link active" href="about.php">Over Ons</a>
         </nav>
     <div>
         <div class="about_img_container">
-            <img src="../../../Desktop/krashosting/img/hoofd1.jpg" class="about_img">
-            <img src="../../../Desktop/krashosting/img/hoofd2.jpg" class="about_img">
+            <img src="../img/hoofd1.jpg" class="about_img">
+            <img src="../img/hoofd2.jpg" class="about_img">
         </div>
         <div class="about">
             <p class="info_about">
