@@ -19,6 +19,7 @@ if (isset($_SESSION['err'])){
 	<script src="../js/login.js" async></script>
 </head>
 <body>
+<div id="test"></div>
 	<div id="container">
 		<form action="logindatabase.php" method="post" enctype="multipart/form-data">
 			<input name="email" type="text" placeholder="Email">
