@@ -18,7 +18,7 @@ while($row = $res->fetch_assoc()){
     $out.= '</ul>';
     $out.= '</div>';
 }
-$conn->close();
+$conn->close();//test
 ?>
 <!DOCTYPE html>
 <html lang="en">
