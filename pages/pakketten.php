@@ -1,3 +1,25 @@
+<?php
+$out = '';
+$conn = new mysqli('localhost', 'root', 'root', 'krashosting');
+$query = 'SELECT * FROM producten';
+$res = $conn->query($query);
+while($row = $res->fetch_assoc()){
+    $gb = $row['mb'] / 1000;
+
+    $out.= '<div class="columns2">';
+    $out.= '<ul class="price">';
+    $out.= '<li class="header">' . ucfirst($row['naam']) . '</li>';
+    $out.= '<li class="grey">€' . $row['ppm'] . ' / month</li>';
+    $out.= '<li>' . $gb . 'GB Storage</li>';
+    $out.= '<li>SSL Certificate: ' . ucfirst($row['ssl']) . '</li>';
+    $out.= '<li>' . $row['domeinen'] . ' Domains</li>';
+    $out.= '<li>' . ucfirst($row['bandbreedte']) . ' Bandwidth</li>';
+    $out.= '<li class="grey"><a href="#" class="button">Sign Up</a></li>';
+    $out.= '</ul>';
+    $out.= '</div>';
+}
+$conn->close();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,39 +40,7 @@
         <a class="link" href="about.php">Over Ons</a>
     </nav>
     <article id="artcl1">
-        <div class="columns2">
-            <ul class="price">
-                <li class="header">Basic</li>
-                <li class="grey">$ 9.99 / year</li>
-                <li>10GB Storage</li>
-                <li>10 Emails</li>
-                <li>10 Domains</li>
-                <li>1GB Bandwidth</li>
-                <li class="grey"><a href="#" class="button">Sign Up</a></li>
-            </ul>
-        </div>
-        <div class="columns2">
-            <ul class="price">
-                <li class="header">Basic</li>
-                <li class="grey">$ 9.99 / year</li>
-                <li>10GB Storage</li>
-                <li>10 Emails</li>
-                <li>10 Domains</li>
-                <li>1GB Bandwidth</li>
-                <li class="grey"><a href="#" class="button">Sign Up</a></li>
-            </ul>
-        </div>
-        <div class="columns2">
-            <ul class="price">
-                <li class="header">Basic</li>
-                <li class="grey">$ 9.99 / year</li>
-                <li>10GB Storage</li>
-                <li>10 Emails</li>
-                <li>10 Domains</li>
-                <li>1GB Bandwidth</li>
-                <li class="grey"><a href="#" class="button">Sign Up</a></li>
-            </ul>
-        </div>
+        <?php echo $out?>
         <div class="columns2">
             <ul class="price">
                 <li class="header">Custom</li>
