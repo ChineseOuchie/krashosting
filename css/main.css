@@ -46,7 +46,7 @@ table {
     box-sizing: border-box;
 }
 body{
-    height:2000px;
+    height:1500px;
     background-color: white;
 }
 .container{
@@ -130,6 +130,15 @@ nav a{
     border: none;
     color: white;
     padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+.buttonPakketten{
+    background-color: #ea3a39;
+    border: none;
+    color: white;
+    padding: 5px 12px;
     text-align: center;
     text-decoration: none;
     font-size: 18px;
@@ -287,6 +296,9 @@ div.item {
         height:100px;
         margin-left: 50px;
         margin-right: 50px;
+    }
+    .buttonPakketten{
+        padding: 10px 25px;
     }
 
 }

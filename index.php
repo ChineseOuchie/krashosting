@@ -9,12 +9,12 @@ while($row = $res->fetch_assoc()){
     $out.= '<div class="columns">';
     $out.= '<ul class="price">';
     $out.= '<li class="header">' . ucfirst($row['naam']) . '</li>';
-    $out.= '<li class="signupBG">€' . $row['ppm'] . ' / month</li>';
+    $out.= '<li class="grey">€' . $row['ppm'] . ' / month</li>';
     $out.= '<li>' . $gb . 'GB Storage</li>';
     $out.= '<li>SSL Certificate: ' . ucfirst($row['ssl']) . '</li>';
     $out.= '<li>' . $row['domeinen'] . ' Domains</li>';
     $out.= '<li>' . ucfirst($row['bandbreedte']) . ' Bandwidth</li>';
-    $out.= '<li class="signupBG"><a href="#" class="button">Sign Up</a></li>';
+    $out.= '<li class="grey"><a href="#" class="button">Sign Up</a></li>';
     $out.= '</ul>';
     $out.= '</div>';
 }

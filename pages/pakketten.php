@@ -14,7 +14,7 @@ while($row = $res->fetch_assoc()){
     $out.= '<li>SSL Certificate: ' . ucfirst($row['ssl']) . '</li>';
     $out.= '<li>' . $row['domeinen'] . ' Domains</li>';
     $out.= '<li>' . ucfirst($row['bandbreedte']) . ' Bandwidth</li>';
-    $out.= '<li class="grey"><a href="#" class="button">Sign Up</a></li>';
+    $out.= '<li class="grey"><a href="#" class="buttonPakketten">Sign Up</a></li>';
     $out.= '</ul>';
     $out.= '</div>';
 }
@@ -49,7 +49,7 @@ $conn->close();
                 <li>10 Emails</li>
                 <li>10 Domains</li>
                 <li>1GB Bandwidth</li>
-                <li class="grey"><a href="#" class="button">Sign Up</a></li>
+                <li class="grey"><a href="#" class="buttonPakketten">Sign Up</a></li>
             </ul>
         </div>
     </article>
