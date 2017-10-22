@@ -119,7 +119,7 @@ nav a{
 }
 
 /* Grey list item */
-.price .grey {
+.price .signupBG {
     background-color: #eee;
     font-size: 20px;
 }
@@ -160,12 +160,18 @@ nav a{
 }
 .pro{
     width: 100%;
-    height: 20px;
+    height: 30px;
     padding-left: 100px;
     padding-right: 100px;
+    padding-top: 5px;
     margin-top: 30px;
     display: inline-block;
     text-align: center;
+    background-color: #ea3a39;
+}
+.pro a{
+    text-decoration: none;
+    color: white;
 }
 .nieuws{
     margin-top: 100px;
@@ -219,6 +225,10 @@ a:visited{
 }
 .active{
     background-color: #b93232;
+}
+.item{
+    width:200px;
+    float: left;
 }
 @media only screen and (max-width: 600px) {
     .columns {
