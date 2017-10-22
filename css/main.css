@@ -73,7 +73,6 @@ nav a{
     text-decoration: none;
     border: 1px solid black;
 }
-
 .columns {
     float: left;
     width: 33.3%;
@@ -247,7 +246,7 @@ div.item {
     width: 300px;
     display: inline-block;
     padding: 10px;
-
+    border-right: 1px solid black;
 }
 @media only screen and (max-width: 600px) {
     .columns {
