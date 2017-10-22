@@ -177,6 +177,7 @@ nav a{
     margin-top: 100px;
     border: 1px solid black;
     height: 300px;
+    overflow-x: scroll;
 }
 #bannerimg {
     width: 100vw;
@@ -226,9 +227,18 @@ a:visited{
 .active{
     background-color: #b93232;
 }
-.item{
-    width:200px;
-    float: left;
+.slider {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    white-space: nowrap;
+}
+div.item {
+    height: 250px;
+    width: 300px;
+    display: inline-block;
+    padding: 10px;
+
 }
 @media only screen and (max-width: 600px) {
     .columns {

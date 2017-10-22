@@ -43,12 +43,14 @@ $conn->close();
                 <?php echo $out?>
             </article>
             <div class="pro"><a href="#">Pro/Custom</a></div>
-            <div class="nieuws">
-                <div class="item">1</div>
-                <div class="item">2</div>
-                <div class="item">3</div>
-                <div class="item">4</div>
-                <div class="item">5</div>
+            <div class="slider">
+                <div class="nieuws slide">
+                    <div class="item">Nieuws Bericht #1</div>
+                    <div class="item">Nieuws Bericht #2</div>
+                    <div class="item">Nieuws Bericht #3</div>
+                    <div class="item">Nieuws Bericht #4</div>
+                    <div class="item">Nieuws Bericht #5</div>
+                </div>
             </div>
         </div>
     </body>
