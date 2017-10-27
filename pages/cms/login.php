@@ -131,7 +131,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 		<!--			mail link-->
 		<a href="mailto:admin@krashosting.nl?subject=Inloggegevens%20vergeten&body=Beste%20systeembeheerder,%0D%0A%0D%0AIk%20ben%20mijn%20inloggegevens%20vergeten%20en%20heb%203%20keer%20verkeerd%20ingelogd.%20Zou%20u%20mijn%20gevegens%20kunnen%20opzoeken%20en%20deze%20popup%20weg%20kunnen%20halen.%0D%0A%0D%0ANaam:%20'naam'%0D%0AWerk%20email:%20'email'">Email systeembeheerder!</a>
 	</div>
-</div>
+</div>e
 <script defer>let x = <?php echo $err; ?>;</script>
 </body>
 </html>
