@@ -15,28 +15,28 @@ $msg = array();
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     if (isset($_POST['firstname'], $_POST['lastname'], $_POST['telephone'], $_POST['bsn'], $_POST['email'])){
         if (!empty($_POST['firstname']) && preg_match("/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u", $_POST['firstname'])){
-            $firstname = mysqli_real_escape_string($base, $_POST['firstname']);
+            $firstname = $base->real_escape_string($_POST['firstname']);
         }else {
             $msg[] = "U bent vergeten uw voornaam in te vullen.";
         }
         if (!empty($_POST['lastname']) && preg_match("/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u", $_POST['lastname'])){
-            $lastname = mysqli_real_escape_string($base, $_POST['lastname']);
+            $lastname = $base->real_escape_string($_POST['lastname']);
         }else {
             $msg[] = "U bent vergeten uw achternaam in te vullen.";
         }
         if (!empty($_POST['telephone']) && preg_match("/[0-9]{10}/", $_POST['telephone'])){
-            $telephone = mysqli_real_escape_string($base, $_POST['telephone']);
+            $telephone = $base->real_escape_string($_POST['telephone']);
         }else {
             $msg[] = "U bent vergeten uw telefoonnummer in te vullen.";
         }
         if (!empty($_POST['bsn']) && preg_match("/^[0-9]{9}$/", $_POST['bsn'])){
-            $bsn = mysqli_real_escape_string($base, $_POST['bsn']);
+            $bsn = $base->real_escape_string($_POST['bsn']);
         }else {
             $msg[] = "U bent vergeten uw BSN in te vullen.";
         }
         if (!empty($_POST['email'])){
             $postemail = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
-            $email = mysqli_real_escape_string($base, $postemail);
+            $email = $base->real_escape_string($postemail);
         }else {
             $msg[] = "U bent vergeten uw email in te vullen.";
         }
@@ -72,7 +72,7 @@ $passwordgenny = array("$^@sx0uWv26Dq?lOV8Qf7F4D+U2_NX", "SSibiT5oBPn-rB9v?Zn242
     "CblsA^+4g8^K0sww$7|9^jQHvMOJ=*", "U%g*fLnF0oiGj6oXWOk1+cr4YffKFx", "#oZT|mNvLtgRS3j14qV_pT-8i78+3O", "heRVTc&JZ53BJN*IBh1_TD_?3=D|Pb", "|slw@bT@Ymk4%^FW0G-CSVTqD2b8ak",
     "mimh#AHh93CNKpV07VuKUN!dEc4@&F", "J&R@egy9yV2ztpej6kGB=F?Ar^Ir9k", "yi+8W33gSB8JiFKAEwGAX%*oE^rb+4", "bM^tw#IF-3^cyI9rVIBdmknroE_6G^", "pJnuD=3IFMdjmL9VC5MX7t?t%b3TBO"
 );
-$rand = rand(0, 90);
+$rand = rand(0, 97);
 $password = $passwordgenny[$rand];
 
 $sql = "INSERT INTO krashosting.medewerkers(voornaam, achternaam, telefoonnummer, bsn, email, bedrijfsemail, wachtwoord, idtype) VALUES ('$firstname', '$lastname', '$telephone', '$bsn', '$email', '$werkemail', '$password', '2');";
