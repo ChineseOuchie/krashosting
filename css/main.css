@@ -215,6 +215,12 @@ a:visited{
     margin-right: 10px;
     margin-top: -400px;
 }
+.info_about{
+    height:100px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 100px;
+}
 
 /*Nieuws bericht slider*/
 .nieuws{
