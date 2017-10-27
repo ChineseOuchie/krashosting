@@ -1,9 +1,13 @@
 <?php
+session_start();
 $err = '';
 include_once("config.php");
-session_start();
+
 if (isset($_SESSION['err'])){
     $err = $_SESSION['err'];
+}
+if ($err > 2){
+   session_destroy();
 }
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -98,7 +102,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     </style>
 
-	<script src="../../js/login.js" async></script>
+	<script src="../../js/login.js" defer></script>
 </head>
 
 <body bgcolor = "#FFFFFF">
@@ -128,6 +132,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 		<a href="mailto:admin@krashosting.nl?subject=Inloggegevens%20vergeten&body=Beste%20systeembeheerder,%0D%0A%0D%0AIk%20ben%20mijn%20inloggegevens%20vergeten%20en%20heb%203%20keer%20verkeerd%20ingelogd.%20Zou%20u%20mijn%20gevegens%20kunnen%20opzoeken%20en%20deze%20popup%20weg%20kunnen%20halen.%0D%0A%0D%0ANaam:%20'naam'%0D%0AWerk%20email:%20'email'">Email systeembeheerder!</a>
 	</div>
 </div>
-<script>let x = <?php echo $err;?>;</script>
+<script defer>let x = <?php echo $err; ?>;</script>
 </body>
 </html>
