@@ -17,3 +17,4 @@ if (x === 3){
     modal.style.display = "block";
     email.style.display = "block";
 }
+console.log(x);

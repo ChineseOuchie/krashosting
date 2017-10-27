@@ -1,6 +1,10 @@
 <?php
+$err = '';
 include_once("config.php");
 session_start();
+if (isset($_SESSION['err'])){
+    $err = $_SESSION['err'];
+}
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 $error = '';
@@ -63,7 +67,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             header("location: welcome.php");
         } else {
             $error = "Uw gebruikersnaam of wachtwoord is onjuist.";
-            session_start();
             if (isset($_SESSION['err'])){ //kijkt of er al een err session is
                 $_SESSION['err'] = $_SESSION['err'] + 1; //voegt +1 toe aan de error counter
             }else{
@@ -77,7 +80,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="nl">
 <head>
     <title>Login Page</title>
-
+	<link rel="stylesheet" type="text/css" href="../../css/login.css">
     <style type = "text/css">
         body {
             font-family:Arial, Helvetica, sans-serif;
@@ -94,12 +97,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             border:#666666 solid 1px;
         }
     </style>
+
 	<script src="../../js/login.js" async></script>
 </head>
 
 <body bgcolor = "#FFFFFF">
 
-<div align = "center">
+<div id="container" align = "center">
     <div style = "width:300px; border: solid 1px #333333; " align = "left">
         <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Login</b></div>
 
@@ -116,7 +120,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
     </div>
-
+</div>
+<div id="myModal" class="modal">
+	<div class="modal-content">
+		<span class="close">&times;</span>
+		<!--			mail link-->
+		<a href="mailto:admin@krashosting.nl?subject=Inloggegevens%20vergeten&body=Beste%20systeembeheerder,%0D%0A%0D%0AIk%20ben%20mijn%20inloggegevens%20vergeten%20en%20heb%203%20keer%20verkeerd%20ingelogd.%20Zou%20u%20mijn%20gevegens%20kunnen%20opzoeken%20en%20deze%20popup%20weg%20kunnen%20halen.%0D%0A%0D%0ANaam:%20'naam'%0D%0AWerk%20email:%20'email'">Email systeembeheerder!</a>
+	</div>
 </div>
 <script>let x = <?php echo $err;?>;</script>
 </body>
