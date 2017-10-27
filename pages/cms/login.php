@@ -63,6 +63,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             header("location: welcome.php");
         } else {
             $error = "Uw gebruikersnaam of wachtwoord is onjuist.";
+            session_start();
+            if (isset($_SESSION['err'])){ //kijkt of er al een err session is
+                $_SESSION['err'] = $_SESSION['err'] + 1; //voegt +1 toe aan de error counter
+            }else{
+                $_SESSION['err'] = 1; //maakt de error counter aan en stopt er 1 in
+            }
         }
     }
 }
@@ -88,7 +94,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             border:#666666 solid 1px;
         }
     </style>
-
+	<script src="../../js/login.js" async></script>
 </head>
 
 <body bgcolor = "#FFFFFF">
@@ -112,6 +118,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 
 </div>
-
+<script>let x = <?php echo $err;?>;</script>
 </body>
 </html>
