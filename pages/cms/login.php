@@ -1,6 +1,6 @@
 <?php
 session_start();
-$err = '';
+$err = 0;
 include_once("config.php");
 
 if (isset($_SESSION['err'])){
