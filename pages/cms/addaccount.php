@@ -81,7 +81,6 @@ if (count($msg) == 0){
     $base->query($sql);
     //header('location: login.php');
 }
-echo $sql;
 ?>
 <!DOCTYPE html>
 <html lang="nl">
