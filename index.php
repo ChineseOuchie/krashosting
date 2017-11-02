@@ -48,7 +48,7 @@ $conn->close();
             <article id="artcl1">
                 <?php echo $out?>
             </article>
-            <div class="pro"><a href="#">Pro/Custom</a></div>
+            <div class="pro"><a href="pages/custom.php">Pro/Custom</a></div>
             <div class="slider">
                 <div class="nieuws slide">
                     <div class="item">Nieuws Bericht #1</div>
