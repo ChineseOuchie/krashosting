@@ -25,7 +25,7 @@ if (isset($_POST) && $_SERVER["REQUEST_METHOD"] === "POST"){
                     $v = '';
                 }
             }
-            $sql = "UPDATE producten SET naam = '$naam', mb = $mb, ssl = '$ssl', ppm = $ppm, domeinen = $domeinen, bandbreedte = '$bandbreedte' WHERE idproducten = $id";
+            $sql = "UPDATE producten SET naam = '$naam', mb = '$mb', ssl = '$ssl', ppm = $ppm, domeinen = $domeinen, bandbreedte = '$bandbreedte' WHERE idproducten = $id";
 
             if ($db->query($sql)) {
                 header('Location:change.php');
