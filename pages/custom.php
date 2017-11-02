@@ -45,12 +45,12 @@ if ($error) {
     <div class="form-style-6">
         <h1>Stel uw pakket samen</h1>
         <form action="custom.php" method="post">
-            <input type="text" name="field1" placeholder="Aantal GB (min 15)*" />
-            <input type="text" name="field2" placeholder="Aantal domeinen (min 2)*" />
-            <input type="text" name="field3" placeholder="Bandbreedte*" />
-            <input type="text" name="field4" placeholder="SSL certificaat (ja of nee)*" />
+            <input type="text" name="field1" placeholder="Aantal GB (min 15)*" >
+            <input type="text" name="field2" placeholder="Aantal domeinen (min 2)*" >
+            <input type="text" name="field3" placeholder="Bandbreedte*" >
+            <input type="text" name="field4" placeholder="SSL certificaat (ja of nee)*" >
 
-            <input id="submit" type="submit" value="Send" />
+            <input id="submit" type="submit" value="Send" >
             <?php echo $r; ?>
         </form>
     </div>
