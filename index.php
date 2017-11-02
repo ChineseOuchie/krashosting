@@ -1,5 +1,9 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 $out = '';
+$outNieuws = "";
 $conn = new mysqli('localhost', 'root', 'root', 'krashosting');
 $query = 'SELECT * FROM producten';
 $res = $conn->query($query);
@@ -24,6 +28,12 @@ while($row = $res->fetch_assoc()){
     $out.= '</ul>';
     $out.= '</div>';
 }
+$queryNieuws = 'SELECT * FROM nieuws';
+$resNieuws = $conn->query($queryNieuws);
+while($rowNieuws = $resNieuws->fetch_assoc()) {
+    $outNieuws .= "<div class='item'>{$rowNieuws['titel']}<br>{$rowNieuws['bericht']}</div>";
+}
+
 $conn->close();
 ?>
 <!DOCTYPE html>
@@ -51,11 +61,12 @@ $conn->close();
             <div class="pro"><a href="pages/custom.php">Pro/Custom</a></div>
             <div class="slider">
                 <div class="nieuws slide">
-                    <div class="item">Nieuws Bericht #1</div>
-                    <div class="item">Nieuws Bericht #2</div>
-                    <div class="item">Nieuws Bericht #3</div>
-                    <div class="item">Nieuws Bericht #4</div>
-                    <div class="item">Nieuws Bericht #5</div>
+<!--                    <div class="item">Nieuws Bericht #1</div>-->
+<!--                    <div class="item">Nieuws Bericht #2</div>-->
+<!--                    <div class="item">Nieuws Bericht #3</div>-->
+<!--                    <div class="item">Nieuws Bericht #4</div>-->
+<!--                    <div class="item">Nieuws Bericht #5</div>-->
+                    <?php echo $outNieuws;?>
                 </div>
             </div>
         </div>

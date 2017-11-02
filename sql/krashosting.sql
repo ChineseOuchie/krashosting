@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
--- https://www.phpmyadmin.net/
+-- version 4.4.15.5
+-- http://www.phpmyadmin.net
 --
--- Host: localhost:3306
--- Generation Time: Nov 02, 2017 at 07:22 PM
+-- Host: 127.0.0.1:3306
+-- Generation Time: Nov 02, 2017 at 08:01 PM
 -- Server version: 5.6.34-log
--- PHP Version: 7.1.5
+-- PHP Version: 7.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -21,7 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `krashosting`
 --
-DROP DATABASE IF EXISTS `krashosting`;
 CREATE DATABASE IF NOT EXISTS `krashosting` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `krashosting`;
 
@@ -31,7 +28,7 @@ USE `krashosting`;
 -- Table structure for table `customproduct`
 --
 
-CREATE TABLE `customproduct` (
+CREATE TABLE IF NOT EXISTS `customproduct` (
   `idcustomproduct` int(11) NOT NULL,
   `mb` varchar(45) NOT NULL,
   `ssl` tinyint(4) NOT NULL,
@@ -45,7 +42,7 @@ CREATE TABLE `customproduct` (
 -- Table structure for table `klanten`
 --
 
-CREATE TABLE `klanten` (
+CREATE TABLE IF NOT EXISTS `klanten` (
   `idklanten` int(11) NOT NULL,
   `voornaam` varchar(45) NOT NULL,
   `tussenvoegsel` varchar(45) DEFAULT NULL,
@@ -61,7 +58,7 @@ CREATE TABLE `klanten` (
 -- Table structure for table `medewerkers`
 --
 
-CREATE TABLE `medewerkers` (
+CREATE TABLE IF NOT EXISTS `medewerkers` (
   `idmedewerkers` int(11) NOT NULL,
   `voornaam` varchar(45) NOT NULL,
   `achternaam` varchar(45) NOT NULL,
@@ -71,7 +68,7 @@ CREATE TABLE `medewerkers` (
   `bedrijfsemail` varchar(45) NOT NULL,
   `wachtwoord` varchar(45) NOT NULL,
   `idtype` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `medewerkers`
@@ -85,10 +82,33 @@ INSERT INTO `medewerkers` (`idmedewerkers`, `voornaam`, `achternaam`, `telefoonn
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `nieuws`
+--
+
+CREATE TABLE IF NOT EXISTS `nieuws` (
+  `idnieuws` int(100) NOT NULL,
+  `titel` varchar(100) NOT NULL,
+  `bericht` text NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `nieuws`
+--
+
+INSERT INTO `nieuws` (`idnieuws`, `titel`, `bericht`) VALUES
+(1, 'Nieuws bericht 1', 'Lorum ipsum'),
+(2, 'Nieuws bericht 2', 'Lorum ipsum'),
+(3, 'Nieuws bericht 3', 'Lorum ipsum'),
+(4, 'Nieuws bericht 4', 'Lorum ipsum'),
+(9, 'Nieuws bericht 5', 'Lorem ipsum');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `producten`
 --
 
-CREATE TABLE `producten` (
+CREATE TABLE IF NOT EXISTS `producten` (
   `idproducten` int(11) NOT NULL,
   `naam` varchar(45) NOT NULL,
   `mb` varchar(45) NOT NULL,
@@ -96,7 +116,7 @@ CREATE TABLE `producten` (
   `ppm` int(111) NOT NULL,
   `domeinen` int(10) NOT NULL,
   `bandbreedte` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `producten`
@@ -113,12 +133,12 @@ INSERT INTO `producten` (`idproducten`, `naam`, `mb`, `ssl`, `ppm`, `domeinen`, 
 -- Table structure for table `sitecontent`
 --
 
-CREATE TABLE `sitecontent` (
+CREATE TABLE IF NOT EXISTS `sitecontent` (
   `idsitecontent` int(11) NOT NULL,
   `pagename` varchar(99) NOT NULL,
   `headings` varchar(99) NOT NULL,
   `teksten` mediumtext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `sitecontent`
@@ -135,14 +155,14 @@ INSERT INTO `sitecontent` (`idsitecontent`, `pagename`, `headings`, `teksten`) V
 -- Table structure for table `type`
 --
 
-CREATE TABLE `type` (
+CREATE TABLE IF NOT EXISTS `type` (
   `idtype` int(11) NOT NULL,
   `naam` varchar(45) NOT NULL,
   `create` tinyint(4) NOT NULL,
   `read` tinyint(4) NOT NULL,
   `update` tinyint(4) NOT NULL,
   `delete` tinyint(4) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `type`
@@ -175,6 +195,12 @@ ALTER TABLE `klanten`
 ALTER TABLE `medewerkers`
   ADD PRIMARY KEY (`idmedewerkers`),
   ADD KEY `type_idx` (`idtype`);
+
+--
+-- Indexes for table `nieuws`
+--
+ALTER TABLE `nieuws`
+  ADD PRIMARY KEY (`idnieuws`);
 
 --
 -- Indexes for table `producten`
@@ -212,22 +238,27 @@ ALTER TABLE `klanten`
 -- AUTO_INCREMENT for table `medewerkers`
 --
 ALTER TABLE `medewerkers`
-  MODIFY `idmedewerkers` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `idmedewerkers` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=25;
+--
+-- AUTO_INCREMENT for table `nieuws`
+--
+ALTER TABLE `nieuws`
+  MODIFY `idnieuws` int(100) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `producten`
 --
 ALTER TABLE `producten`
-  MODIFY `idproducten` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idproducten` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `sitecontent`
 --
 ALTER TABLE `sitecontent`
-  MODIFY `idsitecontent` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idsitecontent` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `type`
 --
 ALTER TABLE `type`
-  MODIFY `idtype` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idtype` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- Constraints for dumped tables
 --
@@ -243,7 +274,6 @@ ALTER TABLE `klanten`
 --
 ALTER TABLE `medewerkers`
   ADD CONSTRAINT `type` FOREIGN KEY (`idtype`) REFERENCES `type` (`idtype`) ON UPDATE CASCADE;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
