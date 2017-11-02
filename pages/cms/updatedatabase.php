@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 include_once("config.php");
 
-//if (isset($_POST) && $_SERVER["REQUEST_METHOD"] === "POST"){
+if (isset($_POST) && $_SERVER["REQUEST_METHOD"] === "POST"){
 
     $id = $_GET['id'];
     $naam = $_POST['naam'];
@@ -25,6 +25,11 @@ include_once("config.php");
                     $v = '';
                 }
             }
+            if ($ssl === 'true'){
+                $ssl = true;
+            }else{
+                $ssl = false;
+            }
             $sql = "UPDATE producten SET naam = '$naam', mb = $mb, ssl = $ssl, ppm = $ppm, domeinen = $domeinen, bandbreedte = '$bandbreedte' WHERE idproducten = $id";
 
             if ($db->query($sql)) {
@@ -32,5 +37,5 @@ include_once("config.php");
             }
             $db->close();
         }
-//    }
+    }
 }
