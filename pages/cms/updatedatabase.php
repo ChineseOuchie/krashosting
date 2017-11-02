@@ -1,10 +1,10 @@
 <?php
 $id = '';
-$id = $_GET['id'];
 include_once("config.php");
 
-if ($_SERVER["REQUEST_METHOD"] === "POST"){
+if (isset($_POST) && isset($_GET) && $_SERVER["REQUEST_METHOD"] === "POST"){
 
+    $id = $_GET['id'];
     $naam = $_POST['naam'];
     $ppm = $_POST['ppm'];
     $mb = $_POST['mb'];
