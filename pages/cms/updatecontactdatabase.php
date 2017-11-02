@@ -7,13 +7,12 @@ include_once("config.php");
 if (isset($_POST) && $_SERVER["REQUEST_METHOD"] === "POST"){
 
     $id = $_GET['id'];
-    $content1 = $_POST['content1'];
-    $content2 = $_POST['content2'];
+    $content = $_POST['content' . $id];
 
-    $array = array('content1' => $content1, 'content2' => $content2);
+    $array = array('content' => $content);
 
-    if(isset($content1, $contentt2)){
-        if(!empty($content1) || !empty($content2)) {
+    if(isset($content)){
+        if(!empty($content)) {
 
             foreach ($array as $k => $v){
                 $$k = $db->real_escape_string($v);
@@ -21,7 +20,7 @@ if (isset($_POST) && $_SERVER["REQUEST_METHOD"] === "POST"){
                     $v = '';
                 }
             }
-            $sql = "UPDATE producten SET content1 = '$content1', content2 = $content2 WHERE idsitecontent = $id";
+            $sql = "UPDATE sitecontent SET teksten = '$content' WHERE idsitecontent = $id";
             echo $sql;
             if ($db->query($sql)) {
                 header('Location:change.php');

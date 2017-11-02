@@ -5,12 +5,12 @@ include_once("config.php");
 $form = $id = '';
 if (isset($_GET) && $_SERVER['REQUEST_METHOD'] === 'GET') {
     $id = $_GET['id'];
-    $sql = 'SELECT * FROM sitecontent WHERE pagename = "contact1" OR pagename = "contact2"';
+    $sql = 'SELECT * FROM sitecontent WHERE pagename = "contact' . $id . '"';
     $res = $db->query($sql);
     $count = 1;
     while ($row = $res->fetch_assoc()) {
-        $name = "content$count";
-        $form .= "<label for='$name'>Content $count: </label><br>";
+        $name = "content$id";
+        $form .= "<label for='$name'>Content $id: </label><br>";
         $form .= "<textarea id='$name' name='$name' required>" . $row['teksten'] . "</textarea><br>";
         $count++;
     }

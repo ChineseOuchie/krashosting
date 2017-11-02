@@ -4,6 +4,7 @@ ini_set('display_errors', 1);
 //session_start();
 include_once("config.php");
 $pakketten = $contact = $aboutus = '';
+$count = 1;
 //if (isset($_SESSION) && $_SESSION['admin']){
     $sqlpakketten = 'SELECT * FROM producten';
 	$sqlcontact = 'SELECT * FROM sitecontent WHERE pagename = "contact1" OR pagename = "contact2"';
@@ -23,9 +24,11 @@ $pakketten = $contact = $aboutus = '';
         $pakketten .= '<a href="delete.php?id=' . $row["idproducten"] . '">Delete</a></p>';
     }
     while($row = $rescontact->fetch_assoc()){
-    	$contact .= $row['teksten'] . '<br><br>';
+    	$contact .= 'Content ' . $count .':<br><br>';
+    	$contact .= $row['teksten'] . '<br>';
         $contact .= '<a href="updatecontact.php?id=' . $row["idsitecontent"] . '">Update</a><br>';
-        $contact .= '<a href="delete.php?id=' . $row["idsitecontent"] . '">Delete</a><br><br>';
+        $contact .= '<a href="delete.php?id=' . $row["idsitecontent"] . '">Delete</a><br><br><br>';
+        $count++;
 	}
 	while($row = $resaboutus->fetch_assoc()){
     	$aboutus .= $row['teksten'] . '<br><br>';
