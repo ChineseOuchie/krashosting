@@ -9,8 +9,8 @@ if (isset($_SESSION['err'])){
 if ($err > 2){
    session_destroy();
 }
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
 $error = '';
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     // username and password sent from form
@@ -77,6 +77,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['err'] = 1; //maakt de error counter aan en stopt er 1 in
             }
         }
+		$db->close();
     }
 }
 ?>
@@ -105,7 +106,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 	<script src="../../js/login.js" defer></script>
 </head>
 
-<body bgcolor = "#FFFFFF">
+<body>
 
 <div id="container" align = "center">
     <div style = "width:300px; border: solid 1px #333333; " align = "left">

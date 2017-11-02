@@ -12,17 +12,17 @@ while($row = $res->fetch_assoc()){
         $ssl = 'Nee';
     }
 
-    $out.= '<div class="columns2">';
-    $out.= '<ul class="price">';
-    $out.= '<li class="header">' . ucfirst($row['naam']) . '</li>';
-    $out.= '<li class="grey">€' . $row['ppm'] . ' / month</li>';
-    $out.= '<li>' . $gb . 'GB Storage</li>';
-    $out.= '<li>SSL Certificate: ' . $ssl . '</li>';
-    $out.= '<li>' . $row['domeinen'] . ' Domains</li>';
-    $out.= '<li>' . ucfirst($row['bandbreedte']) . ' Bandwidth</li>';
-    $out.= '<li class="grey"><a href="#" class="buttonPakketten">Sign Up</a></li>';
-    $out.= '</ul>';
-    $out.= '</div>';
+    $out .= '<div class="columns2">';
+    $out .= '<ul class="price">';
+    $out .= '<li class="header">' . ucfirst($row['naam']) . '</li>';
+    $out .= '<li class="grey">€' . $row['ppm'] . ' / month</li>';
+    $out .= '<li>' . $gb . 'GB Storage</li>';
+    $out .= '<li>SSL Certificate: ' . $ssl . '</li>';
+    $out .= '<li>' . $row['domeinen'] . ' Domains</li>';
+    $out .= '<li>' . ucfirst($row['bandbreedte']) . ' Bandwidth</li>';
+    $out .= '<li class="grey"><a href="#" class="buttonPakketten">Sign Up</a></li>';
+    $out .= '</ul>';
+    $out .= '</div>';
 }
 $conn->close();
 ?>
