@@ -7,9 +7,9 @@ while($row = $res->fetch_assoc()){
     $gb = $row['mb'] / 1000;
     $ssl = $row['ssl'];
     if($ssl === 'TRUE'){
-        $ssl = 'Ja';
+        $ssl = 'Yes';
     }else{
-        $ssl = 'Nee';
+        $ssl = 'No';
     }
 
     $out .= '<div class="columns2">';
@@ -41,9 +41,9 @@ $conn->close();
     </div>
     <nav id="nav">
         <a class="link" href="../index.php">Home</a>
-        <a class="link active" href="pakketten.php">Pakketten</a>
+        <a class="link" href="../pages/pakketten.php">Package</a>
         <a class="link" href="../pages/contact.php">Contact</a>
-        <a class="link" href="about.php">Over Ons</a>
+        <a class="link active" href="about.php">About Us</a>
     </nav>
     <article id="artcl1">
         <?php echo $out?>

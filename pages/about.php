@@ -15,9 +15,9 @@
         </div>
         <nav id="nav">
             <a class="link" href="../index.php">Home</a>
-            <a class="link" href="../pages/pakketten.php">Pakketten</a>
+            <a class="link" href="../pages/pakketten.php">Package</a>
             <a class="link" href="../pages/contact.php">Contact</a>
-            <a class="link active" href="about.php">Over Ons</a>
+            <a class="link active" href="about.php">About Us</a>
         </nav>
     <div>
         <div class="about_img_container">
