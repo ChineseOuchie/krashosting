@@ -39,7 +39,7 @@ if ($error) {
         <a class="link" href="../index.php">Home</a>
         <a class="link" href="../pages/pakketten.php">Package</a>
         <a class="link" href="../pages/contact.php">Contact</a>
-        <a class="link active" href="about.php">About Us</a>
+        <a class="link" href="about.php">About Us</a>
     </nav>
     <div id="plaats"></div>
     <div class="form-style-6">
