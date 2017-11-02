@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Oct 27, 2017 at 08:40 AM
+-- Generation Time: Nov 02, 2017 at 07:22 PM
 -- Server version: 5.6.34-log
 -- PHP Version: 7.1.5
 
@@ -115,9 +115,19 @@ INSERT INTO `producten` (`idproducten`, `naam`, `mb`, `ssl`, `ppm`, `domeinen`, 
 
 CREATE TABLE `sitecontent` (
   `idsitecontent` int(11) NOT NULL,
+  `pagename` varchar(99) NOT NULL,
   `headings` varchar(99) NOT NULL,
-  `teksten` text NOT NULL
+  `teksten` mediumtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `sitecontent`
+--
+
+INSERT INTO `sitecontent` (`idsitecontent`, `pagename`, `headings`, `teksten`) VALUES
+(1, 'contact1', '', 'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum'),
+(2, 'contact2', '', 'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum'),
+(3, 'about us', '', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id neque eros. Nullam condimentum et lacus sed egestas. Ut euismod enim velit, eu porta ante aliquam eget. Nam ut tristique tortor. Nam leo mi, consectetur nec neque non, vehicula efficitur massa. In et pretium lorem, et pellentesque augue. Pellentesque at eros eget lacus volutpat dignissim ac et nisi. Integer facilisis congue ipsum, eu porta felis lobortis et. Morbi volutpat facilisis tellus, sit amet feugiat diam dapibus id. Nulla placerat mi eu metus convallis, et rutrum turpis semper. Duis in dolor vitae orci eleifend mattis eu in leo. Mauris turpis eros, consequat at mi ut, dignissim vulputate sem. Nunc malesuada nisl non diam consequat, id euismod leo bibendum. Mauris felis nisl, pulvinar eu mi id, egestas porta sem. Nam ultricies purus sed suscipit rhoncus.');
 
 -- --------------------------------------------------------
 
@@ -207,12 +217,12 @@ ALTER TABLE `medewerkers`
 -- AUTO_INCREMENT for table `producten`
 --
 ALTER TABLE `producten`
-  MODIFY `idproducten` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `idproducten` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `sitecontent`
 --
 ALTER TABLE `sitecontent`
-  MODIFY `idsitecontent` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idsitecontent` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `type`
 --
