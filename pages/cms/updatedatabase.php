@@ -1,8 +1,10 @@
 <?php
 $id = '';
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 include_once("config.php");
 
-if (isset($_POST) && isset($_GET) && $_SERVER["REQUEST_METHOD"] === "POST"){
+//if (isset($_POST) && $_SERVER["REQUEST_METHOD"] === "POST"){
 
     $id = $_GET['id'];
     $naam = $_POST['naam'];
@@ -23,12 +25,12 @@ if (isset($_POST) && isset($_GET) && $_SERVER["REQUEST_METHOD"] === "POST"){
                     $v = '';
                 }
             }
-            $sql = "UPDATE producten SET naam = '$naam', ppm = '$ppm', mb = '$mb', mb = '$mb', ssl = '$ssl', domeinen = '$domeinen', bandbreedte = '$bandbreedte' WHERE idproducten = $id";
+            $sql = "UPDATE producten SET naam = '$naam', mb = $mb, ssl = $ssl, ppm = $ppm, domeinen = $domeinen, bandbreedte = '$bandbreedte' WHERE idproducten = $id";
 
             if ($db->query($sql)) {
                 header('Location:change.php');
             }
             $db->close();
         }
-    }
-};
+//    }
+}
