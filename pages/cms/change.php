@@ -24,7 +24,7 @@ $pakketten = $contact = $aboutus = '';
     }
     while($row = $rescontact->fetch_assoc()){
     	$contact .= $row['teksten'] . '<br><br>';
-        $contact .= '<a href="update.php?id=' . $row["idsitecontent"] . '">Update</a><br>';
+        $contact .= '<a href="updatecontact.php?id=' . $row["idsitecontent"] . '">Update</a><br>';
         $contact .= '<a href="delete.php?id=' . $row["idsitecontent"] . '">Delete</a><br><br>';
 	}
 	while($row = $resaboutus->fetch_assoc()){
