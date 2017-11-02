@@ -24,9 +24,13 @@ $pakketten = $contact = $aboutus = '';
     }
     while($row = $rescontact->fetch_assoc()){
     	$contact .= $row['teksten'] . '<br><br>';
+        $contact .= '<a href="update.php?id=' . $row["idsitecontent"] . '">Update</a><br>';
+        $contact .= '<a href="delete.php?id=' . $row["idsitecontent"] . '">Delete</a><br><br>';
 	}
 	while($row = $resaboutus->fetch_assoc()){
-    	$aboutus .= $row['teksten'];
+    	$aboutus .= $row['teksten'] . '<br><br>';
+        $aboutus .= '<a href="update.php?id=' . $row["idsitecontent"] . '">Update</a><br>';
+        $aboutus .= '<a href="delete.php?id=' . $row["idsitecontent"] . '">Delete</a>';
 	}
 //}
 ?>

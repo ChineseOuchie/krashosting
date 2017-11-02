@@ -1,3 +1,13 @@
+<?php
+	$aboutus = '';
+	include_once('cms/config.php');
+	$sqlaboutus = 'SELECT * FROM sitecontent WHERE pagename = "about us"';
+	$resaboutus = $db->query($sqlaboutus);
+	while($row = $resaboutus->fetch_assoc()){
+		$aboutus .= $row['teksten'];
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,15 +36,7 @@
         </div>
         <div class="about">
             <p class="info_about">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id neque eros.
-                Nullam condimentum et lacus sed egestas. Ut euismod enim velit, eu porta ante aliquam eget.
-                Nam ut tristique tortor. Nam leo mi, consectetur nec neque non, vehicula efficitur massa.
-                In et pretium lorem, et pellentesque augue. Pellentesque at eros eget lacus volutpat dignissim ac et nisi.
-                Integer facilisis congue ipsum, eu porta felis lobortis et. Morbi volutpat facilisis tellus, sit amet feugiat diam dapibus id.
-                Nulla placerat mi eu metus convallis, et rutrum turpis semper.
-                Duis in dolor vitae orci eleifend mattis eu in leo. Mauris turpis eros, consequat at mi ut, dignissim vulputate sem.
-                Nunc malesuada nisl non diam consequat, id euismod leo bibendum. Mauris felis nisl, pulvinar eu mi id, egestas porta sem.
-                Nam ultricies purus sed suscipit rhoncus.
+			<?php echo $aboutus;?>
             </p>
         </div>
     </div>
