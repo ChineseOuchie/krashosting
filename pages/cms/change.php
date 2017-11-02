@@ -26,13 +26,13 @@ $count = 1;
     while($row = $rescontact->fetch_assoc()){
     	$contact .= 'Content ' . $count .':<br><br>';
     	$contact .= $row['teksten'] . '<br>';
-        $contact .= '<a href="updatecontact.php?id=' . $row["idsitecontent"] . '">Update</a><br>';
+        $contact .= '<a href="updatesitecontent.php?id=' . $row["idsitecontent"] . '">Update</a><br>';
         $contact .= '<a href="delete.php?id=' . $row["idsitecontent"] . '">Delete</a><br><br><br>';
         $count++;
 	}
 	while($row = $resaboutus->fetch_assoc()){
     	$aboutus .= $row['teksten'] . '<br><br>';
-        $aboutus .= '<a href="update.php?id=' . $row["idsitecontent"] . '">Update</a><br>';
+        $aboutus .= '<a href="updatesitecontent.php?id=' . $row["idsitecontent"] . '">Update</a><br>';
         $aboutus .= '<a href="delete.php?id=' . $row["idsitecontent"] . '">Delete</a>';
 	}
 //}
