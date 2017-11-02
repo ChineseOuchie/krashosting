@@ -11,7 +11,7 @@
 
         if(isset($naam, $ppm, $mb, $ssl, $domeinen, $bandbreedte)){
             if(!empty($naam) || !empty($ppm) || !empty($mb) || !empty($ssl) || !empty($domeinen) || !empty($bandbreedte)) {
-                $sql = "INSERT INTO medewerkers (naam, mb, ssl, ppm, domeinen, bandbreedte) VALUES ('$naam', '$mb', $ssl, '$ppm', '$domeinen', '$bandbreedte')";
+                $sql = "INSERT INTO producten (naam, mb, ssl, ppm, domeinen, bandbreedte) VALUES ('$naam', '$mb', $ssl, '$ppm', '$domeinen', '$bandbreedte')";
                 if ($db->query($sql)) {
                     header('Location:change.php');
                 }
