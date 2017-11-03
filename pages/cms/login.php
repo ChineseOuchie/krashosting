@@ -121,9 +121,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <div style = "margin:30px">
 
-            <form action = "" method = "post">
-                <label for="username">UserName  :</label><input id="username" type = "text" name = "username" class = "box"/><br /><br />
-                <label for="password">Password  :</label><input id="password" type = "password" name = "password" class = "box" /><br/><br />
+            <form style="text-align: center" action = "" method = "post">
+                <input placeholder="username" id="username" type = "text" name = "username" class = "box"/><br /><br />
+                <input placeholder="password" id="password" type = "password" name = "password" class = "box" /><br/><br />
                 <input type = "submit" value = " Submit "/><br />
             </form>
 
