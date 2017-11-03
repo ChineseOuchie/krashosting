@@ -1,15 +1,19 @@
 <?php
+include_once ('config.php');
 session_start();
 
-$base = new mysqli('localhost', 'root', 'root', 'krashosting');
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+	$id = $_SESSION['renewpassword'];
     if (isset($_POST['password'], $_POST['password_sec'])){
-        $password = mysqli_real_escape_string($base, $_POST['password']);
-    }
-    if ($_POST['password_sec'] !== $password){
-        $err[] = 'Uw wachtwoord komt niet overeen.';
-
+        if ($_POST['password_sec'] !== $password){
+            $err[] = 'Uw wachtwoord komt niet overeen.';
+        }
+        $password = $db->real_escape_string($_POST['password']);
+        $sql = "UPDATE medewerkers SET wachtwoord ='$password' WHERE idmedewerkers = $id";
+        if($db->query($sql)){
+        	header('Location: login.php');
+		}
+        $db->close();
     }
 }
 
