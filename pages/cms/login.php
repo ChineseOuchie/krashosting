@@ -109,7 +109,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             border:#666666 solid 1px;
         }
     </style>
-
 	<script src="../../js/login.js" defer></script>
 </head>
 
