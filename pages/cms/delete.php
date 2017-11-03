@@ -1,4 +1,7 @@
 <?php
+session_start();
+if (isset($_SESSION['type']) && $_SESSION['type'] == 1) {
+
 include_once("config.php");
     if(isset($_GET) && $_SERVER['REQUEST_METHOD'] === 'GET'){
         $id = $_GET['id'];
@@ -8,3 +11,6 @@ include_once("config.php");
         }
         $db->close();
     }
+} else{
+    header('Location: login.php');
+}

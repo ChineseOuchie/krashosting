@@ -1,20 +1,25 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-include_once("config.php");
-$form = $id = '';
-if (isset($_GET) && $_SERVER['REQUEST_METHOD'] === 'GET') {
-    $id = $_GET['id'];
-    $sql = 'SELECT * FROM sitecontent WHERE idsitecontent =' . $id;
-    $res = $db->query($sql);
-    $count = 1;
-    while ($row = $res->fetch_assoc()) {
-        $name = "content$id";
-        $form .= "<label for='$name'>Content: </label><br>";
-        $form .= "<textarea id='$name' name='$name' required>" . $row['teksten'] . "</textarea><br>";
-        $count++;
+session_start();
+if (isset($_SESSION['type'])) {
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+    include_once("config.php");
+    $form = $id = '';
+    if (isset($_GET) && $_SERVER['REQUEST_METHOD'] === 'GET') {
+        $id = $_GET['id'];
+        $sql = 'SELECT * FROM sitecontent WHERE idsitecontent =' . $id;
+        $res = $db->query($sql);
+        $count = 1;
+        while ($row = $res->fetch_assoc()) {
+            $name = "content$id";
+            $form .= "<label for='$name'>Content: </label><br>";
+            $form .= "<textarea id='$name' name='$name' required>" . $row['teksten'] . "</textarea><br>";
+            $count++;
+        }
+        $db->close();
     }
-    $db->close();
+} else{
+    header('Location: login.php');
 }
 ?>
 <!DOCTYPE html>

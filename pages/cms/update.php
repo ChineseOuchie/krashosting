@@ -1,6 +1,8 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+session_start();
+if (isset($_SESSION['type'])) {
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
     include_once("config.php");
     $form = $id = '';
     if (isset($_GET) && $_SERVER['REQUEST_METHOD'] === 'GET') {
@@ -23,6 +25,9 @@ ini_set('display_errors', 1);
         }
         $db->close();
     }
+} else{
+    header('Location: login.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,6 +1,10 @@
 <?php
 session_start();
-include('session.php');
+if (isset($_SESSION['type'])) {
+	include('session.php');
+} else{
+    header('Location: login.php');
+}
 ?>
 <html>
 

@@ -36,6 +36,8 @@ if (isset($_SESSION['type'])){
         $aboutus .= '<a href="updatesitecontent.php?id=' . $row["idsitecontent"] . '">Update</a><br>';
         $aboutus .= '<a class="delete" href="deletesitecontent.php?id=' . $row["idsitecontent"] . '">Delete</a>';
 	}
+} else{
+	header('Location: login.php');
 }
 ?>
 <!DOCTYPE html>
