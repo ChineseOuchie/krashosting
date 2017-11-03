@@ -21,7 +21,7 @@ if (isset($_POST) && $_SERVER["REQUEST_METHOD"] === "POST"){
                 }
             }
             $sql = "UPDATE sitecontent SET teksten = '$content' WHERE idsitecontent = $id";
-            echo $sql;
+//            echo $sql;
             if ($db->query($sql)) {
                 header('Location:change.php');
             }

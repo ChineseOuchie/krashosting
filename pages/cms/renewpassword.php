@@ -3,13 +3,13 @@ session_start();
 
 $base = new mysqli('localhost', 'root', 'root', 'krashosting');
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     if (isset($_POST['password'], $_POST['password_sec'])){
         $password = mysqli_real_escape_string($base, $_POST['password']);
     }
     if ($_POST['password_sec'] !== $password){
         $err[] = 'Uw wachtwoord komt niet overeen.';
-        //hier moet nog password preg_match komen.
+
     }
 }
 

@@ -63,6 +63,7 @@ if (isset($_SESSION['type'])){
 	<div id="aboutus">
         <?php echo $aboutus?>
 	</div>
+    <a href="welcome.php">Terug</a>
 <script>
 	const pakket = document.getElementById('pakketten');
 	const pakketaanpassen = document.getElementById('pakketaanpassen');
