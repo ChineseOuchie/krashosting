@@ -2,6 +2,7 @@
 include_once ('config.php');
 session_start();
 
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 	$id = $_SESSION['renewpassword'];
     if (isset($_POST['password'], $_POST['password_sec'])){
