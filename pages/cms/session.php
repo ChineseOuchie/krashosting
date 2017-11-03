@@ -4,9 +4,9 @@ session_start();
 
 $user_check = $_SESSION['login_user'];
 
-$ses_sql = mysqli_query($db,"select voornaam from medewerkers where bedrijfsemail = '$user_check' ");
+$ses_sql = $db->query("SELECT voornaam FROM medewerkers WHERE bedrijfsemail = '$user_check'");
 
-$row = mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
+$row = $ses_sql->fetch_assoc();
 
 $_SESSION['welkom'] = $row['voornaam'];
 

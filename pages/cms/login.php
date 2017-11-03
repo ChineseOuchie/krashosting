@@ -1,6 +1,7 @@
 <?php
 session_start();
 $err = 0;
+$idtype = '';
 include_once("config.php");
 
 if (isset($_SESSION['err'])){
@@ -34,9 +35,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
     if($ok) {
-		$sql = "SELECT idmedewerkers, wachtwoord FROM medewerkers WHERE bedrijfsemail = '$emaillogin' and wachtwoord = '$wachtwoordlogin'";
+		$sql = "SELECT idmedewerkers, wachtwoord, idtype FROM medewerkers WHERE bedrijfsemail = '$emaillogin' and wachtwoord = '$wachtwoordlogin'";
+		$sql2 = "SELECT idtype FROM medewerkers WHERE bedrijfsemail = '$emaillogin' and wachtwoord = '$wachtwoordlogin'";
 		$result = $db->query($sql);
+		$result2 = $db->query($sql2);
 		$row = $result->fetch_assoc();
+		while ($row2 = $result2->fetch_assoc()){
+			$idtype = $row2['idtype'];
+		}
 		$active = $row['active'];
 
 		$count = $result->num_rows;
@@ -67,6 +73,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['renewpassword'] = $row['idmedewerkers'];
         } elseif ($count == 1) {
             $_SESSION['login_user'] = $emaillogin;
+            $_SESSION['type'] = $idtype;
 
             header("location: welcome.php");
         } else {

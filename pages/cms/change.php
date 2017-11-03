@@ -1,11 +1,12 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-//session_start();
+session_start();
 include_once("config.php");
 $pakketten = $contact = $aboutus = '';
 $count = 1;
-//if (isset($_SESSION) && $_SESSION['admin']){
+if (isset($_SESSION['type'])){
+	$idtype = $_SESSION['type'];
     $sqlpakketten = 'SELECT * FROM producten';
 	$sqlcontact = 'SELECT * FROM sitecontent WHERE pagename = "contact1" OR pagename = "contact2"';
 	$sqlaboutus = 'SELECT * FROM sitecontent WHERE pagename = "about us"';
@@ -21,21 +22,21 @@ $count = 1;
         $pakketten .= $row['domeinen'] . '<br>';
         $pakketten .= $row['bandbreedte'] . '<br>';
         $pakketten .= '<a href="update.php?id=' . $row["idproducten"] . '">Update</a><br>';
-        $pakketten .= '<a href="delete.php?id=' . $row["idproducten"] . '">Delete</a></p>';
+        $pakketten .= '<a class="delete" href="delete.php?id=' . $row["idproducten"] . '">Delete</a></p>';
     }
     while($row = $rescontact->fetch_assoc()){
     	$contact .= 'Content ' . $count .':<br><br>';
     	$contact .= $row['teksten'] . '<br>';
         $contact .= '<a href="updatesitecontent.php?id=' . $row["idsitecontent"] . '">Update</a><br>';
-        $contact .= '<a href="deletesitecontent.php?id=' . $row["idsitecontent"] . '">Delete</a><br><br><br>';
+        $contact .= '<a class="delete" href="deletesitecontent.php?id=' . $row["idsitecontent"] . '">Delete</a><br><br><br>';
         $count++;
 	}
 	while($row = $resaboutus->fetch_assoc()){
     	$aboutus .= $row['teksten'] . '<br><br>';
         $aboutus .= '<a href="updatesitecontent.php?id=' . $row["idsitecontent"] . '">Update</a><br>';
-        $aboutus .= '<a href="deletesitecontent.php?id=' . $row["idsitecontent"] . '">Delete</a>';
+        $aboutus .= '<a class="delete" href="deletesitecontent.php?id=' . $row["idsitecontent"] . '">Delete</a>';
 	}
-//}
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,6 +70,15 @@ $count = 1;
 	const contactaanpassen = document.getElementById('contactaanpassen');
 	const aboutus = document.getElementById('aboutus');
 	const aboutusaanpassen = document.getElementById('aboutusaanpassen');
+	const del = document.getElementsByClassName('delete');
+
+	if (<?php echo $idtype?> == 1){
+
+	}else{
+	    for (let a = 0; del.length > a; a++){
+	        del[a].style.visibility = 'hidden';
+		}
+	}
 
 	pakketaanpassen.addEventListener('click', pakketshow);
 	contactaanpassen.addEventListener('click', contactshow);
