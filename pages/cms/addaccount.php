@@ -1,42 +1,41 @@
 <?php
-//include('config.php');
+include('config.php');
 
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$base = new mysqli('localhost', 'root', 'root', 'krashosting');
 
 $firstname = $lastname = $telephone = $bsn = $email = "";
 
 $msg = array();
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+if (isset($_POST) && $_SERVER['REQUEST_METHOD'] === 'POST'){
     if (isset($_POST['firstname'], $_POST['lastname'], $_POST['telephone'], $_POST['bsn'], $_POST['email'])){
         if (!empty($_POST['firstname']) && preg_match("/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u", $_POST['firstname'])){
-            $firstname = $base->real_escape_string($_POST['firstname']);
+            $firstname = $db->real_escape_string($_POST['firstname']);
         }else {
             $msg[] = "U bent vergeten uw voornaam in te vullen.";
         }
         if (!empty($_POST['lastname']) && preg_match("/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u", $_POST['lastname'])){
-            $lastname = $base->real_escape_string($_POST['lastname']);
+            $lastname = $db->real_escape_string($_POST['lastname']);
         }else {
             $msg[] = "U bent vergeten uw achternaam in te vullen.";
         }
         if (!empty($_POST['telephone']) && preg_match("/[0-9]{10}/", $_POST['telephone'])){
-            $telephone = $base->real_escape_string($_POST['telephone']);
+            $telephone = $db->real_escape_string($_POST['telephone']);
         }else {
             $msg[] = "U bent vergeten uw telefoonnummer in te vullen.";
         }
         if (!empty($_POST['bsn']) && preg_match("/^[0-9]{9}$/", $_POST['bsn'])){
-            $bsn = $base->real_escape_string($_POST['bsn']);
+            $bsn = $db->real_escape_string($_POST['bsn']);
         }else {
             $msg[] = "U bent vergeten uw BSN in te vullen.";
         }
         if (!empty($_POST['email'])){
             $postemail = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
-            $email = $base->real_escape_string($postemail);
+            $email = $db->real_escape_string($postemail);
         }else {
             $msg[] = "U bent vergeten uw email in te vullen.";
         }
@@ -78,7 +77,7 @@ $password = $passwordgenny[$rand];
 $sql = "INSERT INTO krashosting.medewerkers(voornaam, achternaam, telefoonnummer, bsn, email, bedrijfsemail, wachtwoord, idtype) VALUES ('$firstname', '$lastname', '$telephone', '$bsn', '$email', '$werkemail', '$password', '2');";
 
 if (count($msg) == 0){
-    $base->query($sql);
+    $db->query($sql);
     //header('location: login.php');
 }
 ?>
