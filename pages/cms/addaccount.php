@@ -76,7 +76,7 @@ $password = $passwordgenny[$rand];
 
 $sql = "INSERT INTO krashosting.medewerkers(voornaam, achternaam, telefoonnummer, bsn, email, bedrijfsemail, wachtwoord, idtype) VALUES ('$firstname', '$lastname', '$telephone', '$bsn', '$email', '$werkemail', '$password', '2');";
 
-if (count($msg) == 0){
+if (count($msg) === 0){
     $db->query($sql);
     //header('location: login.php');
 }
