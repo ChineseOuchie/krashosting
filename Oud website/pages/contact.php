@@ -12,13 +12,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Kras Hosting</title>
-    <link href="../css/main.css" rel="stylesheet" type="text/css">
-    <script src="../js/main.js" defer></script>
+    <link href="../Oud%20website/css/main.css" rel="stylesheet" type="text/css">
+    <script src="../Oud%20website/js/main.js" defer></script>
 </head>
 <body>
 <div class="container">
     <div class="banner">
-        <img class="banner" src="../img/banner.gif">
+        <img class="banner" src="../Oud%20website/img/banner.gif">
     </div>
     <nav id="nav">
         <a class="link" href="../index.php">Home</a>

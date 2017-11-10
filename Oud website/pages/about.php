@@ -13,15 +13,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Kras Hosting</title>
-    <link href="../css/main.css" rel="stylesheet" type="text/css">
+    <link href="../Oud%20website/css/main.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="initial-scale=1">
-    <script src="../js/main.js" defer></script>
+    <script src="../Oud%20website/js/main.js" defer></script>
 </head>
 <body>
 <body>
     <div class="container">
         <div class="banner">
-            <img class="banner" src="../img/banner.gif">
+            <img class="banner" src="../Oud%20website/img/banner.gif">
         </div>
         <nav id="nav">
             <a class="link" href="../index.php">Home</a>
@@ -31,8 +31,8 @@
         </nav>
     <div>
         <div class="about_img_container">
-            <img src="../img/hoofd1.jpg" class="about_img">
-            <img src="../img/hoofd2.jpg" class="about_img">
+            <img src="../Oud%20website/img/hoofd1.jpg" class="about_img">
+            <img src="../Oud%20website/img/hoofd2.jpg" class="about_img">
         </div>
         <div class="about">
             <p class="info_about">

@@ -110,7 +110,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     </style>
 
-	<script src="../../js/login.js" defer></script>
+	<script src="../../Oud%20website/js/login.js" defer></script>
 </head>
 
 <body>
