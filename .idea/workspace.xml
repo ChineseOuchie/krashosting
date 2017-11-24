@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b797fb3-b49d-49eb-9c40-23439b8748c0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/checky.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/checky.html" afterPath="$PROJECT_DIR$/pages/checky.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,69 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
-              <caret line="50" column="7" lean-forward="false" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="domeincheck.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/domeincheck.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
-              <folding>
-                <marker date="1511522032000" expanded="true" signature="19:783" ph="{...}" />
-                <marker date="1511522032000" expanded="true" signature="107:779" ph="{...}" />
-                <marker date="1511522032000" expanded="true" signature="204:631" ph="{...}" />
-                <marker date="1511522032000" expanded="true" signature="265:621" ph="{...}" />
-                <marker date="1511522032000" expanded="true" signature="310:428" ph="{...}" />
-                <marker date="1511522032000" expanded="true" signature="477:531" ph="{...}" />
-                <marker date="1511522032000" expanded="true" signature="553:607" ph="{...}" />
-                <marker date="1511522032000" expanded="true" signature="862:3898" ph="{...}" />
-                <marker date="1511522032000" expanded="true" signature="1379:1809" ph="{...}" />
-                <marker date="1511522032000" expanded="true" signature="1873:3894" ph="{...}" />
-                <marker date="1511522032000" expanded="true" signature="2041:3888" ph="{...}" />
-                <marker date="1511522032000" expanded="true" signature="2101:3591" ph="{...}" />
-                <marker date="1511522032000" expanded="true" signature="2194:2349" ph="{...}" />
-                <marker date="1511522032000" expanded="true" signature="2427:3195" ph="{...}" />
-                <marker date="1511522032000" expanded="true" signature="2500:2828" ph="{...}" />
-                <marker date="1511522032000" expanded="true" signature="2542:2665" ph="{...}" />
-                <marker date="1511522032000" expanded="true" signature="2686:2806" ph="{...}" />
-                <marker date="1511522032000" expanded="true" signature="2854:3177" ph="{...}" />
-                <marker date="1511522032000" expanded="true" signature="2896:3016" ph="{...}" />
-                <marker date="1511522032000" expanded="true" signature="3037:3155" ph="{...}" />
-                <marker date="1511522032000" expanded="true" signature="3218:3555" ph="{...}" />
-                <marker date="1511522032000" expanded="true" signature="3256:3379" ph="{...}" />
-                <marker date="1511522032000" expanded="true" signature="3400:3520" ph="{...}" />
-                <marker date="1511522032000" expanded="true" signature="3595:3878" ph="{...}" />
-                <marker date="1511522032000" expanded="true" signature="3629:3737" ph="{...}" />
-                <marker date="1511522032000" expanded="true" signature="3758:3864" ph="{...}" />
-                <marker date="1511522032000" expanded="true" signature="3902:3934" ph="//..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Downloads/KrasDesign Site/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="47" column="31" lean-forward="false" selection-start-line="43" selection-start-column="24" selection-end-line="47" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="checky.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/checky.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+            <state relative-caret-position="15">
+              <caret line="1" column="14" lean-forward="false" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -322,7 +263,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1507887044971</updated>
-      <workItem from="1511513901465" duration="1731000" />
+      <workItem from="1511513901465" duration="2732000" />
     </task>
     <task id="LOCAL-00001" summary="site checker">
       <created>1511516293400</created>
@@ -345,11 +286,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511522043098</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="site checker">
+      <created>1511522591022</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1511522591022</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1731000" />
+    <option name="totallyTimeSpent" value="2732000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1680" height="1024" extended-state="0" />
@@ -389,50 +337,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="50" column="7" lean-forward="false" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/domeincheck.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
-          <folding>
-            <marker date="1511522032000" expanded="true" signature="19:783" ph="{...}" />
-            <marker date="1511522032000" expanded="true" signature="107:779" ph="{...}" />
-            <marker date="1511522032000" expanded="true" signature="204:631" ph="{...}" />
-            <marker date="1511522032000" expanded="true" signature="265:621" ph="{...}" />
-            <marker date="1511522032000" expanded="true" signature="310:428" ph="{...}" />
-            <marker date="1511522032000" expanded="true" signature="477:531" ph="{...}" />
-            <marker date="1511522032000" expanded="true" signature="553:607" ph="{...}" />
-            <marker date="1511522032000" expanded="true" signature="862:3898" ph="{...}" />
-            <marker date="1511522032000" expanded="true" signature="1379:1809" ph="{...}" />
-            <marker date="1511522032000" expanded="true" signature="1873:3894" ph="{...}" />
-            <marker date="1511522032000" expanded="true" signature="2041:3888" ph="{...}" />
-            <marker date="1511522032000" expanded="true" signature="2101:3591" ph="{...}" />
-            <marker date="1511522032000" expanded="true" signature="2194:2349" ph="{...}" />
-            <marker date="1511522032000" expanded="true" signature="2427:3195" ph="{...}" />
-            <marker date="1511522032000" expanded="true" signature="2500:2828" ph="{...}" />
-            <marker date="1511522032000" expanded="true" signature="2542:2665" ph="{...}" />
-            <marker date="1511522032000" expanded="true" signature="2686:2806" ph="{...}" />
-            <marker date="1511522032000" expanded="true" signature="2854:3177" ph="{...}" />
-            <marker date="1511522032000" expanded="true" signature="2896:3016" ph="{...}" />
-            <marker date="1511522032000" expanded="true" signature="3037:3155" ph="{...}" />
-            <marker date="1511522032000" expanded="true" signature="3218:3555" ph="{...}" />
-            <marker date="1511522032000" expanded="true" signature="3256:3379" ph="{...}" />
-            <marker date="1511522032000" expanded="true" signature="3400:3520" ph="{...}" />
-            <marker date="1511522032000" expanded="true" signature="3595:3878" ph="{...}" />
-            <marker date="1511522032000" expanded="true" signature="3629:3737" ph="{...}" />
-            <marker date="1511522032000" expanded="true" signature="3758:3864" ph="{...}" />
-            <marker date="1511522032000" expanded="true" signature="3902:3934" ph="//..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Downloads/KrasDesign Site/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -441,10 +345,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/domeincheck.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="50" column="7" lean-forward="false" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/checky.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        <state relative-caret-position="15">
+          <caret line="1" column="14" lean-forward="false" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
           <folding />
         </state>
       </provider>
