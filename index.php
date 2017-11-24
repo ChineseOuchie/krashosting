@@ -70,10 +70,19 @@
                          <li>SSL Certificate:</li>
                          <li>Domains</li>
                          <li>Bandwidth</li>
-                         <li class="grey"><details class="button">Hier is meer info over deze pakket<summary>Meer Informatie</summary></details>
-                             <a href="#" class="button">Sign Up</a></li>
+                         <li class="grey"><a href="#" class="button">More Info</a><a href="#" class="button">Sign Up</a></li>
                      </ul>
                  </div>
+            </div>
+            <div id="nieuws">
+                <div class="slider">
+                    <div class="bericht">d</div>
+                    <div class="bericht">d</div>
+                    <div class="bericht">d</div>
+                    <div class="bericht">d</div>
+                    <div class="bericht">d</div>
+                </div>
+
             </div>
         </div>
     </div>

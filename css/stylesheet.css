@@ -42,6 +42,9 @@ table {
     border-spacing: 0;
 }
 /*CSS Start*/
+*{
+    box-sizing: border-box;
+}
 body{
     font-family: roboto, sans-serif;
 }
@@ -86,19 +89,37 @@ header{
     background-color: #f1f1f1;
 }
 #pakketten{
-    padding-top: 150px;
+    margin-top: 150px;
+}
+#nieuws{
+    width: 100%;
+    margin: 0 auto;
+    white-space: nowrap;
+}
+.bericht{
+    height: 300px;
+    width: 300px;
+    border: 1px solid black;
+    display: flex;
+    float: left;
+    margin-left: 20px;
 }
 .item{
     height:500px;
 }
+
+.slider {
+    border: 1px solid black;
+    height: 300px;
+    overflow-x: scroll;
+}
 .top{
     /*padding-top: 100px;*/
 }
-
 /*pakketten*/
 .columns {
     float: left;
-    width: 25%;
+    width: 33%;
     padding: 8px;
     padding-right: 50px;
     padding-left: 50px;
@@ -196,7 +217,7 @@ header{
 /*MediaQuery*/
 @media (max-width: 775px){
     .container{
-        display: block;
+
     }
     .container header{
         width: auto;
@@ -223,5 +244,16 @@ header{
         width: 100%;
         padding-right: 0;
         padding-left: 0;
+    }
+    #nieuws{
+        display: block;
+        /*overflow-x: scroll;*/
+    }
+    .bericht{
+        height: 300px;
+        width: 600px;
+    }
+    .item{
+        height:1300px;
     }
 }
