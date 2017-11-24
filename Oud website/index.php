@@ -41,7 +41,7 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <title>Kras Hosting</title>
-    <link href="Oud website/css/main.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
     <script src="Oud website/js/main.js" defer></script>
 </head>
     <body>

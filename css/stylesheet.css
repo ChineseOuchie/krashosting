@@ -85,11 +85,81 @@ header{
     padding-left: 30px;
     background-color: #f1f1f1;
 }
+#pakketten{
+    padding-top: 150px;
+}
 .item{
     height:500px;
 }
 .top{
-    padding-top: 100px;
+    /*padding-top: 100px;*/
+}
+
+/*pakketten*/
+.columns {
+    float: left;
+    width: 25%;
+    padding: 8px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+.columns2 {
+    float: left;
+    width: 18%;
+    padding: 8px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+/* Style the list */
+.price {
+    list-style-type: none;
+    border: 1px solid white;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+/* Add shadows on hover */
+.price:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+/* Pricing header */
+.price .header {
+    background-color: #111;
+    color: white;
+    font-size: 25px;
+}
+/* List items */
+.price li {
+    border-bottom: 1px solid white;
+    padding: 20px;
+    text-align: center;
+}
+/* Grey list item */
+.price .signupBG {
+    background-color: #eee;
+    font-size: 20px;
+}
+.button {
+    background-color: #ea3a39;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+.buttonPakketten{
+    background-color: #ea3a39;
+    border: none;
+    color: white;
+    padding: 5px 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
 }
 @keyframes progress_nl {
     0%{
@@ -145,5 +215,13 @@ header{
     }
     .over-mij{
         padding-top: 100px;
+    }
+    .top{
+        padding-top: 90px;
+    }
+    .columns{
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
     }
 }

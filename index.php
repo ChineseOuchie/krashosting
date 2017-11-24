@@ -36,14 +36,44 @@
             </div>
         </header>
         <div class="content">
-            <div id="home" class="banner item top">
+            <div id="home" class="banner top">
                 <img class="banner" src="img/banner.gif">
             </div>
             <div id="pakketten" class="item">
-                <p>bla bla </p>
-                <p>bla bla </p>
-                <p>bla bla </p>
-                <p>bla bla </p>
+                 <div class="columns">
+                     <ul class="price">
+                         <li class="header">Pakket 1</li>
+                         <li class="grey"></li>
+                         <li>GB Storage</li>
+                         <li>SSL Certificate:</li>
+                         <li>Domains</li>
+                         <li>Bandwidth</li>
+                         <li class="grey"><a href="#" class="button">More Info</a><a href="#" class="button">Sign Up</a></li>
+                     </ul>
+                 </div>
+                 <div class="columns">
+                     <ul class="price">
+                         <li class="header">Pakket 2</li>
+                         <li class="grey"></li>
+                         <li>GB Storage</li>
+                         <li>SSL Certificate:</li>
+                         <li>Domains</li>
+                         <li>Bandwidth</li>
+                         <li class="grey"><a href="#" class="button">More Info</a><a href="#" class="button">Sign Up</a></li>
+                     </ul>
+                 </div>
+                 <div class="columns">
+                     <ul class="price">
+                         <li class="header">Pakket 3</li>
+                         <li class="grey"></li>
+                         <li>GB Storage</li>
+                         <li>SSL Certificate:</li>
+                         <li>Domains</li>
+                         <li>Bandwidth</li>
+                         <li class="grey"><details class="button">Hier is meer info over deze pakket<summary>Meer Informatie</summary></details>
+                             <a href="#" class="button">Sign Up</a></li>
+                     </ul>
+                 </div>
             </div>
         </div>
     </div>
