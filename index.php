@@ -19,15 +19,15 @@
                 <li><a href="#home" id="m_home">Home</a></li>
                 <li><a href="#pakketten" id="m_pakketten">Pakketten</a></li>
                 <li><a href="#contact" id="m_contact">Contact</a></li>
-                <li><a href="#over_ons" id="m_over_Ons">Over Ons</a></li>
+                <li><a href="#over_ons" id="m_over_ons">Over Ons</a></li>
             </ul>
         </div>
         <header>
             <div class="header-position">
                 <nav class="menu">
                     <ul>
-                        <li><a href="#home" id="scroll_Home">Home</a></li>
-                        <li><a href="#pakketten" id="scroll_Pakketten">Pakketten</a></li>
+                        <li><a href="#home" id="scroll_home">Home</a></li>
+                        <li><a href="#pakketten" id="scroll_pakketten">Pakketten</a></li>
                         <li><a href="#contact" id="scroll_contact">Contact</a></li>
                         <li><a href="#over_ons" id="scroll_over_ons">Over Ons</a></li>
                     </ul>
@@ -36,11 +36,8 @@
             </div>
         </header>
         <div class="content">
-            <div id="home" class="item top">
-                <p>bla bla </p>
-                <p>bla bla </p>
-                <p>bla bla </p>
-                <p>bla bla </p>
+            <div id="home" class="banner item top">
+                <img class="banner" src="img/banner.gif">
             </div>
             <div id="pakketten" class="item">
                 <p>bla bla </p>
