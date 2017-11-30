@@ -37,7 +37,8 @@
         </header>
         <div class="content">
             <div id="home" class="banner top">
-                <img class="banner" src="img/banner.gif">
+<!--                <img class="banner" src="img/banner.gif">-->
+                <img class="banner" src="img/finish_1.jpg">
             </div>
             <div id="pakketten" class="item">
                  <div class="columns">
