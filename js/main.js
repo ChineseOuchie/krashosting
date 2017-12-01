@@ -52,3 +52,26 @@ function mobilenava() {
 }
 document.getElementById("mobile-nav-toggle").addEventListener("click", mobilenav);
 document.getElementById("mobile-nav-toggle").addEventListener("click", mobilenava);
+
+
+const container = document.getElementById('slidercontainer');
+const fotos = [
+    '../img/banner1.jpg',
+    '../img/banner2.jpg',
+    '../img/banner3.jpg'
+];
+let foto = 1;
+container.style.backgroundRepeat = "no-repeat";
+container.style.background = `url("../img/banner1.jpg") no-repeat`;
+function fotochange() {
+    setInterval(function () {
+        container.style.background = `url("${fotos[foto]}") no-repeat`;
+        console.log(container.style.background = `container.style.background = url("${fotos[foto]}") no-repeat`);
+        foto = foto + 1;
+        if (foto >= 3){
+            foto = 0;
+        }
+    }, 4000)
+
+}
+fotochange();

@@ -1,4 +1,27 @@
 <?php
+	$out = '';
+	$conn = new mysqli('localhost', 'root', 'root', 'krashosting');
+	$query = 'SELECT * FROM producten';
+	$res = $conn->query($query);
+	while($row = $res->fetch_assoc()){
+		($row['zichtbaar'] === 'true' ? $visible = 'block' : $visible = 'none');
+		$gb = $row['mb'] / 1000;
+		$ssl = $row['ssl'];
+		($ssl === 'TRUE' ? $ssl = 'Yes' : $ssl = 'No');
+
+		$out .= '<div style="display:' . $visible . '" id="pakket" class="columns">';
+		$out .= '<ul class="price">';
+		$out .= '<li class="header">' . ucfirst($row['naam']) . '</li>';
+		$out .= '<li class="grey">€' . $row['ppm'] . ' / month</li>';
+		$out .= '<li>' . $gb . 'GB Storage</li>';
+		$out .= '<li>SSL Certificate: ' . $ssl . '</li>';
+		$out .= '<li>' . $row['domeinen'] . ' Domains</li>';
+		$out .= '<li>' . ucfirst($row['bandbreedte']) . ' Bandwidth</li>';
+		$out .= '<li class="grey"><a href="#" class="buttonPakketten">Sign Up</a></li>';
+		$out .= '</ul>';
+		$out .= '</div>';
+	}
+	$conn->close();
 ?>
 <!DOCTYPE html>
 <html lang="nl">
@@ -38,42 +61,11 @@
         <div class="content">
             <div id="home" class="banner top">
 <!--                <img class="banner" src="img/banner.gif">-->
-                <img class="banner" src="img/finish_1.jpg">
+<!--                <img class="banner" src="img/banner1.jpg">-->
+                <div id="slidercontainer"> </div>
             </div>
             <div id="pakketten" class="item">
-                 <div class="columns">
-                     <ul class="price">
-                         <li class="header">Pakket 1</li>
-                         <li class="grey"></li>
-                         <li>GB Storage</li>
-                         <li>SSL Certificate:</li>
-                         <li>Domains</li>
-                         <li>Bandwidth</li>
-                         <li class="grey"><a href="#" class="button">More Info</a><a href="#" class="button">Sign Up</a></li>
-                     </ul>
-                 </div>
-                 <div class="columns">
-                     <ul class="price">
-                         <li class="header">Pakket 2</li>
-                         <li class="grey"></li>
-                         <li>GB Storage</li>
-                         <li>SSL Certificate:</li>
-                         <li>Domains</li>
-                         <li>Bandwidth</li>
-                         <li class="grey"><a href="#" class="button">More Info</a><a href="#" class="button">Sign Up</a></li>
-                     </ul>
-                 </div>
-                 <div class="columns">
-                     <ul class="price">
-                         <li class="header">Pakket 3</li>
-                         <li class="grey"></li>
-                         <li>GB Storage</li>
-                         <li>SSL Certificate:</li>
-                         <li>Domains</li>
-                         <li>Bandwidth</li>
-                         <li class="grey"><a href="#" class="button">More Info</a><a href="#" class="button">Sign Up</a></li>
-                     </ul>
-                 </div>
+                 <?php echo $out;?>
             </div>
             <div id="nieuws">
                 <div class="slider">
@@ -83,8 +75,15 @@
                     <div class="bericht">d</div>
                     <div class="bericht">d</div>
                 </div>
-
             </div>
+            <div id="over-ons">
+                <img class="hoofd" src="img/hoofd1.jpg" alt="foto1">
+                <img class="hoofd" src="img/hoofd2.jpg" alt="foto1">
+                <div class="info">trtgs</div>
+            </div>
+            <div id="contact"></div>
+            <div id="maps"></div>
+            <div id="footer"></div>
         </div>
     </div>
 </body>

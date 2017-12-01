@@ -110,6 +110,7 @@ INSERT INTO `nieuws` (`idnieuws`, `titel`, `bericht`) VALUES
 
 CREATE TABLE IF NOT EXISTS `producten` (
   `idproducten` int(11) NOT NULL,
+  `zichtbaar` VARCHAR(5) NOT NULL,
   `naam` varchar(45) NOT NULL,
   `mb` varchar(45) NOT NULL,
   `ssl` varchar(5) NOT NULL,
@@ -122,10 +123,10 @@ CREATE TABLE IF NOT EXISTS `producten` (
 -- Dumping data for table `producten`
 --
 
-INSERT INTO `producten` (`idproducten`, `naam`, `mb`, `ssl`, `ppm`, `domeinen`, `bandbreedte`) VALUES
-(1, 'starter', '2000', 'FALSE', 5, 1, '5GB'),
-(2, 'basic', '4000', 'TRUE', 10, 2, '20GB'),
-(3, 'advanced', '12000', 'TRUE', 20, 4, 'unlimited');
+INSERT INTO `producten` (`idproducten`, `zichtbaar`,`naam`, `mb`, `ssl`, `ppm`, `domeinen`, `bandbreedte`) VALUES
+(1, 'true', 'starter', '2000', 'FALSE', 5, 1, '5GB'),
+(2, 'true', 'basic', '4000', 'TRUE', 10, 2, '20GB'),
+(3, 'true', 'advanced', '12000', 'TRUE', 20, 4, 'unlimited');
 
 -- --------------------------------------------------------
 
