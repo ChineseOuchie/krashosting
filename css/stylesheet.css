@@ -205,39 +205,6 @@ header{
 }
 .info{
     width: 700px;
-    float: right;
-}
-@keyframes progress_nl {
-    0%{
-        width: 0;
-    }
-    100%{
-        width: 240px;
-    }
-}
-@keyframes progress_en {
-    0%{
-        width: 0;
-    }
-    100%{
-        width: 225px;
-    }
-}
-@keyframes progress_cn {
-    0%{
-        width: 0;
-    }
-    100%{
-        width: 150px;
-    }
-}
-@keyframes progress_kr {
-    0%{
-        width: 0;
-    }
-    100%{
-        width: 60px;
-    }
 }
 /*MediaQuery*/
 @media (max-width: 775px){
