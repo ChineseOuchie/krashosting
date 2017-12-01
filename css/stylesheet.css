@@ -64,12 +64,13 @@ h3{
     line-height: normal;
 }
 .banner{
-    width: 100%;
+    /*width: 100%;*/
+    height: 50%;
 }
 #slidercontainer{
     width: 100%;
-    height: 675px;
-    background-size: cover;
+    height: 100%;
+    background-size: contain;
     transition: 500ms ease-in-out;
 }
 /*header*/
@@ -195,7 +196,11 @@ header{
     height: 600px;
     border: 1px solid black;
     display: flex;
+}
+.hoofden{
+    display: flex;
     flex-direction: column;
+    margin-left: 35px;
 }
 .hoofd{
     width: 250px;
@@ -204,7 +209,9 @@ header{
     margin-bottom: 27px;
 }
 .info{
-    width: 700px;
+    float: left;
+    margin-left: 200px;
+    margin-top: 27px;
 }
 /*MediaQuery*/
 @media (max-width: 775px){
@@ -247,5 +254,8 @@ header{
     }
     .item{
         height:1300px;
-    }
+    }.banner{
+         height: 20%;
+     }
+
 }

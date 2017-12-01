@@ -60,9 +60,7 @@
         </header>
         <div class="content">
             <div id="home" class="banner top">
-<!--                <img class="banner" src="img/banner.gif">-->
-<!--                <img class="banner" src="img/banner1.jpg">-->
-                <div id="slidercontainer"> </div>
+                <div id="slidercontainer"></div>
             </div>
             <div id="pakketten" class="item">
                  <?php echo $out;?>
@@ -77,8 +75,10 @@
                 </div>
             </div>
             <div id="over-ons">
-                <img class="hoofd" src="img/hoofd1.jpg" alt="foto1">
-                <img class="hoofd" src="img/hoofd2.jpg" alt="foto1">
+                <div class="hoofden">
+                    <img class="hoofd" src="img/hoofd1.jpg" alt="foto1">
+                    <img class="hoofd" src="img/hoofd2.jpg" alt="foto1">
+                </div>
                 <div class="info">trtgs</div>
             </div>
             <div id="contact"></div>

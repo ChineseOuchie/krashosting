@@ -62,10 +62,11 @@ const fotos = [
 ];
 let foto = 1;
 container.style.backgroundRepeat = "no-repeat";
-container.style.background = `url("../img/banner1.jpg") no-repeat`;
+container.style.background = `url("../img/banner1.jpg") 0% 0% / contain no-repeat`;
 function fotochange() {
     setInterval(function () {
-        container.style.background = `url("${fotos[foto]}") no-repeat`;
+        container.style.background = `url("${fotos[foto]}") 0% 0% / contain no-repeat`;
+        // container.style.backgroundSize = `contain`;
         console.log(container.style.background = `container.style.background = url("${fotos[foto]}") no-repeat`);
         foto = foto + 1;
         if (foto >= 3){
