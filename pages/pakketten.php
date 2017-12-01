@@ -4,15 +4,12 @@ $conn = new mysqli('localhost', 'root', 'root', 'krashosting');
 $query = 'SELECT * FROM producten';
 $res = $conn->query($query);
 while($row = $res->fetch_assoc()){
+    ($row['zichtbaar'] === 'true' ? $visible = 'block' : $visible = 'none');
     $gb = $row['mb'] / 1000;
     $ssl = $row['ssl'];
-    if($ssl === 'TRUE'){
-        $ssl = 'Yes';
-    }else{
-        $ssl = 'No';
-    }
+	($ssl === 'TRUE' ? $ssl = 'Yes' : $ssl = 'No');
 
-    $out .= '<div class="columns2">';
+    $out .= '<div style="display:' . $visible . '" id="pakket" class="columns2">';
     $out .= '<ul class="price">';
     $out .= '<li class="header">' . ucfirst($row['naam']) . '</li>';
     $out .= '<li class="grey">€' . $row['ppm'] . ' / month</li>';
