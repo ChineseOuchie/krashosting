@@ -66,6 +66,12 @@ h3{
 .banner{
     width: 100%;
 }
+#slidercontainer{
+    width: 100%;
+    height: 675px;
+    background-size: cover;
+    transition: 500ms ease-in-out;
+}
 /*header*/
 header{
     width: 160px;
@@ -91,7 +97,7 @@ header{
 #pakketten{
     margin-top: 150px;
 }
-#nieuws{
+#nieuws {
     width: 100%;
     margin: 0 auto;
     white-space: nowrap;
@@ -182,6 +188,24 @@ header{
     text-align: center;
     text-decoration: none;
     font-size: 18px;
+}
+/*over ons*/
+#over-ons{
+    margin-top: 27px;
+    height: 600px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+.hoofd{
+    width: 250px;
+    height: 250px;
+    margin-top: 27px;
+    margin-bottom: 27px;
+}
+.info{
+    width: 700px;
+    float: right;
 }
 @keyframes progress_nl {
     0%{
