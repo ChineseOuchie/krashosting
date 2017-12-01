@@ -10,6 +10,10 @@ if (isset($_SESSION['type'])) {
         $sql = "SELECT * FROM producten WHERE idproducten = $id;";
         $res = $db->query($sql);
         while ($row = $res->fetch_assoc()) {
+			($row['zichtbaar'] === 'true' ? $checked = 'checked' : $checked = '/');
+
+            $form .= "<label for='zichtbaarheid'>Zichtbaar: </label><br>";
+            $form .= "<input id='zichtbaarheid' placeholder='true/false' type='checkbox' name='cheekybox' value='" . $row['zichtbaar'] . "' $checked><br>";
             $form .= "<label for='naam'>Naam: </label><br>";
             $form .= "<input id='naam' placeholder='naam' type='text' name='naam' value='" . $row['naam'] . "' required><br>";
             $form .= "<label for='ppm'>Prijs per maand: </label><br>";
