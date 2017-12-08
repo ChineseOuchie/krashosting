@@ -24,6 +24,9 @@ a:visited{
 .menu a:visited{
     color: black;
 }
+li a:visited{
+    color: black;
+}
 a:hover{
     color: darkgrey;
 }
@@ -89,7 +92,7 @@ li a:hover{
 }
 .mobile-nav ul{
     list-style: none;
-    margin: 0;
+    margin: 50px;
     padding: 0;
 
 }.mobile-nav li{

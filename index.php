@@ -78,11 +78,22 @@
             </div>
             <div class="nieuws">
                 <div class="slider">
-                    <div class="bericht">d</div>
-                    <div class="bericht">d</div>
-                    <div class="bericht">d</div>
-                    <div class="bericht">d</div>
-                    <div class="bericht">d</div>
+                    <div class="bericht">
+                        <h1 class="title">Title</h1>
+                        <p class="nieuwsinfo">dit is een nieuws bericht en hier moeten de items in. hbjlkasdfkhas`dglfhkjahf`c</p>
+                        <a href="#">Lees meer</a>
+                    </div>
+                    <div class="bericht">
+                        <h1 class="title">Title</h1>
+                        <p class="nieuwsinfo">dit is een nieuws bericht en hier moeten de items in. hbjlkasdfkhas`dglfhkjahf`c</p>
+                        <a href="#">Lees meer</a>
+                    </div>
+                    <div class="bericht">
+                        <h1 class="title">Title</h1>
+                        <p class="nieuwsinfo">dit is een nieuws bericht en hier moeten de items in. hbjlkasdfkhas`dglfhkjahf`c</p>
+                        <a href="#">Lees meer</a>
+                    </div>
+
                 </div>
             </div>
             <div class="over_ons">
