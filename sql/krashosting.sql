@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.15.5
--- http://www.phpmyadmin.net
+-- version 4.7.0
+-- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Nov 02, 2017 at 08:01 PM
+-- Host: localhost:3306
+-- Generation Time: Dec 08, 2017 at 10:33 AM
 -- Server version: 5.6.34-log
--- PHP Version: 7.0.13
+-- PHP Version: 7.1.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,6 +21,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `krashosting`
 --
+DROP DATABASE IF EXISTS `krashosting`;
 CREATE DATABASE IF NOT EXISTS `krashosting` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `krashosting`;
 
@@ -28,7 +31,7 @@ USE `krashosting`;
 -- Table structure for table `customproduct`
 --
 
-CREATE TABLE IF NOT EXISTS `customproduct` (
+CREATE TABLE `customproduct` (
   `idcustomproduct` int(11) NOT NULL,
   `mb` varchar(45) NOT NULL,
   `ssl` tinyint(4) NOT NULL,
@@ -42,7 +45,7 @@ CREATE TABLE IF NOT EXISTS `customproduct` (
 -- Table structure for table `klanten`
 --
 
-CREATE TABLE IF NOT EXISTS `klanten` (
+CREATE TABLE `klanten` (
   `idklanten` int(11) NOT NULL,
   `voornaam` varchar(45) NOT NULL,
   `tussenvoegsel` varchar(45) DEFAULT NULL,
@@ -58,7 +61,7 @@ CREATE TABLE IF NOT EXISTS `klanten` (
 -- Table structure for table `medewerkers`
 --
 
-CREATE TABLE IF NOT EXISTS `medewerkers` (
+CREATE TABLE `medewerkers` (
   `idmedewerkers` int(11) NOT NULL,
   `voornaam` varchar(45) NOT NULL,
   `achternaam` varchar(45) NOT NULL,
@@ -68,7 +71,7 @@ CREATE TABLE IF NOT EXISTS `medewerkers` (
   `bedrijfsemail` varchar(45) NOT NULL,
   `wachtwoord` varchar(45) NOT NULL,
   `idtype` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `medewerkers`
@@ -85,11 +88,11 @@ INSERT INTO `medewerkers` (`idmedewerkers`, `voornaam`, `achternaam`, `telefoonn
 -- Table structure for table `nieuws`
 --
 
-CREATE TABLE IF NOT EXISTS `nieuws` (
+CREATE TABLE `nieuws` (
   `idnieuws` int(100) NOT NULL,
   `titel` varchar(100) NOT NULL,
   `bericht` text NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `nieuws`
@@ -108,22 +111,22 @@ INSERT INTO `nieuws` (`idnieuws`, `titel`, `bericht`) VALUES
 -- Table structure for table `producten`
 --
 
-CREATE TABLE IF NOT EXISTS `producten` (
+CREATE TABLE `producten` (
   `idproducten` int(11) NOT NULL,
-  `zichtbaar` VARCHAR(5) NOT NULL,
+  `zichtbaar` varchar(5) NOT NULL,
   `naam` varchar(45) NOT NULL,
   `mb` varchar(45) NOT NULL,
   `ssl` varchar(5) NOT NULL,
   `ppm` int(111) NOT NULL,
   `domeinen` int(10) NOT NULL,
   `bandbreedte` varchar(20) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `producten`
 --
 
-INSERT INTO `producten` (`idproducten`, `zichtbaar`,`naam`, `mb`, `ssl`, `ppm`, `domeinen`, `bandbreedte`) VALUES
+INSERT INTO `producten` (`idproducten`, `zichtbaar`, `naam`, `mb`, `ssl`, `ppm`, `domeinen`, `bandbreedte`) VALUES
 (1, 'true', 'starter', '2000', 'FALSE', 5, 1, '5GB'),
 (2, 'true', 'basic', '4000', 'TRUE', 10, 2, '20GB'),
 (3, 'true', 'advanced', '12000', 'TRUE', 20, 4, 'unlimited');
@@ -134,21 +137,23 @@ INSERT INTO `producten` (`idproducten`, `zichtbaar`,`naam`, `mb`, `ssl`, `ppm`, 
 -- Table structure for table `sitecontent`
 --
 
-CREATE TABLE IF NOT EXISTS `sitecontent` (
+CREATE TABLE `sitecontent` (
   `idsitecontent` int(11) NOT NULL,
   `pagename` varchar(99) NOT NULL,
   `headings` varchar(99) NOT NULL,
-  `teksten` mediumtext NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+  `headings_en` varchar(99) NOT NULL,
+  `teksten` mediumtext NOT NULL,
+  `teksten_en` mediumtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `sitecontent`
 --
 
-INSERT INTO `sitecontent` (`idsitecontent`, `pagename`, `headings`, `teksten`) VALUES
-(1, 'contact1', '', 'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum'),
-(2, 'contact2', '', 'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum'),
-(3, 'about us', '', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id neque eros. Nullam condimentum et lacus sed egestas. Ut euismod enim velit, eu porta ante aliquam eget. Nam ut tristique tortor. Nam leo mi, consectetur nec neque non, vehicula efficitur massa. In et pretium lorem, et pellentesque augue. Pellentesque at eros eget lacus volutpat dignissim ac et nisi. Integer facilisis congue ipsum, eu porta felis lobortis et. Morbi volutpat facilisis tellus, sit amet feugiat diam dapibus id. Nulla placerat mi eu metus convallis, et rutrum turpis semper. Duis in dolor vitae orci eleifend mattis eu in leo. Mauris turpis eros, consequat at mi ut, dignissim vulputate sem. Nunc malesuada nisl non diam consequat, id euismod leo bibendum. Mauris felis nisl, pulvinar eu mi id, egestas porta sem. Nam ultricies purus sed suscipit rhoncus.');
+INSERT INTO `sitecontent` (`idsitecontent`, `pagename`, `headings`, `headings_en`, `teksten`, `teksten_en`) VALUES
+(1, 'contact1', '', '', 'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum', ''),
+(2, 'contact2', '', '', 'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum', ''),
+(3, 'about us', 'Over ons', 'About us', 'Meer dan 4 miljoen domeinen, 1,6 miljoen gehoste websites en 60.000 servers.\r\nKras Hosting staat voor professionele kwaliteit. Onze producten en dienstverlening worden\r\nregelmatig bekroond. Dankzij onze tevredenheidsgarantie kun je alles 30 dagen uitproberen. Ben\r\nje niet tevreden? Dan krijg je je geld terug. Je gegevens zijn bij ons zo veilig als in een kluis. Onze\r\ndatacenters zijn al meer dan 10 jaar ISO 27001-gecertificeerd.\r\nKrashosting staat 24/7 voor u klaar.', 'More then 4 million domains, 1,6 million hosted websites and 60.000 servers. Kras Hosting stands\r\nfor professional quality. Our products and services are regularly awarded. Thanks to our\r\nsatisfaction guarantee you can try everything for 30 days. Are you not satisfied? You get your\r\nmoney back. Your information is as safe with us as in a safe. Our data centers have been ISO\r\n27001 certified for over 10 years\r\nKrashosting is at your service 24/7.');
 
 -- --------------------------------------------------------
 
@@ -156,14 +161,14 @@ INSERT INTO `sitecontent` (`idsitecontent`, `pagename`, `headings`, `teksten`) V
 -- Table structure for table `type`
 --
 
-CREATE TABLE IF NOT EXISTS `type` (
+CREATE TABLE `type` (
   `idtype` int(11) NOT NULL,
   `naam` varchar(45) NOT NULL,
   `create` tinyint(4) NOT NULL,
   `read` tinyint(4) NOT NULL,
   `update` tinyint(4) NOT NULL,
   `delete` tinyint(4) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `type`
@@ -239,27 +244,27 @@ ALTER TABLE `klanten`
 -- AUTO_INCREMENT for table `medewerkers`
 --
 ALTER TABLE `medewerkers`
-  MODIFY `idmedewerkers` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=25;
+  MODIFY `idmedewerkers` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT for table `nieuws`
 --
 ALTER TABLE `nieuws`
-  MODIFY `idnieuws` int(100) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+  MODIFY `idnieuws` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `producten`
 --
 ALTER TABLE `producten`
-  MODIFY `idproducten` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `idproducten` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `sitecontent`
 --
 ALTER TABLE `sitecontent`
-  MODIFY `idsitecontent` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `idsitecontent` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `type`
 --
 ALTER TABLE `type`
-  MODIFY `idtype` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `idtype` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- Constraints for dumped tables
 --
@@ -275,6 +280,7 @@ ALTER TABLE `klanten`
 --
 ALTER TABLE `medewerkers`
   ADD CONSTRAINT `type` FOREIGN KEY (`idtype`) REFERENCES `type` (`idtype`) ON UPDATE CASCADE;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
