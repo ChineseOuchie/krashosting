@@ -194,9 +194,10 @@ header{
 /*over ons*/
 .over_ons{
     margin-top: 27px;
-    height: 600px;
+    /*height: 600px;*/
     border: 1px solid black;
     display: flex;
+    flex-wrap: wrap;
 }
 .hoofden{
     display: flex;
@@ -221,9 +222,6 @@ header{
 }
 /*MediaQuery*/
 @media (max-width: 775px){
-    .container{
-
-    }
     .container header{
         width: auto;
         padding: 20px 0;
@@ -264,4 +262,10 @@ header{
     .banner{
          height: 60vw;
      }
+    .hoofden{
+        width: 100%;
+    }
+    .info{
+        margin-left: 35px;
+    }
 }
