@@ -58,7 +58,7 @@
         </div>
         <header>
             <div class="header-position">
-                <img src="img/logo.png" class="logo">
+                <div class="logo"></div>
                 <nav class="menu">
                     <ul>
                         <li><a href="#home" id="scroll_home">Home</a></li>
