@@ -32,7 +32,7 @@
     <meta name="author" content="Joey Lau">
     <script src="js/smoothscroll.js" type="text/javascript" defer></script>
     <script src="js/main.js" type="text/javascript" defer></script>
-    <script src="js/domeincheck.js" type="text/javascript"></script>
+    <script src="js/domeincheck.js" type="text/javascript" defer></script>
     <link href="css/stylesheet.css" type="text/css" rel="stylesheet">
     <link href="css/nav.css" type="text/css" rel="stylesheet">
 </head>
@@ -61,20 +61,20 @@
             </div>
         </header>
         <div class="content">
-            <div id="home" class="banner top">
+            <div class="banner top home">
                 <div id="slidercontainer"></div>
             </div>
-            <div id="domainCheck">
+            <div class="domainCheck">
                 <form action="" method="post" class="domaincheck">
                     <input type="text" title="Check your domain here" name="domain" placeholder=" Check hier voor een domeinnaam">
                     <input type="submit" name="submited" title="Check domain" value="CHECK">
                     <div class="domaincheck_msg"><span class="msg"></span><span class="icon"></span></div>
                 </form>
             </div>
-            <div id="pakketten" class="item">
+            <div class="pakketten" class="item">
                  <?php echo $out;?>
             </div>
-            <div id="nieuws">
+            <div class="nieuws">
                 <div class="slider">
                     <div class="bericht">d</div>
                     <div class="bericht">d</div>
@@ -83,16 +83,16 @@
                     <div class="bericht">d</div>
                 </div>
             </div>
-            <div id="over-ons">
+            <div class="over_ons">
                 <div class="hoofden">
                     <img class="hoofd" src="img/hoofd1.jpg" alt="foto1">
                     <img class="hoofd" src="img/hoofd2.jpg" alt="foto1">
                 </div>
                 <div class="info">trtgs</div>
             </div>
-            <div id="contact">contact</div>
-            <div id="maps"></div>
-            <div id="footer"></div>
+            <div class="contact">contact</div>
+            <div class="maps"></div>
+            <div class="footer"></div>
         </div>
     </div>
 </body>
