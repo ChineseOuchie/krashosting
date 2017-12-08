@@ -192,7 +192,7 @@ header{
     font-size: 18px;
 }
 /*over ons*/
-.over-ons{
+.over_ons{
     margin-top: 27px;
     height: 600px;
     border: 1px solid black;
@@ -215,7 +215,7 @@ header{
     margin-top: 27px;
 }
 /*contact*/
-#contact{
+.contact{
     height: 600px;
     margin-top: 25px;
 }
