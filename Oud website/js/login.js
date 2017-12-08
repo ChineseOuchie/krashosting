@@ -12,7 +12,7 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 };
-if (x === 2){
+if (x === 2) {
     container.innerHTML = '';
     modal.style.display = "block";
     email.style.display = "block";
