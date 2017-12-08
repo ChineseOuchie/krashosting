@@ -3,7 +3,6 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-include 'formvalidator.php';
 
 //PHP code voor de controle van het bestel formulier van een particuliere besteller
 

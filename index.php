@@ -32,6 +32,7 @@
     <meta name="author" content="Joey Lau">
     <script src="js/smoothscroll.js" type="text/javascript" defer></script>
     <script src="js/main.js" type="text/javascript" defer></script>
+    <script src="js/domeincheck.js" type="text/javascript"></script>
     <link href="css/stylesheet.css" type="text/css" rel="stylesheet">
     <link href="css/nav.css" type="text/css" rel="stylesheet">
 </head>
@@ -62,6 +63,13 @@
         <div class="content">
             <div id="home" class="banner top">
                 <div id="slidercontainer"></div>
+            </div>
+            <div id="domainCheck">
+                <form action="" method="post" class="domaincheck">
+                    <input type="text" title="Check your domain here" name="domain" placeholder=" Check hier voor een domeinnaam">
+                    <input type="submit" name="submited" title="Check domain" value="CHECK">
+                    <div class="domaincheck_msg"><span class="msg"></span><span class="icon"></span></div>
+                </form>
             </div>
             <div id="pakketten" class="item">
                  <?php echo $out;?>
