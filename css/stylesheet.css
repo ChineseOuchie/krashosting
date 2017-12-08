@@ -306,4 +306,7 @@ header{
     .slider{
         padding: 0;
     }
+    .menu, .copyright{
+        display: none;
+    }
 }

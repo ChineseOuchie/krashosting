@@ -68,6 +68,7 @@
                         <li><a href="#contact" id="scroll_contact">Contact</a></li>
                     </ul>
                 </nav>
+                <a href="#" class="copyright"></a>
                 <div class="mobile-nav-toggle" id="mobile-nav-toggle"><span></span></div>
             </div>
         </header>
