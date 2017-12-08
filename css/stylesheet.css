@@ -60,12 +60,13 @@ h3{
 }
 .container{
     display: flex;
-    min-height: 100vh;
+    /*min-height: 100vh;*/
     line-height: normal;
+    background-color: #f1f1f1;
 }
 .banner{
     /*width: 100%;*/
-    height: 50%;
+    height: 50vw;
 }
 #slidercontainer{
     width: 100%;
@@ -93,7 +94,7 @@ header{
     flex: 1;
     padding-right: 30px;
     padding-left: 30px;
-    background-color: #f1f1f1;
+    height: 100%;
 }
 #pakketten{
     margin-top: 150px;
@@ -213,6 +214,11 @@ header{
     margin-left: 200px;
     margin-top: 27px;
 }
+/*contact*/
+#contact{
+    height: 600px;
+    margin-top: 25px;
+}
 /*MediaQuery*/
 @media (max-width: 775px){
     .container{
@@ -254,8 +260,8 @@ header{
     }
     .item{
         height:1300px;
-    }.banner{
-         height: 20%;
+    }
+    .banner{
+         height: 60vw;
      }
-
 }

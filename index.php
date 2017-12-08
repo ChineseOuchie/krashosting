@@ -51,6 +51,7 @@
                     <ul>
                         <li><a href="#home" id="scroll_home">Home</a></li>
                         <li><a href="#pakketten" id="scroll_pakketten">Pakketten</a></li>
+                        <li><a href="#nieuws" id="scroll_nieuws">Nieuwsbericht</a></li>
                         <li><a href="#contact" id="scroll_contact">Contact</a></li>
                         <li><a href="#over_ons" id="scroll_over_ons">Over Ons</a></li>
                     </ul>
@@ -81,7 +82,7 @@
                 </div>
                 <div class="info">trtgs</div>
             </div>
-            <div id="contact"></div>
+            <div id="contact">contact</div>
             <div id="maps"></div>
             <div id="footer"></div>
         </div>
