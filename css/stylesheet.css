@@ -96,10 +96,10 @@ header{
     padding-left: 30px;
     height: 100%;
 }
-#pakketten{
+.pakketten{
     margin-top: 150px;
 }
-#nieuws {
+.nieuws {
     width: 100%;
     margin: 0 auto;
     white-space: nowrap;
@@ -192,7 +192,7 @@ header{
     font-size: 18px;
 }
 /*over ons*/
-#over-ons{
+.over-ons{
     margin-top: 27px;
     height: 600px;
     border: 1px solid black;
@@ -250,7 +250,7 @@ header{
         padding-right: 0;
         padding-left: 0;
     }
-    #nieuws{
+    .nieuws{
         display: block;
         /*overflow-x: scroll;*/
     }
