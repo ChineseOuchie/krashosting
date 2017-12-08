@@ -1,4 +1,4 @@
-function ping(url) { //ping functie geleverd door dennis
+function ping(url) {
     return new Promise(function (resolve, reject) {
         const xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function () {
