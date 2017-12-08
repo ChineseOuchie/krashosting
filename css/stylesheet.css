@@ -238,8 +238,8 @@ header{
         display: none;
     }
     .logo{
-        max-width: 135px;
-        height:45px;
+        width: 100px;
+        height: 100px;
     }
     .content{
         padding-left: 50px;
