@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () { //start script pas n
                 }); //eind ping code   
             }else{
                 if(taal === "nl"){
-                    domain_check_msg(url + ' is geen geldige url!.', '&#10008;', 'red');
+                    domain_check_msg(url + ' is geen geldige url!', '&#10008;', 'red');
                 }else if(taal === "en"){
                     domain_check_msg(url + ' is not a valid url!', '&#10008;', 'red');
                 }
