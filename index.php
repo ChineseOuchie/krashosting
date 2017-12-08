@@ -45,12 +45,11 @@
                 <li><a href="#nieuws" id="m_nieuwsbericht">Nieuwsbericht</a></li>
                 <li><a href="#over_ons" id="m_over_ons">Over Ons</a></li>
                 <li><a href="#contact" id="m_contact">Contact</a></li>
-
-
             </ul>
         </div>
         <header>
             <div class="header-position">
+                <img src="img/logo.png" class="logo">
                 <nav class="menu">
                     <ul>
                         <li><a href="#home" id="scroll_home">Home</a></li>
@@ -91,7 +90,12 @@
                     <img class="hoofd" src="img/hoofd1.jpg" alt="foto1">
                     <img class="hoofd" src="img/hoofd2.jpg" alt="foto1">
                 </div>
-                <div class="info">trtgs</div>
+                <div class="info"><p> Meer dan 4 miljoen domeinen, 1,6 miljoen gehoste websites en 60.000 servers.
+                        Kras Hosting staat voor professionele kwaliteit. Onze producten en dienstverlening worden
+                        regelmatig bekroond. Dankzij onze tevredenheidsgarantie kun je alles 30 dagen uitproberen. Ben
+                        je niet tevreden? Dan krijg je je geld terug. Je gegevens zijn bij ons zo veilig als in een kluis. Onze
+                        datacenters zijn al meer dan 10 jaar ISO 27001-gecertificeerd.
+                        Krashosting staat 24/7 voor u klaar.</p></div>
             </div>
             <div class="contact">contact</div>
             <div class="maps"></div>

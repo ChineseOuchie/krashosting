@@ -19,6 +19,9 @@ a{
 }
 a:visited{
     text-decoration: none;
+    color: white;
+}
+.menu a:visited{
     color: black;
 }
 a:hover{
