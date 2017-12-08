@@ -1,9 +1,15 @@
 <?php
-	$out = '';
+	include_once('cms/config.php');
+
+	$aboutus = $out = '';
 	$conn = new mysqli('localhost', 'root', 'root', 'krashosting');
-	$query = 'SELECT * FROM producten';
-	$res = $conn->query($query);
-	while($row = $res->fetch_assoc()){
+	$querypakketten = 'SELECT * FROM producten';
+	$queryaboutus = 'SELECT * FROM sitecontent WHERE pagename = "about us"';
+
+	$respakketten = $conn->query($querypakketten);
+	$resaboutus = $db->query($queryaboutus);
+
+	while($row = $respakketten->fetch_assoc()){
 		($row['zichtbaar'] === 'true' ? $visible = 'block' : $visible = 'none');
 		$gb = $row['mb'] / 1000;
 		$ssl = $row['ssl'];
@@ -20,6 +26,9 @@
 		$out .= '<li class="grey"><a href="#" class="buttonPakketten">Sign Up</a></li>';
 		$out .= '</ul>';
 		$out .= '</div>';
+	}
+	while($row = $resaboutus->fetch_assoc()){
+		$aboutus .= '<p>' . $row['teksten'] . '</p>';
 	}
 	$conn->close();
 ?>
@@ -101,12 +110,9 @@
                     <img class="hoofd" src="img/hoofd1.jpg" alt="foto1">
                     <img class="hoofd" src="img/hoofd2.jpg" alt="foto1">
                 </div>
-                <div class="info"><p> Meer dan 4 miljoen domeinen, 1,6 miljoen gehoste websites en 60.000 servers.
-                        Kras Hosting staat voor professionele kwaliteit. Onze producten en dienstverlening worden
-                        regelmatig bekroond. Dankzij onze tevredenheidsgarantie kun je alles 30 dagen uitproberen. Ben
-                        je niet tevreden? Dan krijg je je geld terug. Je gegevens zijn bij ons zo veilig als in een kluis. Onze
-                        datacenters zijn al meer dan 10 jaar ISO 27001-gecertificeerd.
-                        Krashosting staat 24/7 voor u klaar.</p></div>
+                <div class="info">
+                    <?php echo $aboutus;?>
+				</div>
             </div>
             <div class="contact">contact</div>
             <div class="maps"></div>
