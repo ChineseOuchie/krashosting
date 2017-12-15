@@ -76,3 +76,7 @@ function fotochange() {
 
 }
 fotochange();
+
+let extraStarter = document.getElementById('extraStarter');
+let extraBasic = document.getElementById('extraBasic');
+let extraAdvanced = document.getElementById('extraAdvanced');

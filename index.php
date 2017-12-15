@@ -23,6 +23,7 @@
 		$out .= '<li>' . $row['domeinen'] . ' Domains</li>';
 		$out .= '<li>' . ucfirst($row['bandbreedte']) . ' Bandwidth</li>';
 		$out .= '<li class="grey"><a href="#" class="buttonPakketten">Sign Up</a></li>';
+		$out .= '<li class="grey"><div id="'.$row['naam'] .'" class="buttonPakketten">Detail</a></li>';
 		$out .= '</ul>';
 		$out .= '</div>';
 	}
