@@ -42,8 +42,13 @@ table {
     border-spacing: 0;
 }
 /*CSS Start*/
+@font-face {
+    font-family: Roboto;
+    src: url(../font/roboto-regular.ttf);
+}
 *{
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 body{
     font-family: roboto, sans-serif;
