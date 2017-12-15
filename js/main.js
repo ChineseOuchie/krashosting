@@ -58,7 +58,9 @@ const container = document.getElementById('slidercontainer');
 const fotos = [
     '../img/banner1.jpg',
     '../img/banner2.jpg',
-    '../img/banner3.jpg'
+    '../img/banner3.jpg',
+    '../img/banner4.jpg',
+    '../img/banner5.jpg'
 ];
 let foto = 1;
 container.style.backgroundRepeat = "no-repeat";
@@ -67,9 +69,9 @@ function fotochange() {
     setInterval(function () {
         container.style.background = `url("${fotos[foto]}") 0% 0% / contain no-repeat`;
         // container.style.backgroundSize = `contain`;
-        // console.log(container.style.background = `container.style.background = url("${fotos[foto]}") no-repeat`);
+        console.log(container.style.background = `container.style.background = url("${fotos[foto]}") no-repeat`);
         foto = foto + 1;
-        if (foto >= 3){
+        if (foto >= 5){
             foto = 0;
         }
     }, 4000)
