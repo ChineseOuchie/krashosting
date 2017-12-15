@@ -101,3 +101,9 @@ advancedKnop.addEventListener('click', function () {
     extraAdvanced.style.display = 'block';
     extraBasic.style.display = 'none';
 });
+if (refresh !== false){
+    // document.location.replace(Location.href + '?taal=' + document.documentElement.lang);
+    document.location.replace('index.php?taal=' + document.documentElement.lang);
+}else{
+    document.getElementsByTagName('body')[0].innerHTML = 'werkt nie';
+}
