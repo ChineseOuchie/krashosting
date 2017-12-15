@@ -2,42 +2,34 @@ function home() {
     window.scroll({
         top: 0,
         behavior: 'smooth'
-    });
+    })
 }
 function pakketten() {
     window.scroll({
-        top: 900,
+        top: 500,
         behavior: 'smooth'
-    });
-}
-function nieuwsberichten() {
-    window.scroll({
-        top: 1300,
-        behavior: 'smooth'
-    });
+    })
 }
 function contact() {
     window.scroll({
-        top: 2300,
+        top: 1000,
         behavior: 'smooth'
-    });
+    })
 }
 function over_ons() {
     window.scroll({
-        top: 1700,
+        top: 1500,
         behavior: 'smooth'
-    });
+    })
 }
 document.getElementById('scroll_home').addEventListener('click', home);
 document.getElementById('scroll_pakketten').addEventListener('click', pakketten);
 document.getElementById('scroll_contact').addEventListener('click', contact);
-document.getElementById('scroll_nieuws').addEventListener('click', nieuwsberichten);
 document.getElementById('scroll_over_ons').addEventListener('click', over_ons);
 
 document.getElementById('m_home').addEventListener('click', home);
 document.getElementById('m_pakketten').addEventListener('click', pakketten);
 document.getElementById('m_contact').addEventListener('click', contact);
-document.getElementById('m_nieuwsbericht').addEventListener('click', nieuwsberichten);
 document.getElementById('m_over_ons').addEventListener('click', over_ons);
 
 function mobilenav() {
@@ -66,23 +58,21 @@ const container = document.getElementById('slidercontainer');
 const fotos = [
     '../img/banner1.jpg',
     '../img/banner2.jpg',
-    '../img/banner3.jpg',
-    '../img/banner4.jpg',
-    '../img/banner5.jpg'
+    '../img/banner3.jpg'
 ];
-
 let foto = 1;
 container.style.backgroundRepeat = "no-repeat";
 container.style.background = `url("../img/banner1.jpg") 0% 0% / contain no-repeat`;
-
 function fotochange() {
     setInterval(function () {
         container.style.background = `url("${fotos[foto]}") 0% 0% / contain no-repeat`;
+        // container.style.backgroundSize = `contain`;
+        console.log(container.style.background = `container.style.background = url("${fotos[foto]}") no-repeat`);
         foto = foto + 1;
-        if (foto >= 5){
+        if (foto >= 3){
             foto = 0;
         }
-    }, 6000)
+    }, 4000)
 
 }
 fotochange();

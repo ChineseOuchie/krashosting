@@ -28,7 +28,7 @@
 		$out .= '</div>';
 	}
 	while($row = $resaboutus->fetch_assoc()){
-		$aboutus .= '<p>' . $row['teksten'] . '</p>';
+		$aboutus .= '<p>' . $row['teksten' . $taal] . '</p>';
 	}
 	$conn->close();
 ?>
