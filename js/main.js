@@ -80,3 +80,10 @@ fotochange();
 let extraStarter = document.getElementById('extraStarter');
 let extraBasic = document.getElementById('extraBasic');
 let extraAdvanced = document.getElementById('extraAdvanced');
+
+if (refresh !== false){
+    // document.location.replace(Location.href + '?taal=' + document.documentElement.lang);
+    document.location.replace('index.php?taal=' + document.documentElement.lang);
+}else{
+    document.getElementsByTagName('body')[0].innerHTML = 'werkt nie';
+}

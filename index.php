@@ -1,7 +1,24 @@
 <?php
 	include_once('cms/config.php');
-	$aboutus = $out = $taal = '';
-	($taal === 'nl' ? $taal = '' :($taal === 'en' ? $taal = '_en' : $taal = ''));
+	session_start();
+	$aboutus = $out = '';
+	if (isset($_GET['taal']) && $_SERVER['REQUEST_METHOD'] === 'GET'){
+		$taal = $_GET['taal'];
+		if ($taal === 'nl'){
+			$taal = '';
+			$_SESSION['taal'] = 'nl';
+		}elseif ($taal === 'en'){
+			$taal = '_en';
+			$_SESSION['taal'] = 'en';
+		}else{
+			$taal = '';
+		}
+	}
+	if (isset($_SESSION['taal'])){
+		$script = '<script>let refresh = false;</script>';
+	}else{
+		$script = '';
+	}
 	$conn = new mysqli('localhost', 'root', 'root', 'krashosting');
 	$querypakketten = 'SELECT * FROM producten';
 	$queryaboutus = 'SELECT * FROM sitecontent WHERE pagename = "about us"';
@@ -34,12 +51,13 @@
 	$conn->close();
 ?>
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
     <title>Krashosting</title>
     <meta name="viewport" content="initial-scale=1">
     <meta name="description" content="Krashosting">
     <meta name="author" content="Joey Lau">
+	<?php echo $script;?>
     <script src="js/smoothscroll.js" type="text/javascript" defer></script>
     <script src="js/main.js" type="text/javascript" defer></script>
     <script src="js/domeincheck.js" type="text/javascript" defer></script>
