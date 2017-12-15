@@ -14,7 +14,7 @@ function ping(url) { //ping functie geleverd door dennis
                     reject(false);
                 }
             }
-        }
+        };
         xmlhttp.open("GET", 'http://www.dennisvanriet.nl/ping/ping_ws.php?url=' + url + '&t=' + Math.random(), true);
         xmlhttp.send();
     });
