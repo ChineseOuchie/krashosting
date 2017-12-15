@@ -1,6 +1,7 @@
 <?php
 	include_once('cms/config.php');
 	$aboutus = $out = $taal = '';
+	($taal === 'nl' ? $taal = '' :($taal === 'en' ? $taal = '_en' : $taal = ''));
 	$conn = new mysqli('localhost', 'root', 'root', 'krashosting');
 	$querypakketten = 'SELECT * FROM producten';
 	$queryaboutus = 'SELECT * FROM sitecontent WHERE pagename = "about us"';
@@ -23,7 +24,7 @@
 		$out .= '<li>' . $row['domeinen'] . ' Domains</li>';
 		$out .= '<li>' . ucfirst($row['bandbreedte']) . ' Bandwidth</li>';
 		$out .= '<li class="grey"><a href="#" class="buttonPakketten">Sign Up</a></li>';
-		$out .= '<li class="grey"><div id="'.$row['naam'] .'" class="buttonPakketten">Detail</a></li>';
+		$out .= '<li class="grey"><div id="' . $row['naam'] . '" class="buttonPakketten">Detail</a></li>';
 		$out .= '</ul>';
 		$out .= '</div>';
 	}
