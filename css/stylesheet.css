@@ -108,6 +108,7 @@ header{
 }
 .pakketten{
     margin-top: 150px;
+    display: flex;
 }
 .nieuws {
     width: 100%;
@@ -151,7 +152,7 @@ header{
     /*border: 1px solid black;*/
     height: 300px;
     /*width:100%;*/
-    overflow-x: scroll;
+    overflow-x: hidden;
     padding-left: 100px;
 }
 .top{
@@ -159,7 +160,7 @@ header{
 }
 /*pakketten*/
 .columns {
-    float: left;
+    /*float: left;*/
     width: 33%;
     padding: 8px;
     padding-right: 50px;
@@ -180,6 +181,8 @@ header{
     padding: 0;
     -webkit-transition: 0.3s;
     transition: 0.3s;
+
+    flex: 1;
 }
 
 /* Add shadows on hover */
@@ -252,7 +255,18 @@ header{
     height: 600px;
     margin-top: 25px;
 }
+.extra{
+    border: 1px solid black;
+}
 
+
+#custom{
+    margin-top: 700px;
+    margin-bottom: 100px;
+    text-align: center;
+    height: 50px;
+    border: 1px solid black;
+}
 /*MediaQuery*/
 @media (max-width: 775px){
     .container header{
@@ -305,5 +319,8 @@ header{
     }
     .slider{
         padding: 0;
+    }
+    .menu, .copyright{
+        display: none;
     }
 }
