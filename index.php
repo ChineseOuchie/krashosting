@@ -1,7 +1,6 @@
 <?php
 	include_once('cms/config.php');
-
-	$aboutus = $out = '';
+	$aboutus = $out = $taal = '';
 	$conn = new mysqli('localhost', 'root', 'root', 'krashosting');
 	$querypakketten = 'SELECT * FROM producten';
 	$queryaboutus = 'SELECT * FROM sitecontent WHERE pagename = "about us"';
