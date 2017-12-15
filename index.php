@@ -10,7 +10,7 @@
 	$resaboutus = $db->query($queryaboutus);
 
 	while($row = $respakketten->fetch_assoc()){
-		($row['zichtbaar'] === 'true' ? $visible = 'block' : $visible = 'none');
+		($row['zichtbaar'] === 'true' ? $visible = 'flex' : $visible = 'none');
 		$gb = $row['mb'] / 1000;
 		$ssl = $row['ssl'];
 		($ssl === 'TRUE' ? $ssl = 'Yes' : $ssl = 'No');
@@ -86,6 +86,10 @@
             <div class="pakketten" class="item">
                  <?php echo $out;?>
             </div>
+            <div id="extraStarter" class="extra">1</div>
+            <div id="extraBasic" class="extra">1</div>
+            <div id="extraAdvanced" class="extra">1</div>
+            <div id="custom">Bel ons of Mail ons voor een custom pakket</div>
             <div class="nieuws">
                 <div class="slider">
                     <div class="bericht">
