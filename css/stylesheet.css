@@ -267,6 +267,19 @@ header{
     height: 50px;
     border: 1px solid black;
 }
+#starter{
+    cursor: pointer;
+}
+#extraStarter{
+    visibility: visible;
+}
+#extraBasic{
+    visibility: visible;
+}
+#extraAdvanced{
+    visibility: visible;
+
+}
 /*MediaQuery*/
 @media (max-width: 775px){
     .container header{

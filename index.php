@@ -86,9 +86,9 @@
             <div class="pakketten" class="item">
                  <?php echo $out;?>
             </div>
-            <div id="extraStarter" class="extra">1</div>
-            <div id="extraBasic" class="extra">1</div>
-            <div id="extraAdvanced" class="extra">1</div>
+            <div id="extraStarter" class="extra">starter</div>
+            <div id="extraBasic" class="extra">basic</div>
+            <div id="extraAdvanced" class="extra">advanced</div>
             <div id="custom">Bel ons of Mail ons voor een custom pakket</div>
             <div class="nieuws">
                 <div class="slider">
@@ -107,7 +107,6 @@
                         <p class="nieuwsinfo">dit is een nieuws bericht en hier moeten de items in. hbjlkasdfkhas`dglfhkjahf`c</p>
                         <a href="#">Lees meer</a>
                     </div>
-
                 </div>
             </div>
             <div class="over_ons">
