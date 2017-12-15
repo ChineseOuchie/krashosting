@@ -15,9 +15,9 @@
 		}
 	}
 	if (isset($_SESSION['taal'])){
-		$script = '<script>let refresh = false;</script>';
+		$script = '<script>const refresh = false;</script>';
 	}else{
-		$script = '';
+		$script = '<script>const refresh = true;</script>';
 	}
 	$conn = new mysqli('localhost', 'root', 'root', 'krashosting');
 	$querypakketten = 'SELECT * FROM producten';
@@ -51,7 +51,7 @@
 	$conn->close();
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <title>Krashosting</title>
     <meta name="viewport" content="initial-scale=1">
@@ -66,6 +66,10 @@
 </head>
 <body>
     <div class="container">
+		<div id="vertalen">
+			<div id="nederlands"></div>
+			<div id="engels"></div>
+		</div>
         <div class="mobile-nav" id="mobile-nav">
             <ul>
                 <li><a href="#home" id="m_home">Home</a></li>
