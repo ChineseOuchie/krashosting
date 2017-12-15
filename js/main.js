@@ -67,7 +67,7 @@ function fotochange() {
     setInterval(function () {
         container.style.background = `url("${fotos[foto]}") 0% 0% / contain no-repeat`;
         // container.style.backgroundSize = `contain`;
-        console.log(container.style.background = `container.style.background = url("${fotos[foto]}") no-repeat`);
+        // console.log(container.style.background = `container.style.background = url("${fotos[foto]}") no-repeat`);
         foto = foto + 1;
         if (foto >= 3){
             foto = 0;
@@ -101,9 +101,19 @@ advancedKnop.addEventListener('click', function () {
     extraAdvanced.style.display = 'block';
     extraBasic.style.display = 'none';
 });
-if (refresh || window.location.href !== 'http://localhost/index.php?taal=' + document.documentElement.lang){
-    // document.location.replace(Location.href + '?taal=' + document.documentElement.lang);
-    document.location.replace('index.php?taal=' + document.documentElement.lang);
-}else {
 
+//taal veranderen js
+function checktaal() {
+    if (refresh || window.location.href !== 'http://localhost/index.php?taal=' + document.documentElement.lang){
+        // document.location.replace(Location.href + '?taal=' + document.documentElement.lang);
+        document.location.replace('index.php?taal=' + document.documentElement.lang);
+    }
 }
+checktaal();
+
+document.getElementById('nederlands').addEventListener('click', () => {
+    document.location.replace('index.php?lang=nl');
+});
+document.getElementById('engels').addEventListener('click', () => {
+    document.location.replace('index.php?lang=en');
+});

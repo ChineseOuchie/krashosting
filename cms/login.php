@@ -92,7 +92,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="nl">
 <head>
     <title>Login Page</title>
-	<link rel="stylesheet" type="text/css" href="../../css/login.css">
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
     <style type = "text/css">
         body {
             font-family:Arial, Helvetica, sans-serif;
@@ -109,7 +109,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             border:#666666 solid 1px;
         }
     </style>
-	<script src="../../js/login.js" defer></script>
+	<script src="../js/login.js" defer></script>
 </head>
 
 <body>

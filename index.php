@@ -2,7 +2,14 @@
 	include_once('cms/config.php');
 	session_start();
 	$aboutus = $out = '';
-	if (isset($_GET['taal']) && $_SERVER['REQUEST_METHOD'] === 'GET'){
+	$lang = 'nl';
+	if (isset($_GET['lang']) && $_SERVER['REQUEST_METHOD'] === 'GET'){
+			$lang = $_SESSION['lang'] = $_GET['lang'];
+ 	}
+	if (isset($_SESSION['lang'])){
+        $lang = $_SESSION['lang'];
+    }
+	if (isset($_GET['taal']) && !empty($_GET['taal']) && $_SERVER['REQUEST_METHOD'] === 'GET'){
 		$taal = $_GET['taal'];
 		if ($taal === 'nl'){
 			$taal = '';
@@ -49,9 +56,10 @@
 		$aboutus .= '<p>' . $row['teksten' . $taal] . '</p>';
 	}
 	$conn->close();
+//	session_destroy();
 ?>
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="<?php echo $lang?>">
 <head>
     <title>Krashosting</title>
     <meta name="viewport" content="initial-scale=1">
