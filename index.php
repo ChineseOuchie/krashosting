@@ -119,7 +119,28 @@
                     <?php echo $aboutus;?>
 				</div>
             </div>
-            <div class="contact">contact</div>
+            <div class="contact">
+                <form action="/message_send.html">
+                    <label for="voornaam">Voornaam</label>
+                    <input type="text" id="voornaam" name="firstname" placeholder="Voornaam...">
+
+                    <label for="achternaam">Achternaam</label>
+                    <input type="text" id="achternaam" name="lastname" placeholder="Achternaam...">
+
+                    <label for="onderwerp">Onderwerp</label>
+                    <select id="onderwerp" name="onderwerp">
+                        <option value="Kies een optie">Kies een optie...</option>
+                        <option value="Custom pakket">Custom pakket</option>
+                        <option value="Algemene informatie">Algemene informatie</option>
+                        <option value="Anders namelijk...">Anders namelijk...</option>
+                    </select>
+
+                    <label for="bericht">Bericht</label>
+                    <textarea id="bericht" name="bericht" placeholder="Plaats uw bericht..." style="height:200px"></textarea>
+
+                    <input type="submit" value="Verzenden">
+                </form>
+            </div>
             <div class="maps"></div>
             <div class="footer"></div>
         </div>
