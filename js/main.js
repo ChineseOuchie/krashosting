@@ -81,9 +81,23 @@ let extraStarter = document.getElementById('extraStarter');
 let extraBasic = document.getElementById('extraBasic');
 let extraAdvanced = document.getElementById('extraAdvanced');
 
-if (refresh !== false){
-    // document.location.replace(Location.href + '?taal=' + document.documentElement.lang);
-    document.location.replace('index.php?taal=' + document.documentElement.lang);
-}else{
-    document.getElementsByTagName('body')[0].innerHTML = 'werkt nie';
-}
+let starterKnop = document.getElementById('starter');
+let basicKnop = document.getElementById('basic');
+let advancedKnop = document.getElementById('advanced');
+
+starterKnop.addEventListener('click', function () {
+    extraStarter.style.display = 'block';
+    extraAdvanced.style.display = 'none';
+    extraBasic.style.display = 'none';
+
+});
+basicKnop.addEventListener('click', function () {
+    extraStarter.style.display = 'none';
+    extraAdvanced.style.display = 'none';
+    extraBasic.style.display = 'block';
+});
+advancedKnop.addEventListener('click', function () {
+    extraStarter.style.display = 'none';
+    extraAdvanced.style.display = 'block';
+    extraBasic.style.display = 'none';
+});
