@@ -82,7 +82,7 @@
             <ul>
                 <li><a href="#home" id="m_home">Home</a></li>
                 <li><a href="#pakketten" id="m_pakketten">Pakketten</a></li>
-                <li><a href="#nieuws" id="m_nieuwsbericht">Nieuwsbericht</a></li>
+                <li><a href="#nieuws" id="m_nieuws">Nieuwsbericht</a></li>
                 <li><a href="#over_ons" id="m_over_ons">Over Ons</a></li>
                 <li><a href="#contact" id="m_contact">Contact</a></li>
             </ul>

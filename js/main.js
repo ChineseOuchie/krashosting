@@ -6,31 +6,71 @@ function home() {
 }
 function pakketten() {
     window.scroll({
-        top: 500,
+        top: 900,
         behavior: 'smooth'
     })
 }
-function contact() {
+function nieuws() {
     window.scroll({
-        top: 1000,
+        top: 1400,
         behavior: 'smooth'
     })
 }
 function over_ons() {
     window.scroll({
-        top: 1500,
+        top: 1850,
+        behavior: 'smooth'
+    })
+}
+function contact() {
+    window.scroll({
+        top: 2500,
+        behavior: 'smooth'
+    })
+}
+
+
+function homeEN() {
+    window.scroll({
+        top: 0,
+        behavior: 'smooth'
+    })
+}
+function pakkettenEN() {
+    window.scroll({
+        top: 500,
+        behavior: 'smooth'
+    })
+}
+function nieuwsEN() {
+    window.scroll({
+        top: 2100,
+        behavior: 'smooth'
+    })
+}
+function over_onsEN() {
+    window.scroll({
+        top: 2500,
+        behavior: 'smooth'
+    })
+}
+function contactEN() {
+    window.scroll({
+        top: 3450,
         behavior: 'smooth'
     })
 }
 document.getElementById('scroll_home').addEventListener('click', home);
 document.getElementById('scroll_pakketten').addEventListener('click', pakketten);
+document.getElementById('scroll_nieuws').addEventListener('click', nieuws);
 document.getElementById('scroll_contact').addEventListener('click', contact);
 document.getElementById('scroll_over_ons').addEventListener('click', over_ons);
 
-document.getElementById('m_home').addEventListener('click', home);
-document.getElementById('m_pakketten').addEventListener('click', pakketten);
-document.getElementById('m_contact').addEventListener('click', contact);
-document.getElementById('m_over_ons').addEventListener('click', over_ons);
+document.getElementById('m_home').addEventListener('click', homeEN);
+document.getElementById('m_pakketten').addEventListener('click', pakkettenEN);
+document.getElementById('m_nieuws').addEventListener('click', nieuwsEN);
+document.getElementById('m_contact').addEventListener('click', contactEN);
+document.getElementById('m_over_ons').addEventListener('click', over_onsEN);
 
 function mobilenav() {
     let status = document.getElementById("mobile-nav");
@@ -39,7 +79,6 @@ function mobilenav() {
     } else {
         status.className = "mobile-nav";
     }
-
 }
 function mobilenava() {
     let status = document.getElementById("mobile-nav-toggle");
