@@ -94,16 +94,8 @@ document.getElementById("mobile-nav-toggle").addEventListener("click", mobilenav
 
 
 const container = document.getElementById('slidercontainer');
-const fotos = [
-    '../img/banner1.jpg',
-    '../img/banner2.jpg',
-    '../img/banner3.jpg',
-    '../img/banner4.jpg',
-    '../img/banner5.jpg'
-];
 let foto = 1;
 container.style.backgroundRepeat = "no-repeat";
-container.style.background = `url("../img/banner1.jpg") 0% 0% / contain no-repeat`;
 function fotochange() {
     setInterval(function () {
         container.style.background = `url("${fotos[foto]}") 0% 0% / contain no-repeat`;
@@ -200,6 +192,14 @@ if (taal === 'en'){
     mpakketten.innerText = scrollpakketten.innerText = 'Packages';
     mnieuws.innerText = scrollnieuws.innerText = 'News';
     moverons.innerText = scrolloverons.innerText = 'About Us';
+    const fotos = [
+        '../img/banneren1.jpg',
+        '../img/banneren2.jpg',
+        '../img/banneren3.jpg',
+        '../img/banneren4.jpg',
+        '../img/banneren5.jpg'
+    ];
+    container.style.background = `url("../img/banneren1.jpg") 0% 0% / contain no-repeat`;
 }else if(taal === 'nl'){
     voornaam.innerText = 'Voornaam';
     achternaam.innerText = 'Achternaam';
@@ -217,4 +217,12 @@ if (taal === 'en'){
     mpakketten.innerText = scrollpakketten.innerText = 'Pakketten';
     mnieuws.innerText = scrollnieuws.innerText = 'Nieuwsbericht';
     moverons.innerText = scrolloverons.innerText = 'Over ons';
+    const fotos = [
+        '../img/banner1.jpg',
+        '../img/banner2.jpg',
+        '../img/banner3.jpg',
+        '../img/banner4.jpg',
+        '../img/banner5.jpg'
+    ];
+    container.style.background = `url("../img/banner1.jpg") 0% 0% / contain no-repeat`;
 }
