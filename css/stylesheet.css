@@ -145,7 +145,7 @@ header{
     height: 100%;
 }
 .pakketten{
-    margin-top: 150px;
+    margin-top: 60px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -190,6 +190,7 @@ header{
 .slider {
     /*border: 1px solid black;*/
     height: 300px;
+    margin-top: 60px;
     /*width:100%;*/
     overflow-x: hidden;
     padding-left: 100px;
@@ -266,7 +267,7 @@ header{
 }
 /*over ons*/
 .over_ons{
-    margin-top: 27px;
+    margin-top: 60px;
     background-color: #00B8B0;
     display: flex;
 }
@@ -292,7 +293,7 @@ header{
 /*contact*/
 .contact{
     height: 600px;
-    margin-top: 25px;
+    margin-top: 60px;
 }
 .extra{
     border: 1px solid black;
@@ -309,7 +310,7 @@ input[type=text], select, textarea {
 }
 
 input[type=submit] {
-    background-color: #4CAF50;
+    background-color: #00B8B0;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -318,7 +319,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #00958e;
 }
 
 #custom{
@@ -332,14 +333,24 @@ input[type=submit]:hover {
     cursor: pointer;
 }
 #extraStarter{
-    visibility: visible;
+    display: none;
 }
 #extraBasic{
-    visibility: visible;
+    display: none;
 }
 #extraAdvanced{
-    visibility: visible;
+    display: none;
 }
+
+.extra{
+    text-align: center;
+    height: 200px;
+    background-color: #00B8B0;
+    padding: 20px;
+    color: white;
+    margin-top: 30px;
+}
+
 /*MediaQuery*/
 @media (max-width: 775px){
     .container header{

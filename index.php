@@ -117,10 +117,24 @@
             <div class="pakketten" class="item">
                  <?php echo $out;?>
             </div>
-            <div id="extraStarter" class="extra">starter</div>
-            <div id="extraBasic" class="extra">basic</div>
-            <div id="extraAdvanced" class="extra">advanced</div>
-            <div id="custom">Bel ons of Mail ons voor een custom pakket</div>
+<!--            <div id="extraStarter" class="extra">starter</div>-->
+<!--            <div id="extraBasic" class="extra">basic</div>-->
+<!--            <div id="extraAdvanced" class="extra">advanced</div>-->
+<!--            <div id="custom">Bel ons of Mail ons voor een custom pakket</div>-->
+
+            <div id="extraStarter" class="extra"><h2>Starter pakket</h2><br>
+                <p class="extrainfo">Dit pakket is om een simpele webpagina te beginnen waarin alle informatie gezien kan worden.<br>
+                    Dan zit u met het starter pakket helemaal goed. Een mooi pakket voor een standaard lage prijs.</p>
+            </div>
+            <div id="extraBasic" class="extra"><h2>Basic pakket</h2><br>
+                <p>Dit pakket is  meer bedoeld voor portfolio's.<br>
+                    Dit pakket is zeer goed voor het laten zien in je website van foto's/projecten. Lekker veel opslag.</p>
+            </div>
+            <div id="extraAdvanced" class="extra"><h2>Advanced pakket</h2><br>
+                <p>Dit pakket is bedoeld voor bijvoorbeeld een grote webshop.<br>
+                    Een envoudig pakket met super veel MB's. Perfect voor mensen die niet van stoppen weten.</p>
+            </div>
+
             <div class="nieuws">
                 <div class="slider">
                     <div class="bericht">
@@ -162,9 +176,8 @@
                         <option value="Kies een optie">Kies een optie...</option>
                         <option value="Custom pakket">Custom pakket</option>
                         <option value="Algemene informatie">Algemene informatie</option>
-                        <option value="Anders namelijk...">Anders namelijk...</option>
+                        <option value="Anders namelijk...">Betaal informatie</option>
                     </select>
-
                     <label for="bericht">Bericht</label>
                     <textarea id="bericht" name="bericht" placeholder="Plaats uw bericht..." style="height:200px"></textarea>
 
