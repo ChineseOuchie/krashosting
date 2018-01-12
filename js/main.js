@@ -176,6 +176,12 @@ const keuze = document.getElementById('kiesoptie');
 const custompak = document.getElementById('custompakket');
 const alginfo = document.getElementById('algemeeninfo');
 const betinfo = document.getElementById('betaalinfo');
+const mpakketten = document.getElementById('m_pakketten');
+const scrollpakketten = document.getElementById('scroll_pakketten');
+const mnieuws = document.getElementById('m_nieuws');
+const scrollnieuws = document.getElementById('scroll_nieuws');
+const moverons = document.getElementById('m_over_ons');
+const scrolloverons = document.getElementById('scroll_over_ons');
 
 if (taal === 'en'){
     voornaam.innerText = 'Firstname';
@@ -191,6 +197,9 @@ if (taal === 'en'){
     custompak.innerText = 'Custom package';
     alginfo.innerText = 'General information';
     betinfo.innerText = 'Payment information';
+    mpakketten.innerText = scrollpakketten.innerText = 'Packages';
+    mnieuws.innerText = scrollnieuws.innerText = 'News';
+    moverons.innerText = scrolloverons.innerText = 'About Us';
 }else if(taal === 'nl'){
     voornaam.innerText = 'Voornaam';
     achternaam.innerText = 'Achternaam';
@@ -205,4 +214,7 @@ if (taal === 'en'){
     custompak.innerText = 'Custom pakket';
     alginfo.innerText = 'Algemene informatie';
     betinfo.innerText = 'Betaal informatie';
+    mpakketten.innerText = scrollpakketten.innerText = 'Pakketten';
+    mnieuws.innerText = scrollnieuws.innerText = 'Nieuwsbericht';
+    moverons.innerText = scrolloverons.innerText = 'Over ons';
 }
