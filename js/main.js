@@ -108,7 +108,7 @@ function fotochange() {
     setInterval(function () {
         container.style.background = `url("${fotos[foto]}") 0% 0% / contain no-repeat`;
         // container.style.backgroundSize = `contain`;
-        console.log(container.style.background = `container.style.background = url("${fotos[foto]}") no-repeat`);
+        // console.log(container.style.background = `container.style.background = url("${fotos[foto]}") no-repeat`);
         foto = foto + 1;
         if (foto >= 5){
             foto = 0;
@@ -158,3 +158,38 @@ document.getElementById('nederlands').addEventListener('click', () => {
 document.getElementById('engels').addEventListener('click', () => {
     document.location.replace('index.php?lang=en');
 });
+
+
+
+
+const taal = document.documentElement.lang;
+const bericht = document.getElementById('ichtber');
+const voornaam = document.getElementById('naamvoor');
+const achternaam = document.getElementById('naamachter');
+const onderwerp = document.getElementById('werponder');
+const voornaamplc = document.getElementById('voornaam');
+const achternaamplc = document.getElementById('achternaam');
+const onderwerpplc = document.getElementById('onderwerp');
+const berichtplc = document.getElementById('bericht');
+const submit = document.getElementById('submit');
+if (taal === 'en'){
+    voornaam.innerText = 'Firstname';
+    achternaam.innerText = 'Lastname';
+    onderwerp.innerText = 'Subject';
+    bericht.innerText = 'Message';
+    voornaamplc.placeholder = 'Firstname...';
+    achternaamplc.placeholder = 'Lastname...';
+    // onderwerp.placeholder = 'Subject...';
+    berichtplc.placeholder = 'Place your message...';
+    submit.value = 'Send';
+}else if(taal === 'nl'){
+    voornaam.innerText = 'Voornaam';
+    achternaam.innerText = 'Achternaam';
+    onderwerp.innerText = 'Onderwerp';
+    bericht.innerText = 'Bericht';
+    voornaamplc.placeholder = 'Voornaam...';
+    achternaamplc.placeholder = 'Achternaam...';
+    // onderwerp.placeholder = 'Subject...';
+    berichtplc.placeholder = 'Plaats je bericht...';
+    submit.value = 'Verstuur';
+}
