@@ -169,9 +169,14 @@ const achternaam = document.getElementById('naamachter');
 const onderwerp = document.getElementById('werponder');
 const voornaamplc = document.getElementById('voornaam');
 const achternaamplc = document.getElementById('achternaam');
-const onderwerpplc = document.getElementById('onderwerp');
 const berichtplc = document.getElementById('bericht');
 const submit = document.getElementById('submit');
+const domeincheck = document.getElementById('domeincheck');
+const keuze = document.getElementById('kiesoptie');
+const custompak = document.getElementById('custompakket');
+const alginfo = document.getElementById('algemeeninfo');
+const betinfo = document.getElementById('betaalinfo');
+
 if (taal === 'en'){
     voornaam.innerText = 'Firstname';
     achternaam.innerText = 'Lastname';
@@ -179,9 +184,13 @@ if (taal === 'en'){
     bericht.innerText = 'Message';
     voornaamplc.placeholder = 'Firstname...';
     achternaamplc.placeholder = 'Lastname...';
-    // onderwerp.placeholder = 'Subject...';
     berichtplc.placeholder = 'Place your message...';
     submit.value = 'Send';
+    domeincheck.placeholder = 'Check here for a domainname';
+    keuze.innerText = 'Choose an option...';
+    custompak.innerText = 'Custom package';
+    alginfo.innerText = 'General information';
+    betinfo.innerText = 'Payment information';
 }else if(taal === 'nl'){
     voornaam.innerText = 'Voornaam';
     achternaam.innerText = 'Achternaam';
@@ -189,7 +198,11 @@ if (taal === 'en'){
     bericht.innerText = 'Bericht';
     voornaamplc.placeholder = 'Voornaam...';
     achternaamplc.placeholder = 'Achternaam...';
-    // onderwerp.placeholder = 'Subject...';
     berichtplc.placeholder = 'Plaats je bericht...';
     submit.value = 'Verstuur';
+    domeincheck.placeholder = 'Check hier voor een domeinnaam';
+    keuze.innerText = 'Kies een optie...';
+    custompak.innerText = 'Custom pakket';
+    alginfo.innerText = 'Algemene informatie';
+    betinfo.innerText = 'Betaal informatie';
 }

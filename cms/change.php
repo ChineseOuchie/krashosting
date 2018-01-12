@@ -34,7 +34,11 @@ if (isset($_SESSION['type'])){
 	while($row = $resaboutus->fetch_assoc()){
     	$aboutus .= $row['teksten'] . '<br><br>';
         $aboutus .= '<a href="updatesitecontent.php?id=' . $row["idsitecontent"] . '">Update</a><br>';
-        $aboutus .= '<a class="delete" href="deletesitecontent.php?id=' . $row["idsitecontent"] . '">Delete</a>';
+        $aboutus .= '<a class="delete" href="deletesitecontent.php?id=' . $row["idsitecontent"] . '">Delete</a><br><br>';
+//
+//        $aboutus .= $row['teksten'] . '<br><br>';
+//        $aboutus .= '<a href="updatesitecontent.php?id=' . $row["idsitecontent"] . '">Update</a><br>';
+//        $aboutus .= '<a class="delete" href="deletesitecontent.php?id=' . $row["idsitecontent"] . '">Delete</a><br><br>';
 	}
 } else{
 	header('Location: login.php');

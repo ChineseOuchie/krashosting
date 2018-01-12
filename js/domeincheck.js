@@ -21,7 +21,6 @@ function ping(url) { //ping functie geleverd door dennis
 } //eind ping functie
 document.addEventListener("DOMContentLoaded", function () { //start script pas naardat DOMtree (pagina code) geladen is.
     const taal = document.documentElement.lang;
-    const domaincheck = document.querySelector(".comaincheck");
     //variable met domain form
     const domaincheck_input = document.querySelector(".domaincheck input[type=\"text\"]");
     //variable met domain invoer veld

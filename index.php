@@ -109,7 +109,7 @@
             </div>
             <div class="domainCheck">
                 <form action="" method="post" class="domaincheck">
-                    <input type="text" title="Check your domain here" name="domain" placeholder=" Check hier voor een domeinnaam">
+                    <input id="domeincheck" type="text" title="Check your domain here" name="domain" placeholder=" Check hier voor een domeinnaam">
                     <input type="submit" name="submited" title="Check domain" value="CHECK">
                     <div class="domaincheck_msg"><span class="msg"></span><span class="icon"></span></div>
                 </form>
@@ -173,10 +173,10 @@
 
                     <label id="werponder" for="onderwerp">Onderwerp</label>
                     <select id="onderwerp" name="onderwerp">
-                        <option value="Kies een optie">Kies een optie...</option>
-                        <option value="Custom pakket">Custom pakket</option>
-                        <option value="Algemene informatie">Algemene informatie</option>
-                        <option value="Anders namelijk...">Betaal informatie</option>
+                        <option id="kiesoptie" value="Kies een optie">Kies een optie...</option>
+                        <option id="custompakket" value="Custom pakket">Custom pakket</option>
+                        <option id="algemeeninfo" value="Algemene informatie">Algemene informatie</option>
+                        <option id="betaalinfo" value="Anders namelijk...">Betaal informatie</option>
                     </select>
                     <label id="ichtber" for="bericht">Bericht</label>
                     <textarea id="bericht" name="bericht" placeholder="Plaats uw bericht..." style="height:200px"></textarea>
