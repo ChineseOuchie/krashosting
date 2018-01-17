@@ -53,7 +53,7 @@
 		$out .= '</div>';
 	}
 	while($row = $resaboutus->fetch_assoc()){
-		$aboutus .= '<p>' . $row['teksten' . $taal] . '</p>';
+		$aboutus .= '<p>' . $row['teksten' . $taal] . '</p>'; //test
 	}
 	$conn->close();
 //	session_destroy();
