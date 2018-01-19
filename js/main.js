@@ -1,3 +1,4 @@
+let fotos = [];
 function home() {
     window.scroll({
         top: 0,
@@ -100,7 +101,7 @@ function fotochange() {
     setInterval(function () {
         container.style.background = `url("${fotos[foto]}") 0% 0% / contain no-repeat`;
         // container.style.backgroundSize = `contain`;
-        // console.log(container.style.background = `container.style.background = url("${fotos[foto]}") no-repeat`);
+        console.log(container.style.background = `container.style.background = url("${fotos[foto]}") no-repeat`);
         foto = foto + 1;
         if (foto >= 5){
             foto = 0;
@@ -108,7 +109,6 @@ function fotochange() {
     }, 4000)
 
 }
-fotochange();
 
 let extraStarter = document.getElementById('extraStarter');
 let extraBasic = document.getElementById('extraBasic');
@@ -138,7 +138,6 @@ advancedKnop.addEventListener('click', function () {
 //taal veranderen js
 function checktaal() {
     if (refresh || window.location.href !== 'http://localhost/index.php?taal=' + document.documentElement.lang){
-        // document.location.replace(Location.href + '?taal=' + document.documentElement.lang);
         document.location.replace('index.php?taal=' + document.documentElement.lang);
     }
 }
@@ -192,14 +191,14 @@ if (taal === 'en'){
     mpakketten.innerText = scrollpakketten.innerText = 'Packages';
     mnieuws.innerText = scrollnieuws.innerText = 'News';
     moverons.innerText = scrolloverons.innerText = 'About Us';
-    const fotos = [
-        '../img/banneren1.jpg',
-        '../img/banneren2.jpg',
-        '../img/banneren3.jpg',
-        '../img/banneren4.jpg',
-        '../img/banneren5.jpg'
+    fotos = [
+        '../img/banner_en_1.jpg',
+        '../img/banner_en_2.jpg',
+        '../img/banner_en_3.jpg',
+        '../img/banner_en_4.jpg',
+        '../img/banner_en_5.jpg'
     ];
-    container.style.background = `url("../img/banneren1.jpg") 0% 0% / contain no-repeat`;
+    container.style.background = `url("../img/banner_en_1.jpg") 0% 0% / contain no-repeat`;
 }else if(taal === 'nl'){
     voornaam.innerText = 'Voornaam';
     achternaam.innerText = 'Achternaam';
@@ -217,7 +216,7 @@ if (taal === 'en'){
     mpakketten.innerText = scrollpakketten.innerText = 'Pakketten';
     mnieuws.innerText = scrollnieuws.innerText = 'Nieuwsbericht';
     moverons.innerText = scrolloverons.innerText = 'Over ons';
-    const fotos = [
+    fotos = [
         '../img/banner1.jpg',
         '../img/banner2.jpg',
         '../img/banner3.jpg',
@@ -226,3 +225,4 @@ if (taal === 'en'){
     ];
     container.style.background = `url("../img/banner1.jpg") 0% 0% / contain no-repeat`;
 }
+fotochange();
