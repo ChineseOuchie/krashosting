@@ -1,6 +1,4 @@
 <?php
-
-
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -8,7 +6,7 @@ error_reporting(E_ALL);
 session_start();
 if (isset($_SESSION['type'])) {
     include('config.php');
-    $firstname = $lastname = $telephone = $email = $datumbetaald = "";
+    $firstname = $lastname = $telephone = $email =	 "";
     $msg = [];
     $date = date("d/m/Y");
 
@@ -40,7 +38,7 @@ if (isset($_SESSION['type'])) {
         } else {
             $msg[] = "Er is iets fout gegaan tijdens het versturen. Neem contact op met systeembeheer van Krashosting.";
         }
-        $sql = "INSERT INTO klanten (voornaam, tussenvoegsel, achternaam, email, telefoonnummer, aankoopdatum, betaald, datumbetaald, idproducten) VALUES ('$firstname', '$tv', '$lastname', '$email', '$telephone', '$date', 'false', '$datumbetaald', $pakket)";
+        $sql = "INSERT INTO klanten (voornaam, tussenvoegsel, achternaam, email, telefoonnummer, aankoopdatum, betaald, datumbetaald, idproducten) VALUES ('$firstname', '$tv', '$lastname', '$email', '$telephone', '$date', 'false', 'N.v.t.', $pakket)";
         $db->query($sql);
     }
 
@@ -86,5 +84,6 @@ foreach ($msg as $value) {
     echo $value . "<br>";
 }
 ?>
+<a href="welcome.php">Terug</a>
 </body>
 </html>
