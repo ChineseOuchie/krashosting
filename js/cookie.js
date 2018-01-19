@@ -1,6 +1,36 @@
 document.addEventListener('DOMContentLoaded', function(){
-    const cookie = document.getElementById('cookiemodal');
-    cookie.style.visibility = 'visible';
+    function getCookie( name ) {
+        let dc = document.cookie;
+        let prefix = name + "=";
+        let begin = dc.indexOf("; " + prefix);
+        let end = null;
+        if (begin === -1) {
+            begin = dc.indexOf(prefix);
+            if (begin !== 0) return null;
+            end = document.cookie.indexOf(";", begin);
+        } else {
+            begin += 2;
+            end = document.cookie.indexOf(";", begin);
+            if (end === -1) {
+                end = dc.length;
+            }
+        }
+
+        return decodeURI(dc.substring(begin + prefix.length, end) ).replace(/"/g, '');
+    }
+
+
+    function searchCookie(){
+        const gekkeCookie = getCookie('type');
+
+        if (gekkeCookie === null){
+            const cookie = document.getElementById('cookiemodal');
+            cookie.style.visibility = 'visible';
+        } else {
+            const cookie = document.getElementById('cookiemodal');
+            cookie.style.visibility = 'hidden';
+        }
+    }
 
     function particulier(){
         document.cookie = "type=particulier; expires=Thu, 18 Dec 2222 12:00:00 UTC";
@@ -18,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
 
-
+    searchCookie();
     document.getElementById('cookie_part').addEventListener('click', particulier);
     document.getElementById('cookie_zak').addEventListener('click', zakelijk);
 });
