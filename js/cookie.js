@@ -50,6 +50,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
     searchCookie();
     document.getElementById('cookie_part').addEventListener('click', particulier);
+    document.getElementById('cookie_part2').addEventListener('click', particulier);
     document.getElementById('cookie_zak').addEventListener('click', zakelijk);
+    document.getElementById('cookie_zak2').addEventListener('click', zakelijk);
 });
 

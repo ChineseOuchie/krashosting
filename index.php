@@ -88,6 +88,10 @@ $aboutus = $out = '';
 			<div id="nederlands"></div>
 			<div id="engels"></div>
 		</div>
+        <div id="cookieChanger">
+            <a class="cookielink" id="cookie_part2"><img src="img/002-man-user.svg" class="svg"></a>
+            <a class="cookielink" id="cookie_zak2"><img src="img/001-users-group.svg" class="svg"></a>
+        </div>
         <div class="mobile-nav" id="mobile-nav">
             <ul>
                 <li><a href="#home" id="m_home">Home</a></li>
