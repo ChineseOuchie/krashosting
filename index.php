@@ -120,7 +120,7 @@
 <!--            <div id="extraStarter" class="extra">starter</div>-->
 <!--            <div id="extraBasic" class="extra">basic</div>-->
 <!--            <div id="extraAdvanced" class="extra">advanced</div>-->
-<!--            <div id="custom">Bel ons of Mail ons voor een custom pakket</div>-->
+            <div id="custom">Bel ons of Mail ons voor een custom pakket</div>
 
             <div id="extraStarter" class="extra"><h2>Starter pakket</h2><br>
                 <p class="extrainfo">Dit pakket is om een simpele webpagina te beginnen waarin alle informatie gezien kan worden.<br>
