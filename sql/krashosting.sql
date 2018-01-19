@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 08, 2017 at 10:33 AM
+-- Generation Time: Jan 19, 2018 at 09:19 AM
 -- Server version: 5.6.34-log
 -- PHP Version: 7.1.5
 
@@ -52,7 +52,10 @@ CREATE TABLE `klanten` (
   `achternaam` varchar(45) NOT NULL,
   `email` mediumtext NOT NULL,
   `telefoonnummer` int(10) NOT NULL,
-  `idproducten` int(11) NOT NULL
+  `idproducten` int(11) NOT NULL,
+  `aankoopdatum` varchar(30) NOT NULL,
+  `betaald` varchar(5) NOT NULL,
+  `datumbetaald` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
