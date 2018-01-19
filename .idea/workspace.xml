@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9b797fb3-b49d-49eb-9c40-23439b8748c0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/css/stylesheet.css" afterPath="$PROJECT_DIR$/css/stylesheet.css" />
+      <change beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change beforePath="$PROJECT_DIR$/js/cookie.js" afterPath="$PROJECT_DIR$/js/cookie.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,11 +29,11 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="168" column="72" lean-forward="true" selection-start-line="168" selection-start-column="72" selection-end-line="168" selection-end-column="72" />
+            <state relative-caret-position="346">
+              <caret line="92" column="96" lean-forward="false" selection-start-line="92" selection-start-column="96" selection-end-line="92" selection-end-column="96" />
               <folding>
-                <marker date="1516355815000" expanded="true" signature="814:837" ph="SELECT * FRO... producten" />
-                <marker date="1516355815000" expanded="true" signature="858:911" ph="SELECT * FRO... sitecontent" />
+                <marker date="1516359401000" expanded="true" signature="814:837" ph="SELECT * FRO... producten" />
+                <marker date="1516359401000" expanded="true" signature="858:911" ph="SELECT * FRO... sitecontent" />
               </folding>
             </state>
           </provider>
@@ -40,8 +42,8 @@
       <file leaf-file-name="stylesheet.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/stylesheet.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="372" column="23" lean-forward="false" selection-start-line="372" selection-start-column="23" selection-end-line="372" selection-end-column="23" />
+            <state relative-caret-position="405">
+              <caret line="127" column="14" lean-forward="false" selection-start-line="127" selection-start-column="14" selection-end-line="127" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -50,8 +52,8 @@
       <file leaf-file-name="cookie.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/cookie.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
-              <caret line="50" column="19" lean-forward="false" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
+            <state relative-caret-position="810">
+              <caret line="54" column="79" lean-forward="false" selection-start-line="54" selection-start-column="79" selection-end-line="54" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -80,6 +82,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>form</find>
+      <find>vertalen</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -93,9 +96,9 @@
         <option value="$PROJECT_DIR$/pages/checky.html" />
         <option value="$PROJECT_DIR$/php/bestel_particulier.php" />
         <option value="$PROJECT_DIR$/js/main.js" />
-        <option value="$PROJECT_DIR$/css/stylesheet.css" />
         <option value="$PROJECT_DIR$/php/coockie_handler.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/css/stylesheet.css" />
         <option value="$PROJECT_DIR$/js/cookie.js" />
       </list>
     </option>
@@ -340,7 +343,7 @@
       <workItem from="1512720457582" duration="28000" />
       <workItem from="1515744856409" duration="2221000" />
       <workItem from="1516176279745" duration="16000" />
-      <workItem from="1516350926643" duration="4550000" />
+      <workItem from="1516350926643" duration="5647000" />
     </task>
     <task id="LOCAL-00001" summary="site checker">
       <created>1511516293400</created>
@@ -405,11 +408,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516355828301</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="cookie shit">
+      <created>1516357401202</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1516357401202</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15138000" />
+    <option name="totallyTimeSpent" value="16235000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -485,8 +495,8 @@
         <state relative-caret-position="1020">
           <caret line="68" column="7" lean-forward="false" selection-start-line="68" selection-start-column="7" selection-end-line="68" selection-end-column="7" />
           <folding>
-            <marker date="1516355815000" expanded="true" signature="814:837" ph="SELECT * FRO... producten" />
-            <marker date="1516355815000" expanded="true" signature="858:911" ph="SELECT * FRO... sitecontent" />
+            <marker date="1516359401000" expanded="true" signature="814:837" ph="SELECT * FRO... producten" />
+            <marker date="1516359401000" expanded="true" signature="858:911" ph="SELECT * FRO... sitecontent" />
           </folding>
         </state>
       </provider>
@@ -522,8 +532,8 @@
         <state relative-caret-position="1020">
           <caret line="68" column="7" lean-forward="false" selection-start-line="68" selection-start-column="7" selection-end-line="68" selection-end-column="7" />
           <folding>
-            <marker date="1516355815000" expanded="true" signature="814:837" ph="SELECT * FRO... producten" />
-            <marker date="1516355815000" expanded="true" signature="858:911" ph="SELECT * FRO... sitecontent" />
+            <marker date="1516359401000" expanded="true" signature="814:837" ph="SELECT * FRO... producten" />
+            <marker date="1516359401000" expanded="true" signature="858:911" ph="SELECT * FRO... sitecontent" />
           </folding>
         </state>
       </provider>
@@ -548,8 +558,8 @@
         <state relative-caret-position="1020">
           <caret line="68" column="7" lean-forward="false" selection-start-line="68" selection-start-column="7" selection-end-line="68" selection-end-column="7" />
           <folding>
-            <marker date="1516355815000" expanded="true" signature="814:837" ph="SELECT * FRO... producten" />
-            <marker date="1516355815000" expanded="true" signature="858:911" ph="SELECT * FRO... sitecontent" />
+            <marker date="1516359401000" expanded="true" signature="814:837" ph="SELECT * FRO... producten" />
+            <marker date="1516359401000" expanded="true" signature="858:911" ph="SELECT * FRO... sitecontent" />
           </folding>
         </state>
       </provider>
@@ -568,35 +578,8 @@
         <state relative-caret-position="1020">
           <caret line="68" column="7" lean-forward="false" selection-start-line="68" selection-start-column="7" selection-end-line="68" selection-end-column="7" />
           <folding>
-            <marker date="1516355815000" expanded="true" signature="814:837" ph="SELECT * FRO... producten" />
-            <marker date="1516355815000" expanded="true" signature="858:911" ph="SELECT * FRO... sitecontent" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/bestel_particulier.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="58" column="8" lean-forward="false" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/checky.html" />
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="68" column="7" lean-forward="false" selection-start-line="68" selection-start-column="7" selection-end-line="68" selection-end-column="7" />
-          <folding>
-            <marker date="1516355815000" expanded="true" signature="814:837" ph="SELECT * FRO... producten" />
-            <marker date="1516355815000" expanded="true" signature="858:911" ph="SELECT * FRO... sitecontent" />
+            <marker date="1516359401000" expanded="true" signature="814:837" ph="SELECT * FRO... producten" />
+            <marker date="1516359401000" expanded="true" signature="858:911" ph="SELECT * FRO... sitecontent" />
           </folding>
         </state>
       </provider>
@@ -622,8 +605,35 @@
         <state relative-caret-position="1020">
           <caret line="68" column="7" lean-forward="false" selection-start-line="68" selection-start-column="7" selection-end-line="68" selection-end-column="7" />
           <folding>
-            <marker date="1516355815000" expanded="true" signature="814:837" ph="SELECT * FRO... producten" />
-            <marker date="1516355815000" expanded="true" signature="858:911" ph="SELECT * FRO... sitecontent" />
+            <marker date="1516359401000" expanded="true" signature="814:837" ph="SELECT * FRO... producten" />
+            <marker date="1516359401000" expanded="true" signature="858:911" ph="SELECT * FRO... sitecontent" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/bestel_particulier.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="58" column="8" lean-forward="false" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/checky.html" />
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="68" column="7" lean-forward="false" selection-start-line="68" selection-start-column="7" selection-end-line="68" selection-end-column="7" />
+          <folding>
+            <marker date="1516359401000" expanded="true" signature="814:837" ph="SELECT * FRO... producten" />
+            <marker date="1516359401000" expanded="true" signature="858:911" ph="SELECT * FRO... sitecontent" />
           </folding>
         </state>
       </provider>
@@ -699,14 +709,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/stylesheet.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="372" column="23" lean-forward="false" selection-start-line="372" selection-start-column="23" selection-end-line="372" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/coockie_handler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -723,21 +725,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/stylesheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="127" column="14" lean-forward="false" selection-start-line="127" selection-start-column="14" selection-end-line="127" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="168" column="72" lean-forward="true" selection-start-line="168" selection-start-column="72" selection-end-line="168" selection-end-column="72" />
+        <state relative-caret-position="346">
+          <caret line="92" column="96" lean-forward="false" selection-start-line="92" selection-start-column="96" selection-end-line="92" selection-end-column="96" />
           <folding>
-            <marker date="1516355815000" expanded="true" signature="814:837" ph="SELECT * FRO... producten" />
-            <marker date="1516355815000" expanded="true" signature="858:911" ph="SELECT * FRO... sitecontent" />
+            <marker date="1516359401000" expanded="true" signature="814:837" ph="SELECT * FRO... producten" />
+            <marker date="1516359401000" expanded="true" signature="858:911" ph="SELECT * FRO... sitecontent" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/cookie.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="50" column="19" lean-forward="false" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
+        <state relative-caret-position="810">
+          <caret line="54" column="79" lean-forward="false" selection-start-line="54" selection-start-column="79" selection-end-line="54" selection-end-column="79" />
           <folding />
         </state>
       </provider>
