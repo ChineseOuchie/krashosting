@@ -198,7 +198,7 @@ if (taal === 'en'){
         '../img/banner_en_4.jpg',
         '../img/banner_en_5.jpg'
     ];
-    container.style.background = `url("../img/banneren1.jpg") 0% 0% / contain no-repeat`;
+    container.style.background = `url("../img/banner_en_1.jpg") 0% 0% / contain no-repeat`;
 }else if(taal === 'nl'){
     voornaam.innerText = 'Voornaam';
     achternaam.innerText = 'Achternaam';
