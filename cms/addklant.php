@@ -13,13 +13,14 @@ if (isset($_SESSION['type'])) {
     $date = date("d/m/Y");
 
     if (isset($_POST) && $_SERVER['REQUEST_METHOD'] === 'POST') {
-        if (isset($_POST['firstname'], $_POST['lastname'], $_POST['telephone'], $_POST['bsn'], $_POST['email'])) {
+        if (isset($_POST['firstname'], $_POST['lastname'], $_POST['telephone'], $_POST['email'])) {
             if (!empty($_POST['firstname']) && preg_match("/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u", $_POST['firstname'])) {
                 $firstname = $db->real_escape_string($_POST['firstname']);
             } else {
                 $msg[] = "U bent vergeten uw voornaam in te vullen.";
             }
             $tv = $db->real_escape_string($_POST['tv']);
+            $pakket = $db->real_escape_string($_POST['pakket']);
             if (!empty($_POST['lastname']) && preg_match("/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u", $_POST['lastname'])) {
                 $lastname = $db->real_escape_string($_POST['lastname']);
             } else {
@@ -39,13 +40,12 @@ if (isset($_SESSION['type'])) {
         } else {
             $msg[] = "Er is iets fout gegaan tijdens het versturen. Neem contact op met systeembeheer van Krashosting.";
         }
-        $sql = "INSERT INTO klanten (voornaam, tussenvoegsel, achternaam, email, telefoonnummer, aankoopdatum, betaald, datumbetaald) VALUES ('$firstname', '$tv', '$lastname', '$email', '$telephone', '$date', 'false', '$datumbetaald')";
+        $sql = "INSERT INTO klanten (voornaam, tussenvoegsel, achternaam, email, telefoonnummer, aankoopdatum, betaald, datumbetaald, idproducten) VALUES ('$firstname', '$tv', '$lastname', '$email', '$telephone', '$date', 'false', '$datumbetaald', $pakket)";
         $db->query($sql);
     }
 
 
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="nl">
@@ -71,6 +71,13 @@ if (isset($_SESSION['type'])) {
     <input id="email" type="email" name="email"><br>
     <label for="telephone">Telefoonnummer:</label><br>
     <input id="telephone" type="tel" name="telephone"><br>
+	<label for="pakket">Pakket:</label><br>
+	<select id="pakket" name="pakket">
+		<option value="1">Starter</option>
+		<option value="2">Basic</option>
+		<option value="3">Advanced</option>
+		<option value="4">Custom</option>
+	</select><br>
     <input type="submit">
 </form>
 
