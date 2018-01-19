@@ -192,11 +192,11 @@ if (taal === 'en'){
     mnieuws.innerText = scrollnieuws.innerText = 'News';
     moverons.innerText = scrolloverons.innerText = 'About Us';
     fotos = [
-        '../img/banneren1.jpg',
-        '../img/banneren2.jpg',
-        '../img/banneren3.jpg',
-        '../img/banneren4.jpg',
-        '../img/banneren5.jpg'
+        '../img/banner_en_1.jpg',
+        '../img/banner_en_2.jpg',
+        '../img/banner_en_3.jpg',
+        '../img/banner_en_4.jpg',
+        '../img/banner_en_5.jpg'
     ];
     container.style.background = `url("../img/banneren1.jpg") 0% 0% / contain no-repeat`;
 }else if(taal === 'nl'){
