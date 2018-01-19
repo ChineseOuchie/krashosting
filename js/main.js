@@ -108,7 +108,6 @@ function fotochange() {
     }, 4000)
 
 }
-fotochange();
 
 let extraStarter = document.getElementById('extraStarter');
 let extraBasic = document.getElementById('extraBasic');
@@ -138,7 +137,6 @@ advancedKnop.addEventListener('click', function () {
 //taal veranderen js
 function checktaal() {
     if (refresh || window.location.href !== 'http://localhost/index.php?taal=' + document.documentElement.lang){
-        // document.location.replace(Location.href + '?taal=' + document.documentElement.lang);
         document.location.replace('index.php?taal=' + document.documentElement.lang);
     }
 }
@@ -226,3 +224,4 @@ if (taal === 'en'){
     ];
     container.style.background = `url("../img/banner1.jpg") 0% 0% / contain no-repeat`;
 }
+fotochange();
