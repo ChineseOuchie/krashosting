@@ -13,7 +13,7 @@ if (isset($_SESSION['type'])) {
     $date = date("d/m/Y");
 
     if (isset($_POST) && $_SERVER['REQUEST_METHOD'] === 'POST') {
-        if (isset($_POST['firstname'], $_POST['lastname'], $_POST['telephone'], $_POST['bsn'], $_POST['email'])) {
+        if (isset($_POST['firstname'], $_POST['lastname'], $_POST['telephone'], $_POST['email'])) {
             if (!empty($_POST['firstname']) && preg_match("/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u", $_POST['firstname'])) {
                 $firstname = $db->real_escape_string($_POST['firstname']);
             } else {
@@ -39,7 +39,7 @@ if (isset($_SESSION['type'])) {
         } else {
             $msg[] = "Er is iets fout gegaan tijdens het versturen. Neem contact op met systeembeheer van Krashosting.";
         }
-        $sql = "INSERT INTO klanten (voornaam, tussenvoegsel, achternaam, email, telefoonnummer, aankoopdatum, betaald, datumbetaald) VALUES ('$firstname', '$tv', '$lastname', '$email', '$telephone', '$date', 'false', '$datumbetaald')";
+        $sql = "INSERT INTO klanten (voornaam, tussenvoegsel, achternaam, email, telefoonnummer, aankoopdatum, betaald, datumbetaald, idproducten) VALUES ('$firstname', '$tv', '$lastname', '$email', '$telephone', '$date', 'false', '$datumbetaald', 1)";
         $db->query($sql);
     }
 
