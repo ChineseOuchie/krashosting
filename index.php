@@ -1,7 +1,8 @@
 <?php
 	include_once('cms/config.php');
 	session_start();
-	$aboutus = $out = '';
+
+$aboutus = $out = '';
 	$lang = 'nl';
 	if (isset($_GET['lang']) && $_SERVER['REQUEST_METHOD'] === 'GET'){
 			$lang = $_SESSION['lang'] = $_GET['lang'];
@@ -71,8 +72,17 @@
     <script src="js/domeincheck.js" type="text/javascript" defer></script>
     <link href="css/stylesheet.css" type="text/css" rel="stylesheet">
     <link href="css/nav.css" type="text/css" rel="stylesheet">
+    <script src="js/cookie.js" type="text/javascript" defer></script>
 </head>
 <body>
+    <div id="cookiemodal">
+        <div id="cookiequest">
+            <p>
+                Ik ben <a class="cookielink" id="cookie_part">Particulier</a><br>
+                Ik ben <a class="cookielink" id="cookie_zak">zakelijk</a>
+            </p>
+        </div>
+    </div>
     <div class="container">
 		<div id="vertalen">
 			<div id="nederlands"></div>
