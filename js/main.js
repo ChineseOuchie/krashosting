@@ -1,3 +1,4 @@
+let fotos = [];
 function home() {
     window.scroll({
         top: 0,
@@ -100,7 +101,7 @@ function fotochange() {
     setInterval(function () {
         container.style.background = `url("${fotos[foto]}") 0% 0% / contain no-repeat`;
         // container.style.backgroundSize = `contain`;
-        // console.log(container.style.background = `container.style.background = url("${fotos[foto]}") no-repeat`);
+        console.log(container.style.background = `container.style.background = url("${fotos[foto]}") no-repeat`);
         foto = foto + 1;
         if (foto >= 5){
             foto = 0;
@@ -190,7 +191,7 @@ if (taal === 'en'){
     mpakketten.innerText = scrollpakketten.innerText = 'Packages';
     mnieuws.innerText = scrollnieuws.innerText = 'News';
     moverons.innerText = scrolloverons.innerText = 'About Us';
-    const fotos = [
+    fotos = [
         '../img/banneren1.jpg',
         '../img/banneren2.jpg',
         '../img/banneren3.jpg',
@@ -215,7 +216,7 @@ if (taal === 'en'){
     mpakketten.innerText = scrollpakketten.innerText = 'Pakketten';
     mnieuws.innerText = scrollnieuws.innerText = 'Nieuwsbericht';
     moverons.innerText = scrolloverons.innerText = 'Over ons';
-    const fotos = [
+    fotos = [
         '../img/banner1.jpg',
         '../img/banner2.jpg',
         '../img/banner3.jpg',
