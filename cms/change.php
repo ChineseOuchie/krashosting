@@ -49,11 +49,7 @@ if (isset($_SESSION['type'])){
 <head>
     <meta charset="UTF-8">
     <title>Kras Hosting</title>
-	<style>
-		#pakketten, #contact, #aboutus{
-			display: none;
-		}
-	</style>
+	<link href="../css/cms.css" type="text/css" rel="stylesheet">
 </head>
 <body>
 	<h3 id="pakketaanpassen">Klik om pakketten aan te passen:</h3>

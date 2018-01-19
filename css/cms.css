@@ -1,6 +1,12 @@
+#pakketten, #contact, #aboutus{
+    display: none;
+}
 .bold{
     font-weight: bold;
 }
-#showgegevens{
+#showproduct{
     font-weight: bold;
+}
+#klantgegevens, #productgegevens{
+    display: none;
 }
