@@ -10,7 +10,12 @@ if (isset($_SESSION['type'])){
     $sql = 'SELECT * FROM klanten INNER JOIN producten ON klanten.idproducten = producten.idproducten';
     $res = $db->query($sql);
     while($row = $res->fetch_assoc()){
-        $out .= '<h3 class="showklant">Klantgegevens: ' . $row['voornaam'] . ' ' . $row['achternaam'] . '</h3>';
+    	if ($row['betaald'] === 'false'){
+    		$betaald = '<span style="color: red"> &#10007</span>';
+		}else{
+    		$betaald = '<span style="color: lime"> &#10003</span>';
+		}
+        $out .= '<h3 class="showklant">Klantgegevens: ' . $row['voornaam'] . ' ' . $row['achternaam'] . $betaald . '</h3>';
         $out .= '<p class="klantgegevens"><span class="bold">Voornaam: </span>' . $row['voornaam'] . '<br>';
         $out .= '<span class="bold">Tussenvoegsel: </span>' . $row['tussenvoegsel'] . '<br>';
         $out .= '<span class="bold">Achternaam: </span>' .$row['achternaam'] . '<br>';
@@ -26,7 +31,7 @@ if (isset($_SESSION['type'])){
 		$out .= '<span class="bold">Ssl ceritficaat: </span>' . $row['ssl'] . '<br>';
 		$out .= '<span class="bold">Prijs per maand: </span>' . $row['ppm'] . '<br>';
 		$out .= '<span class="bold">Aantal domeinnamen: </span>' . $row['domeinen'] . '<br>';
-		$out .= '<span class="bold">Hoeveelheid bandbreedte: </span>' . $row['bandbreedte'] . '</span></p>';
+		$out .= '<span class="bold">Hoeveelheid bandbreedte: 	</span>' . $row['bandbreedte'] . '</span></p>';
 
 //        $out .= $row['datumbetaald'] . '</p>';
 
@@ -71,7 +76,6 @@ if (isset($_SESSION['type'])){
         });
 
     }
-
     if (<?php echo $idtype?> == 1){
     }else{
         for (let a = 0; del.length > a; a++){
