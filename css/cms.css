@@ -4,9 +4,9 @@
 .bold{
     font-weight: bold;
 }
-#showproduct{
+.showproduct{
     font-weight: bold;
 }
-#klantgegevens, #productgegevens{
+.klantgegevens, .productgegevens{
     display: none;
 }

@@ -13,10 +13,11 @@ if (isset($_SESSION['type'])) {
 </head>
 
 <body>
-<h1>Welkom <?php echo $_SESSION['welkom']; ?> bij het Krashosting werknemers panel</h1>
-<a href= "change.php">Aanpassingen maken</a><br>
-<a href= "addklant.php">Klant toevoegen</a><br>
-<a href= "logout.php">Log uit</a>
+	<h1>Welkom <?php echo $_SESSION['welkom']; ?> bij het Krashosting werknemers panel</h1>
+	<a href= "change.php">Aanpassingen maken</a><br>
+	<a href= "addklant.php">Klant toevoegen</a><br>
+	<a href= "changeklant.php">Klantgegevens bekijken en/of aanpassen</a><br>
+	<a href= "logout.php">Log uit</a>
 </body>
 
 </html>
