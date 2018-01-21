@@ -7,7 +7,7 @@ if (isset($_SESSION['type'])){
     include_once("config.php");
     $out = '';
     $idtype = $_SESSION['type'];
-    $sql = 'SELECT * FROM klanten INNER JOIN producten ON klanten.idproducten = producten.idproducten';
+    $sql = 'SELECT * FROM klanten INNER JOIN producten ON klanten.idproducten = producten.idproducten ORDER BY betaald, voornaam, achternaam';
     $res = $db->query($sql);
     while($row = $res->fetch_assoc()){
     	if ($row['betaald'] === 'false'){
@@ -15,7 +15,7 @@ if (isset($_SESSION['type'])){
 		}else{
     		$betaald = '<span style="color: lime"> &#10003</span>';
 		}
-        $out .= '<h3 class="showklant">Klantgegevens: ' . $row['voornaam'] . ' ' . $row['achternaam'] . $betaald . '</h3>';
+        $out .= '<h3 class="showklant">Klantgegevens: <span>' . $row['voornaam'] . ' ' . $row['achternaam'] . '</span>' . $betaald . '</h3>';
         $out .= '<p class="klantgegevens"><span class="bold">Voornaam: </span>' . $row['voornaam'] . '<br>';
         $out .= '<span class="bold">Tussenvoegsel: </span>' . $row['tussenvoegsel'] . '<br>';
         $out .= '<span class="bold">Achternaam: </span>' .$row['achternaam'] . '<br>';
@@ -49,14 +49,15 @@ if (isset($_SESSION['type'])){
 </head>
 <body>
     <div>
+		<input type="text" id="search" placeholder="Search..." title="Voer een naam in">
         <?php echo $out?>
     </div>
     <a href="welcome.php">Terug</a>
 <script>
-    const del = document.getElementsByClassName('delete');
     const showproduct = document.getElementsByClassName('showproduct');
     const showklant = document.getElementsByClassName('showklant');
 
+    //show on click
 	for(let i = 0; i < showproduct.length; i++){
 	    showproduct[i].addEventListener('click', function() {
             const productgegevens = document.getElementsByClassName('productgegevens')[i];
@@ -76,10 +77,21 @@ if (isset($_SESSION['type'])){
         });
 
     }
-    if (<?php echo $idtype?> == 1){
-    }else{
-        for (let a = 0; del.length > a; a++){
-            del[a].style.visibility = 'hidden';
+
+    //search
+	document.getElementById('search').addEventListener('keydown', search);
+    function search() {
+        const input = document.getElementById("search");
+        const filter = input.value.toUpperCase();
+        const h3 = document.getElementsByTagName("h3"); //line 50
+        for (let i = 0; i < h3.length; i++) {
+			let span = h3[i].getElementsByTagName("span")[0];
+            if (span.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                h3[i].style.display = "block";
+            } else {
+                h3[i].style.display = "none";
+
+            }
         }
     }
 </script>

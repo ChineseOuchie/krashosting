@@ -22,19 +22,31 @@ if (isset($_SESSION['type'])){
         $pakketten .= $row['domeinen'] . '<br>';
         $pakketten .= $row['bandbreedte'] . '<br>';
         $pakketten .= '<a href="update.php?id=' . $row["idproducten"] . '">Update</a><br>';
-        $pakketten .= '<a class="delete" href="delete.php?id=' . $row["idproducten"] . '">Delete</a></p>';
+        if ($idtype === 1) {
+            $pakketten .= '<a class="delete" href="delete.php?id=' . $row["idproducten"] . '">Delete</a></p>';
+        }else{
+        	$pakketten .= '</p>';
+		}
     }
     while($row = $rescontact->fetch_assoc()){
     	$contact .= 'Content ' . $count .':<br><br>';
     	$contact .= $row['teksten'] . '<br>';
         $contact .= '<a href="updatesitecontent.php?id=' . $row["idsitecontent"] . '">Update</a><br>';
-        $contact .= '<a class="delete" href="deletesitecontent.php?id=' . $row["idsitecontent"] . '">Delete</a><br><br><br>';
+        if ($idtype === 1) {
+            $contact .= '<a class="delete" href="deletesitecontent.php?id=' . $row["idsitecontent"] . '">Delete</a><br><br><br>';
+        }else{
+        	$contact .= '<br><br><br>';
+		}
         $count++;
 	}
 	while($row = $resaboutus->fetch_assoc()){
     	$aboutus .= $row['teksten'] . '<br><br>';
         $aboutus .= '<a href="updatesitecontent.php?id=' . $row["idsitecontent"] . '">Update</a><br>';
-        $aboutus .= '<a class="delete" href="deletesitecontent.php?id=' . $row["idsitecontent"] . '">Delete</a><br><br>';
+        if ($idtype === 1) {
+            $aboutus .= '<a class="delete" href="deletesitecontent.php?id=' . $row["idsitecontent"] . '">Delete</a><br><br>';
+        }else{
+        	$aboutus.= '<br><br><br>';
+		}
 //
 //        $aboutus .= $row['teksten'] . '<br><br>';
 //        $aboutus .= '<a href="updatesitecontent.php?id=' . $row["idsitecontent"] . '">Update</a><br>';
@@ -73,15 +85,6 @@ if (isset($_SESSION['type'])){
 	const contactaanpassen = document.getElementById('contactaanpassen');
 	const aboutus = document.getElementById('aboutus');
 	const aboutusaanpassen = document.getElementById('aboutusaanpassen');
-	const del = document.getElementsByClassName('delete');
-
-	if (<?php echo $idtype?> == 1){
-
-	}else{
-	    for (let a = 0; del.length > a; a++){
-	        del[a].style.visibility = 'hidden';
-		}
-	}
 
 	pakketaanpassen.addEventListener('click', pakketshow);
 	contactaanpassen.addEventListener('click', contactshow);
