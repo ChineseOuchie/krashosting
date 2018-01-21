@@ -27,7 +27,7 @@ if (isset($_SESSION['type'])) {
             if (!empty($_POST['telephone']) && preg_match("/[0-9]{10}/", $_POST['telephone'])) {
                 $telephone = $db->real_escape_string($_POST['telephone']);
             } else {
-                $msg[] = "U bent vergeten uw telefoonnummer in te vullen.";
+                $msg[] = "U heeft een onjuist telefoonnummer ingevuld of u bent vergeten het telefoonnummer in te vullen.";
             }
             if (!empty($_POST['email'])) {
                 $postemail = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
@@ -39,10 +39,14 @@ if (isset($_SESSION['type'])) {
             $msg[] = "Er is iets fout gegaan tijdens het versturen. Neem contact op met systeembeheer van Krashosting.";
         }
         $sql = "INSERT INTO klanten (voornaam, tussenvoegsel, achternaam, email, telefoonnummer, aankoopdatum, betaald, datumbetaald, idproducten) VALUES ('$firstname', '$tv', '$lastname', '$email', '$telephone', '$date', 'false', 'N.v.t.', $pakket)";
-        $db->query($sql);
+        if(empty($msg)){
+        	if ($db->query($sql)){
+        		header('Location: changeklant.php');
+        	}
+		}
     }
-
-
+} else{
+    header('Location: login.php');
 }
 ?>
 <!DOCTYPE html>
