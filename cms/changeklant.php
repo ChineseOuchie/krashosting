@@ -3,6 +3,9 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 session_start();
 
+//test
+
+
 if (isset($_SESSION['type'])){
     include_once("config.php");
     $out = '';
@@ -10,8 +13,17 @@ if (isset($_SESSION['type'])){
     $sql = 'SELECT * FROM klanten INNER JOIN producten ON klanten.idproducten = producten.idproducten ORDER BY betaald, voornaam, achternaam';
     $res = $db->query($sql);
     while($row = $res->fetch_assoc()){
+        $datetime1 = date_create($row['aankoopdatum']);
+        $datetime2 = date_create(date('d-m-Y'));
+        $remaining = date_diff($datetime1, $datetime2)->format('%a');
+        if ($remaining >= 30){
+        	$remaining = $remaining - 30 . ' Dagen te laat';
+		}else{
+        	$remaining = 30 - $remaining . ' Dagen resterend';
+		}
+
     	if ($row['betaald'] === 'false'){
-    		$betaald = '<span style="color: red"> &#10007</span>';
+    		$betaald = '<span style="color: red"> &#10007</span><small class="remaining">  ' . $remaining .' </small>';
 		}else{
     		$betaald = '<span style="color: lime"> &#10003</span>';
 		}

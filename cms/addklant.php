@@ -8,7 +8,7 @@ if (isset($_SESSION['type'])) {
     include('config.php');
     $firstname = $lastname = $telephone = $email =	 "";
     $msg = [];
-    $date = date("d/m/Y");
+    $date = date("d-m-Y");
 
     if (isset($_POST) && $_SERVER['REQUEST_METHOD'] === 'POST') {
         if (isset($_POST['firstname'], $_POST['lastname'], $_POST['telephone'], $_POST['email'])) {
