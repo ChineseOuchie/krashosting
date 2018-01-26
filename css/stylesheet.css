@@ -314,9 +314,6 @@ header{
     height: 600px;
     margin-top: 60px;
 }
-.extra{
-    border: 1px solid black;
-}
 input[type=text], select, textarea {
     width: 100%;
     padding: 12px;
@@ -342,11 +339,15 @@ input[type=submit]:hover {
 }
 
 #custom{
-    margin-top: 30px;
+    margin-top: 130px;
     margin-bottom: 30px;
     text-align: center;
-    height: 50px;
-    border: 5px solid #00958e;
+    height: 300px;
+    padding-top: 120px;
+    color: #00B8B0;
+    font-size: 40px;
+    font-weight: bolder;
+    border:solid 5px #00B8B0;
 }
 #starter{
     cursor: pointer;
@@ -401,7 +402,13 @@ input[type=submit]:hover {
     align-items: center;
     justify-content: center;
 }
-
+.check1{
+    font-size: 50px;
+    font-weight: bolder;
+    color: #00B8B0;
+    text-align: center;
+    margin-top: 150px;
+}
 /*MediaQuery*/
 @media (max-width: 775px){
     .container header{

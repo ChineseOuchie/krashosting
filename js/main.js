@@ -13,19 +13,19 @@ function pakketten() {
 }
 function nieuws() {
     window.scroll({
-        top: 1400,
+        top: 2400,
         behavior: 'smooth'
     })
 }
 function over_ons() {
     window.scroll({
-        top: 1850,
+        top: 3000,
         behavior: 'smooth'
     })
 }
 function contact() {
     window.scroll({
-        top: 2500,
+        top: 3900,
         behavior: 'smooth'
     })
 }
@@ -45,19 +45,19 @@ function pakkettenEN() {
 }
 function nieuwsEN() {
     window.scroll({
-        top: 2100,
+        top: 3100,
         behavior: 'smooth'
     })
 }
 function over_onsEN() {
     window.scroll({
-        top: 2500,
+        top: 3650,
         behavior: 'smooth'
     })
 }
 function contactEN() {
     window.scroll({
-        top: 3450,
+        top: 4800,
         behavior: 'smooth'
     })
 }
@@ -173,6 +173,12 @@ const mnieuws = document.getElementById('m_nieuws');
 const scrollnieuws = document.getElementById('scroll_nieuws');
 const moverons = document.getElementById('m_over_ons');
 const scrolloverons = document.getElementById('scroll_over_ons');
+const title_domein = document.getElementById('title_domein');
+const title_pakket = document.getElementById('title_pakket');
+const title_custom = document.getElementById('custom');
+const title_nieuws = document.getElementById('title_nieuws');
+const title_over = document.getElementById('title_over');
+const title_contact = document.getElementById('title_contact');
 
 if (taal === 'en'){
     voornaam.innerText = 'Firstname';
@@ -188,6 +194,14 @@ if (taal === 'en'){
     custompak.innerText = 'Custom package';
     alginfo.innerText = 'General information';
     betinfo.innerText = 'Payment information';
+
+    title_domein.innerText = 'Check here your domain name!';
+    title_pakket.innerText = 'Our packages';
+    title_custom.innerText = 'Call us or Mail us for a custom package';
+    title_nieuws.innerText = 'News Board';
+    title_over.innerText = 'A little about us';
+    title_contact.innerText = 'Contact us';
+
     mpakketten.innerText = scrollpakketten.innerText = 'Packages';
     mnieuws.innerText = scrollnieuws.innerText = 'News';
     moverons.innerText = scrolloverons.innerText = 'About Us';
@@ -213,6 +227,14 @@ if (taal === 'en'){
     custompak.innerText = 'Custom pakket';
     alginfo.innerText = 'Algemene informatie';
     betinfo.innerText = 'Betaal informatie';
+
+    title_domein.innerText = 'Check hier uw domeinnaam!';
+    title_pakket.innerText = 'Onze pakketen';
+    title_custom.innerText = 'Bel ons of Mail ons voor een custom pakket';
+    title_nieuws.innerText = 'Onze nieuwsberichten';
+    title_over.innerText = 'Een beetje over ons';
+    title_contact.innerText = 'Contacteer ons';
+
     mpakketten.innerText = scrollpakketten.innerText = 'Pakketten';
     mnieuws.innerText = scrollnieuws.innerText = 'Nieuwsbericht';
     moverons.innerText = scrolloverons.innerText = 'Over ons';
