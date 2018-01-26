@@ -13,19 +13,19 @@ function pakketten() {
 }
 function nieuws() {
     window.scroll({
-        top: 1400,
+        top: 2400,
         behavior: 'smooth'
     })
 }
 function over_ons() {
     window.scroll({
-        top: 1850,
+        top: 3000,
         behavior: 'smooth'
     })
 }
 function contact() {
     window.scroll({
-        top: 2500,
+        top: 3900,
         behavior: 'smooth'
     })
 }
@@ -45,19 +45,19 @@ function pakkettenEN() {
 }
 function nieuwsEN() {
     window.scroll({
-        top: 2100,
+        top: 3100,
         behavior: 'smooth'
     })
 }
 function over_onsEN() {
     window.scroll({
-        top: 2500,
+        top: 3650,
         behavior: 'smooth'
     })
 }
 function contactEN() {
     window.scroll({
-        top: 3450,
+        top: 4800,
         behavior: 'smooth'
     })
 }
