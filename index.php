@@ -122,14 +122,14 @@ $aboutus = $out = '';
                 <div id="slidercontainer"></div>
             </div>
             <div class="domainCheck">
-                <h2 class="check1">Check hier uw domeinnaam!</h2>
+                <h2 class="check1" id="title_domein">Check hier uw domeinnaam!</h2>
                 <form action="" method="post" class="domaincheck">
                     <input id="domeincheck" type="text" title="Check your domain here" name="domain" placeholder=" Check hier voor een domeinnaam">
                     <input type="submit" name="submited" title="Check domain" value="CHECK">
                     <div class="domaincheck_msg"><span class="msg"></span><span class="icon"></span></div>
                 </form>
             </div>
-            <h2 class="check1">Onze pakketen</h2>
+            <h2 class="check1" id="title_pakket">Onze pakketen</h2>
             <div class="pakketten" class="item">
                  <?php echo $out;?>
             </div>
@@ -146,7 +146,7 @@ $aboutus = $out = '';
                     Een envoudig pakket met super veel MB's. Perfect voor mensen die niet van stoppen weten.</p>
             </div>
             <div id="custom">Bel ons of Mail ons voor een custom pakket</div>
-            <h2 class="check1">Onze nieuwsberichten</h2>
+            <h2 class="check1" id="title_nieuws">Onze nieuwsberichten</h2>
             <div class="nieuws">
                 <div class="slider">
                     <div class="bericht">
@@ -166,7 +166,7 @@ $aboutus = $out = '';
                     </div>
                 </div>
             </div>
-            <h2 class="check1">Een beetje over ons</h2>
+            <h2 class="check1" id="title_over">Een beetje over ons</h2>
             <div class="over_ons">
                 <div class="hoofden">
                     <img class="hoofd" src="img/hoofd1.jpg" alt="foto1">
@@ -176,7 +176,7 @@ $aboutus = $out = '';
                     <?php echo $aboutus;?>
 				</div>
             </div>
-            <h2 class="check1">Contacteer ons</h2>
+            <h2 class="check1" id="title_contact">Contacteer ons</h2>
             <div class="contact">
                 <form action="/message_send.html">
                     <label id="naamvoor" for="voornaam">Voornaam</label>
