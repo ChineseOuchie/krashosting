@@ -35,7 +35,13 @@ if (isset($_SESSION['type'])){
         $out .= '<span class="bold">Telefoonnummer: </span>' .$row['telefoonnummer'] . '<br>';
         $out .= '<span class="bold">Aankoopdatum: </span>' .$row['aankoopdatum'] . '<br>';
         $out .= '<span class="bold">Betaald: </span>' .$row['betaald'] . '<br>';
-        $out .= '<span class="bold">Datumbetaald: </span>' .$row['datumbetaald'] . '<br><br>';
+        $out .= '<span class="bold">Datumbetaald: </span>' .$row['datumbetaald'] . '<br>';
+        $out .= '<br><a href="updateklant.php?id=' . $row["idklanten"] . '">Update</a><br>';
+        if ($idtype === '1') {
+            $out .= '<a class="delete" href="deleteklant.php?id=' . $row["idklanten"] . '">Delete</a><br><br>';
+        }else{
+            $out.= '<br><br>';
+        }
         $out .= '<span class="showproduct">Productgegevens:</span>';
         $out .= '<span class="productgegevens">';
         $out .= '<span class="bold">Pakkettype: </span>' . $row['naam'] . '<br>';
