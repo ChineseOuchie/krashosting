@@ -172,9 +172,14 @@ $aboutus = $out = '';
                     <img class="hoofd" src="img/hoofd1.jpg" alt="foto1">
                     <img class="hoofd" src="img/hoofd2.jpg" alt="foto1">
                 </div>
-                <div class="info">
-                    <?php echo $aboutus;?>
-				</div>
+                <div class="over_ons_info">
+                    <div class="info">
+                        <?php echo $aboutus;?>
+                    </div>
+                    <div class="maps"><iframe id="myIframe" src="https://www.mapsdirections.info/nl/maak-een-google-map/map.php?width=100%&height=600&hl=ru&q=Goirkestraat%2C%20Tilburg+(Kras%20Hosting)&ie=UTF8&t=&z=16&iwloc=A&output=embed" frameborder="0" scrolling="no"><a href="https://www.mapsdirections.info/nl/maak-een-google-map/">Maak een Google Map</a> van <a href="https://www.mapsdirections.info/nl/">Nederland Kaart</a></iframe></div><br />
+
+                </div>
+
             </div>
             <h2 class="check1" id="title_contact">Contacteer ons</h2>
             <div class="contact">

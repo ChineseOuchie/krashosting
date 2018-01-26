@@ -381,7 +381,18 @@ input[type=submit]:hover {
 .cookielink {
     color: black;
 }
-
+.over_ons_info{
+    display: flex;
+    flex-direction: column;
+}
+.maps{
+    margin-left: 180px;
+    padding-top: 25px;
+}
+#myIframe{
+    width: 90%;
+    height: 384px;
+}
 #cookiemodal {
     width: 100vw;
     height: 100vh;
@@ -464,5 +475,8 @@ input[type=submit]:hover {
     }
     .menu, .copyright{
         display: none;
+    }
+    .maps {
+        margin-left: 35px;
     }
 }
