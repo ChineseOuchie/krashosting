@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 19, 2018 at 09:19 AM
+-- Generation Time: Jan 26, 2018 at 08:47 AM
 -- Server version: 5.6.34-log
 -- PHP Version: 7.1.5
 
@@ -50,13 +50,22 @@ CREATE TABLE `klanten` (
   `voornaam` varchar(45) NOT NULL,
   `tussenvoegsel` varchar(45) DEFAULT NULL,
   `achternaam` varchar(45) NOT NULL,
-  `email` mediumtext NOT NULL,
-  `telefoonnummer` int(10) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `telefoonnummer` varchar(10) NOT NULL,
   `idproducten` int(11) NOT NULL,
   `aankoopdatum` varchar(30) NOT NULL,
   `betaald` varchar(5) NOT NULL,
   `datumbetaald` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `klanten`
+--
+
+INSERT INTO `klanten` (`idklanten`, `voornaam`, `tussenvoegsel`, `achternaam`, `email`, `telefoonnummer`, `idproducten`, `aankoopdatum`, `betaald`, `datumbetaald`) VALUES
+(15, 'Test', ' ts ', 'Test', 'test@gmail.com', '0612345678', 1, '19-01-2018', 'false', 'N.v.t.'),
+(16, 'Test', ' ts ', 'Test', 'test@gmail.com', '0612345678', 3, '19-01-2018', 'false', 'N.v.t.'),
+(17, 'rgafa', 'saf', 'sdfadsf', 'test@gmail.com', '0632145678', 3, '20-01-2018', 'true', '20-01-2018');
 
 -- --------------------------------------------------------
 
@@ -242,7 +251,7 @@ ALTER TABLE `customproduct`
 -- AUTO_INCREMENT for table `klanten`
 --
 ALTER TABLE `klanten`
-  MODIFY `idklanten` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idklanten` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 --
 -- AUTO_INCREMENT for table `medewerkers`
 --
